@@ -1,0 +1,518 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItemMod
+// Author: igi
+// Date:   29/11/2006
+// ----------------------------------------------------------------------------
+BACKUP ~iiItemMod/backup~
+AUTHOR ~igi~
+
+LANGUAGE ~English~ ~English~ ~iiItemMod/Languages/English/setup.tra~
+LANGUAGE ~Spanish~ ~Spanish~ ~iiItemMod/Languages/Spanish/setup.tra~
+
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Readme stuff
+// Some people like to view the readme
+BEGIN @1010
+NO_LOG_RECORD
+DESIGNATED 1000
+SUBCOMPONENT @1000
+  AT_INTERACTIVE_EXIT ~VIEW iiItemMod/Readme-iiItemMod.txt~
+
+
+// And some people don't like to view the readme
+BEGIN @1020
+DESIGNATED 2000
+NO_LOG_RECORD
+SUBCOMPONENT @1000
+// Do nothing
+
+
+//!----------------------------------------------------------------------------
+// Items
+//!----------------------------------------------------------------------------
+BEGIN @51
+DESIGNATED 1
+  // ----------------------------------------------------------------------------
+  // Potions
+  // ----------------------------------------------------------------------------
+
+  // Mirror Image
+  COPY ~iiItemMod/potions/itm/i1po001.itm~ ~override~
+  SAY NAME2 @2001
+  SAY DESC  @2002
+  SAY 0xde  @1100
+
+  // Restoration
+  COPY ~iiItemMod/potions/itm/i1po002.itm~ ~override~
+  SAY NAME2 @2021
+  SAY DESC  @2022
+  SAY 0xde  @1100
+
+  // Protection Timestop
+  COPY ~iiItemMod/potions/itm/i1po003.itm~ ~override~
+  SAY NAME2 @2031
+  SAY DESC  @2032
+  SAY 0xde  @1100
+
+  // Refreshment
+  COPY ~iiItemMod/potions/itm/i1po004.itm~ ~override~
+  SAY NAME2 @2041
+  SAY DESC  @2042
+  SAY 0xde  @1100
+
+  // Elemental Stability
+  COPY ~iiItemMod/potions/itm/i1po005.itm~ ~override~
+  SAY NAME2 @2051
+  SAY DESC  @2052
+  SAY 0xde  @1100
+
+  // Vocalize
+  COPY ~iiItemMod/potions/itm/i1po006.itm~ ~override~
+  SAY NAME2 @2061
+  SAY DESC  @2062
+  SAY 0xde  @1100
+
+  // Recuperation
+  COPY ~iiItemMod/potions/itm/i1po007.itm~ ~override~
+  SAY NAME2 @2071
+  SAY DESC  @2072
+  SAY 0xde  @1100
+
+  // Critical Skill
+  COPY ~iiItemMod/potions/itm/i1po008.itm~ ~override~
+  SAY NAME2 @2081
+  SAY DESC  @2082
+  SAY 0xde  @1100
+
+  // Umberhulk Blood
+  COPY ~iiItemMod/potions/itm/i1po009.itm~ ~override~
+  SAY NAME2 @2091
+  SAY DESC  @2092
+  SAY 0xde  @1100
+
+  // Rocksalt
+  COPY ~iiItemMod/potions/itm/i1po010.itm~ ~override~
+  SAY NAME2 @2101
+  SAY DESC  @2102
+  SAY 0xde  @1100
+
+  // Perfume
+  COPY ~iiItemMod/potions/itm/i1po011.itm~ ~override~
+  SAY NAME2 @2111
+  SAY DESC  @2112
+  SAY 0xde  @1100
+
+  COPY ~iiItemMod/potions/spl/i1po011.spl~ ~override~
+  SAY NAME2 #-1
+  SAY DESC  #-1
+
+  // BAM files
+  COPY ~iiItemMod/potions/bam/copy~ ~override~
+
+
+  // ----------------------------------------------------------------------------
+  // Arrows
+  // ----------------------------------------------------------------------------
+
+  // Arrows of Silencing
+  COPY ~iiItemMod/arrows/itm/i1ar000.itm~ ~override~
+  SAY NAME2 @3001
+  SAY DESC  @3002
+  SAY 0xde  @3003
+
+  // Arrows of Slowing
+  COPY ~iiItemMod/arrows/itm/i1ar001.itm~ ~override~
+  SAY NAME2 @3011
+  SAY DESC  @3012
+  SAY 0xde  @3013
+
+  // Arrows of Pacifism
+  COPY ~iiItemMod/arrows/itm/i1ar002.itm~ ~override~
+  SAY NAME2 @3021
+  SAY DESC  @3022
+  SAY 0xde  @3023
+
+  // Arrows of Healing
+  COPY ~iiItemMod/arrows/itm/i1ar003.itm~ ~override~
+  SAY NAME2 @3031
+  SAY DESC  @3032
+  SAY 0xde  @3033
+
+  // Barbed Arrows
+  COPY ~iiItemMod/arrows/itm/i1ar004.itm~ ~override~
+  SAY NAME2 @3041
+  SAY DESC  @3042
+  SAY 0xde  @3043
+
+  // Arrows of Stone to Flesh
+  COPY ~iiItemMod/arrows/itm/i1ar005.itm~ ~override~
+  SAY NAME2 @3051
+  SAY DESC  @3052
+  SAY 0xde  @3053
+
+  // Arrows of Fatigue
+  COPY ~iiItemMod/arrows/itm/i1ar006.itm~ ~override~
+  SAY NAME2 @3061
+  SAY DESC  @3062
+  SAY 0xde  @3063
+
+  // Arrows of Restriction
+  COPY ~iiItemMod/arrows/itm/i1ar007.itm~ ~override~
+  SAY NAME2 @3071
+  SAY DESC  @3072
+  SAY 0xde  @3073
+
+  // Far Range Arrows
+  COPY ~iiItemMod/arrows/itm/i1ar008.itm~ ~override~
+  SAY NAME2 @3081
+  SAY DESC  @3082
+
+  // BAM files
+  COPY ~iiItemMod/arrows/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Armor, robes and cloaks
+  // ----------------------------------------------------------------------------
+
+  // Skeleton Armor
+  COPY ~iiItemMod/armor/itm/i1lt001.itm~ ~override~
+  SAY NAME1 @4001
+  SAY UNIDENTIFIED_DESC @4002
+  SAY NAME2 @4003
+  SAY DESC  @4004
+
+  COPY ~iiItemMod/armor/eff/i1lt001.eff~ ~override~
+
+  // Gubbie Armor
+  COPY ~iiItemMod/armor/itm/i1pl001.itm~ ~override~
+  SAY NAME2 @4013
+  SAY DESC  @4014
+
+  // Mucky Robes
+  COPY ~iiItemMod/armor/itm/i1ck001.itm~ ~override~
+  SAY NAME2 @4023
+  SAY DESC  @4024
+
+  // Smoke Armor
+  COPY ~iiItemMod/armor/itm/i1ch001.itm~ ~override~
+  SAY NAME1 @4031
+  SAY UNIDENTIFIED_DESC @4032
+  SAY NAME2 @4033
+  SAY DESC  @4034
+
+  // Voice of Doom
+  COPY ~iiItemMod/armor/itm/i1ch002.itm~ ~override~
+  SAY NAME1 @4041
+  SAY UNIDENTIFIED_DESC @4042
+  SAY NAME2 @4043
+  SAY DESC  @4044
+
+  // Leafy Cloak
+  COPY ~iiItemMod/armor/itm/i1ck002.itm~ ~override~
+  SAY NAME1 @4051
+  SAY UNIDENTIFIED_DESC @4052
+  SAY NAME2 @4053
+  SAY DESC  @4054
+
+  // Mirror Image Cloak
+  COPY ~iiItemMod/armor/itm/i1ck003.itm~ ~override~
+  SAY NAME2 @4063
+  SAY DESC  @4064
+
+  COPY ~iiItemMod/armor/eff/i1ck003.eff~ ~override~
+
+  // Anti-Imprisonment Armor
+  COPY ~iiItemMod/armor/itm/i1lt002.itm~ ~override~
+  SAY NAME2 @4073
+  SAY DESC  @4074
+
+  // BAM files
+  COPY ~iiItemMod/armor/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Gloves
+  // ----------------------------------------------------------------------------
+
+  // Bracers of Defence AC 1
+  COPY ~iiItemMod/gloves/itm/i1br001.itm~ ~override~
+  SAY NAME2 @5001
+  SAY DESC  @5002
+
+  // Bracers of Non-archery
+  COPY ~iiItemMod/gloves/itm/i1br002.itm~ ~override~
+  SAY NAME2 @5011
+  SAY DESC  @5012
+
+  // Bracers of Improved Health
+  COPY ~iiItemMod/gloves/itm/i1br003.itm~ ~override~
+  SAY NAME2 @5021
+  SAY DESC  @5022
+
+  // Severed Hand
+  COPY ~iiItemMod/gloves/itm/i1br004.itm~ ~override~
+  SAY NAME1 @5031
+  SAY UNIDENTIFIED_DESC @5032
+  SAY NAME2 @5033
+  SAY DESC  @5034
+
+  // Yuanti Devourer
+  COPY ~iiItemMod/gloves/itm/i1br005.itm~ ~override~
+  SAY NAME2 @5043
+  SAY DESC  @5044
+
+  COPY ~iiItemMod/gloves/eff/i1br005.eff~ ~override~
+
+  // Sure Grip Gloves
+  COPY ~iiItemMod/gloves/itm/i1br006.itm~ ~override~
+  SAY NAME2 @5053
+  SAY DESC  @5054
+
+  // BAM files
+  COPY ~iiItemMod/gloves/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Belts
+  // ----------------------------------------------------------------------------
+
+  // Girdle of Clarity
+  COPY ~iiItemMod/belts/itm/i1bl001.itm~ ~override~
+  SAY NAME2 @6001
+  SAY DESC  @6002
+
+  // Belt of Life
+  COPY ~iiItemMod/belts/itm/i1bl002.itm~ ~override~
+  SAY NAME2 @6011
+  SAY DESC  @6012
+
+  COPY ~iiItemMod/belts/eff/i1bl002.eff~ ~override~
+
+  // Second Sense Belt
+  COPY ~iiItemMod/belts/itm/i1bl003.itm~ ~override~
+  SAY NAME2 @6021
+  SAY DESC  @6022
+
+  // Belt of Self
+  COPY ~iiItemMod/belts/itm/i1bl004.itm~ ~override~
+  SAY NAME2 @6031
+  SAY DESC  @6032
+
+  // BAM files
+  COPY ~iiItemMod/belts/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Amulets
+  // ----------------------------------------------------------------------------
+
+  // Amulet of Firm Standing
+  COPY ~iiItemMod/amulets/itm/i1am001.itm~ ~override~
+  SAY NAME2 @7001
+  SAY DESC  @7002
+
+  // Amulet of Knowledge
+  COPY ~iiItemMod/amulets/itm/i1am002.itm~ ~override~
+  SAY NAME2 @7011
+  SAY DESC  @7012
+
+  // Tymora's Curse
+  COPY ~iiItemMod/amulets/itm/i1am003.itm~ ~override~
+  SAY NAME2 @7021
+  SAY DESC  @7022
+
+  // Arachnid Defence
+  COPY ~iiItemMod/amulets/itm/i1am004.itm~ ~override~
+  SAY NAME2 @7031
+  SAY DESC  @7032
+
+  COPY ~iiItemMod/amulets/eff/i1am004.eff~ ~override~
+
+  // BAM files
+  COPY ~iiItemMod/amulets/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Helmets
+  // ----------------------------------------------------------------------------
+  // Skull of Theolon
+  COPY ~iiItemMod/helmets/itm/i1hm001.itm~ ~override~
+  SAY NAME1 @8001
+  SAY UNIDENTIFIED_DESC @8002
+  SAY NAME2 @8003
+  SAY DESC  @8004
+
+  COPY ~iiItemMod/helmets/itm/i1hm002.itm~ ~override~
+  SAY NAME2 @8011
+  SAY DESC  @8012
+
+  COPY ~iiItemMod/helmets/itm/i1hm003.itm~ ~override~
+  SAY NAME1 @8021
+  SAY UNIDENTIFIED_DESC @8022
+  SAY NAME2 @8023
+  SAY DESC  @8024
+
+  // BAM files
+  COPY ~iiItemMod/helmets/bam/copy~ ~override~
+
+
+
+  //---------------------------------------------------------------------------
+  // Add items to the gameworld
+  //---------------------------------------------------------------------------
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Add_Potions.tph~
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Add_Arrows.tph~
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Select_Random_Store.tph~
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Add_Infinites_To_Stores.tph~
+  INCLUDE ~iiItemMod/tph/ii_Add_Item_To_Store.tph~
+  INCLUDE ~iiItemMod/tph/ii_Add_RandomItem_To_Creatures.tph~
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Select_Random_i1poxxx.tph~
+  INCLUDE ~iiItemMod/tph/ii_iiItem_Select_Random_i1arxxx.tph~
+
+  //------------------------------
+  // Add the (potentially) infinite items to area containers
+  //------------------------------
+  // Maybe in the next version. Maybe not.
+
+  //------------------------------
+  // Add the (potentially) infinite items to creature inventories
+  //------------------------------
+  // Potions (max 1 potion type per creature)
+  PRINT ~Adding infinites (potions) to creatures~
+  OUTER_SPRINT iimacro_name ii_iiItem_Select_Random_i1poxxx
+  OUTER_SET iicheckitemtype = 9
+  OUTER_SET new_item_add_chance = 20
+  OUTER_SET existing_item_add_chance = 60
+  LAUNCH_ACTION_MACRO ~ii_Add_RandomItem_To_Creatures~
+
+  // Arrows (max 1 arrow type per creature)
+  PRINT ~Adding infinites (arrows) to creatures~
+  OUTER_SPRINT iimacro_name ii_iiItem_Select_Random_i1arxxx
+  OUTER_SET iicheckitemtype = 5
+  OUTER_SET new_item_add_chance = 20
+  OUTER_SET existing_item_add_chance = 60
+  LAUNCH_ACTION_MACRO ~ii_Add_RandomItem_To_Creatures~
+
+  //------------------------------
+  // Add the (potentially) infinite items to stores
+  //------------------------------
+  PRINT ~Adding infinites to stores~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Infinites_To_Stores~
+
+  //------------------------------
+  // Add the unique items to stores
+  // We add uniques to creatures (not stores/areas) for several reasons:
+  //  Creature files are re-used throughout the game
+  //  Not all creatures may be encountered in the game
+  //  Adding to stores is easier
+  //------------------------------
+  PRINT ~Adding uniques to stores~
+  RANDOM_SEED USE_SYSTEM_TIME
+  OUTER_SET usetype      = 1
+  OUTER_SET charge1      = 0
+  OUTER_SET charge2      = 0
+  OUTER_SET charge3      = 0
+  OUTER_SET amount       = 1
+  OUTER_SET infinite     = 0
+  OUTER_SET randomchance = 100
+  OUTER_SET mustadd      = 1
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1am001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1am002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1am003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1am004
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ch001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ch002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ck001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ck002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ck003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1l1001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1l1002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1pl001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1bl001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1bl002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1bl003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1bl004
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br004
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br005
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1br006
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hm001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hm002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hm003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+// ----------------------------------------------------------------------------
+// EOF

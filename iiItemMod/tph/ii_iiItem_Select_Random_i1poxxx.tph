@@ -1,0 +1,89 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Select_Random_i1poxxx
+// Author: igi
+// Date:   11/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Select one of the hard-coded iiselecteditem files randomly.
+  Farmed out to macro to prevent massive code duplication.
+
+  returns iiselecteditem set to the name of the selected itm
+*/
+
+DEFINE_PATCH_MACRO ii_iiItem_Select_Random_i1poxxx
+BEGIN
+
+  INNER_ACTION
+  BEGIN    
+    OUTER_SET i1poxxxresult = RANDOM(1 110)
+    OUTER_SET added       = 0
+
+    ACTION_IF ((i1poxxxresult <= 10) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po001
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 20) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po002
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 30) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po003
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 40) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po004
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 50) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po005
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 60) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po006
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 70) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po007
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 80) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po008
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 90) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po009
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 100) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po010
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1poxxxresult <= 110) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1po011
+      OUTER_SET added = 1
+    END
+  END
+END  // define_patch_macro

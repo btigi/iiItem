@@ -1,0 +1,383 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Add_Infinites_To_Stores
+// Author: igi
+// Date:   09/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Add potential infinite stock items to stores.
+  Farmed out to macro to prevent massive code duplication.
+*/
+
+DEFINE_ACTION_MACRO ii_iiItem_Add_Infinites_To_Stores
+BEGIN
+
+  // Add the items to any store
+  COPY_EXISTING_REGEXP GLOB ~.*\.sto~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x9a)
+    BEGIN
+      SPRINT storefilename "%SOURCE_RES%.sto"
+      INNER_ACTION
+      BEGIN
+        LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+        LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+      END
+    END
+  BUT_ONLY_IF_IT_CHANGES
+
+
+/*
+  // Add the items to the stores I think they should be ok
+
+  // Pen & Parchment
+  //------------------------------
+  OUTER_SPRINT storefilename 25spell.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Pen & Parchment
+  //------------------------------
+  OUTER_SPRINT storefilename 25spell2.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename amcler02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename amsmug01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename amsmug02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename arled.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Copper Coronet
+  //------------------------------
+  OUTER_SPRINT storefilename bernard.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Copper Coronet
+  //------------------------------
+  OUTER_SPRINT storefilename bernard2.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Copper Coronet
+  //------------------------------
+  OUTER_SPRINT storefilename bernard3.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Copper Coronet
+  //------------------------------
+  OUTER_SPRINT storefilename bernard4.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // Copper Coronet
+  //------------------------------
+  OUTER_SPRINT storefilename bernard5.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename bhelm.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename bshop01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename bshop02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename dawnmas.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename dmark1.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename doghma.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename dshop02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename gorch.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename govwau01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename helpmpr.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename hendak.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename hgkar01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename jayes.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename kpchap01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename murcrag.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename ppumb01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename ribald.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename ribald2.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename ribald3.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename roger.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename sahpr1.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename sarbar01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename sartem01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename shop03.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename shop05.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename slilmat.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename slshop01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename suelf10.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename tanally1.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename temhelm.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename temlath.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename temple.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename temsup.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename temtalos.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trcar04.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trgeni01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trmer01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trmer03.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trmer04.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trmer04a.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trrak01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename trrak02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename type1.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename type2.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename type3.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename uddrow22.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename uddrow24.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename udduer01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename udduer01.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename udsvir04.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename udsvir05.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename uhmer02.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename wallace.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename wallace2.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Arrows~
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+
+  // 
+  //------------------------------
+  OUTER_SPRINT storefilename wilmat.sto
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Add_Potions~
+*/
+END

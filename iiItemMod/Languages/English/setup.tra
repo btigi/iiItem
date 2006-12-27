@@ -1,0 +1,799 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItemMod
+// Author: igi
+// Date:   21/11/2006
+// ----------------------------------------------------------------------------
+
+// Readme
+@1000 = ~View Readme~
+@1010 = ~Show readme after installation~
+@1020 = ~Do not show readme after installation~
+
+// Components
+@500 = ~Item positions~
+@550 = ~Items in stores ONLY~
+@600 = ~Items throughout game ONLY~
+@650 = ~Items in stores AND items throughout game (uniques in stores)~
+@700 = ~Items in stores AND items throughout game (uniques scattered)~
+@750 = ~Items in stores AND items throughout game (uniques mixed)~
+
+
+@51 = ~Items~
+
+// ----------------------------------------------------------------------------
+// Potions
+// ----------------------------------------------------------------------------
+@1100  = ~Gulp!~ [GULP]
+
+@2001 = ~Potion of Mirror Image~
+@2002 = ~One of the most useful spells in any mages repertoire is Mirror Image. It reduces the chances of being struck, by either spell, arrow, or sword. It confuses and puzzles enemies. It intimidates animals and monsters alike. It's also a pain to go without it when the party mage has kicked the bucket.
+
+That's the marketing mantra behind the makers of this potion. Consuming this potion acts the same as casting Mirror Image on the imbiber.~
+
+
+
+
+@2021 = ~Potion of Lesser Restoration~
+@2022 = ~Thuzinn was never the most honest cleric, even before he was kicked out of the Order, so he was as surprised as everyone else when his latest get-rich-quick scheme actually worked!
+
+Using a few common herbs, mixed in just the right way, heated gently over night and a few mumbo-jumbo 'blessings' actually Thuzinn actually managed to bottle the Lesser Restoration spell, a miracle in itself.
+
+The potion is bright and seems full of energy, to the point of warming the bottle containing it.
+
+STATISTICS:
+
+Special: Lesser Restoration on imbiber~
+
+
+
+
+@2031 = ~Potion of Protection from Timestop~
+@2032 = ~Timestop is one of the most powerful spells any mage can cast. Using it, a mage can devastate an opposing army, clear out an entire dungeon single-handedly or bring down even the most deadliest foes.
+
+This simple potion offers the imbiber protection from the Timestop spell for a short while.
+
+STATISTICS:
+
+Special: Protects from Timestop for 5 rounds~
+
+
+
+
+@2041 = ~Potion of Refreshment~
+@2042 = ~After (or during) a close fought battle, most adventurers take several steps - drinking a healing potion, looting treasure from fallen foes, resting to regain strength and spells and so on. This potion eliminates the need for several of those steps; the highly concentrated restorative juice heals wounds, removes tiredness and fatigue and also refreshes the mind, causing cast spells to be re-memorised.
+
+STATISTICS:
+
+Special: Heal HP
+Special: Remove fatigue
+Special: Regain cast spells~
+
+
+
+
+@2051 = ~Potion of Elemental Stability~
+@2052 = ~There are many magical artifacts that allow brave adventurers to survive devastating elemental attacks, including fireballs, iceshards and lightning spells. Likewise, there are many spells which can counteract the bonuses provided by these artifacts.
+
+The Potion of Elemental Stability is the next step in this chain - it prevents the elemental resistances of the imbiber from being altered (in either a positive or negative way) for a significant amount of time - usually enough to take care of the immediate threat at the least.
+
+STATISTICS:
+
+Special: Lock elemental resistances at current values for 1 turn~
+
+
+
+
+@2061 = ~Potion of Vocalize~
+@2062 = ~One of the most fearsome tortures that can be inflicted upon a mage is the Silence spell. Such a spell prevents the mage from casting their own spells, potentially dooming them to an early grave - for mages often rely upon their spells to stay alive in dangerous situations.
+
+This sweet smelling purple potion can act as a life-saver in these situations, countering the Silence spell and allowing the imbiber to speak normally.
+
+STATISTICS:
+Special: Casts Vocalize on imbiber~
+
+
+
+
+@2071 = ~Potion of Necromantic Recuperation~
+@2072 = ~In trying to duplicate the natural regeneration abilities of trolls and other creatures, mages have pushed the boundaries further and further. The mixture for this potion is the result of a particularly gruesome series of experiments, which are reflecting in how the potion works. Upon drinking the bitter tasting liquid, the imbiber falls to the ground in a deep coma. While in this deep coma, the target appears dead (and is hence ignored by ravenous monsters), though in reality the opposite is true - the target is recuperating wounds and damage at a rapid rate. The real negative to using this potion comes form the fact that it works by accessing the negative energy inherent within all beings - this causes a permanent loss of vitality.
+
+STATISTICS:
+Special: Regain 1hp/second for 5 rounds
+Special: -5 Maximum HP per use~
+
+
+
+
+@2081 = ~Potion of Critical Skill~
+@2082 = ~It has long been known that certain roots and berries can increase concentration. This potion uses several of these herbal ingredients in a concentrated form, to the point of danger. The increase in concentration is immense and often allows the imbiber to perform extraordinary feats of intelligence or combat, however the ingredients are required in such high doses that the potion becomes highly poisonous, infecting the imbiber with a virulent disease.
+
+STATISTICS:
+
+Special: Every strike is a critical hit (5 rounds)
+Special: Infects imbiber with disease~
+
+
+
+
+@2091 = ~Umberhulk Blood~
+@2092 = ~This bright, pungent, foul smelling liquid is made form actual Umberhulk blood. By consuming the liquid, the imbiber becomes effectively invisible to Umberhulks, due to the complex pheromones given off.
+
+This potion is quite rare, both in its sale and its use - dead Umberhulks are not a common appearance in the alchemist quarters of most cities, and though adventurers will often put up with some inconveniences, smelling strongly of an Umberhulk is not usually one of them.
+
+STATISTICS:
+
+Special: Invisible to Umber Hulks for 1 turn~
+
+
+
+
+@2101 = ~Rocksalt~
+@2102 = ~The liquid of this potion is thin and flows easily, and has the sandy pick colour of it's main physical ingredient - rocksalt. With a few magical spells cast on it during it's mixing, the rocksalt takes on special properties. Upon use, the potion hardens the skin of the imbiber, making it harder to piece, and hence making this potion an excellent choice for melee adventurers. The downside of this skin hardening process is slight a loss of dexterity - this is not noticeable in many cases, though it does disable spell-casting, as the complex and movements required are no longer possible.
+
+STATISTICS:
+
+Special: 5pt AC bonus for 3 rounds
+Special: Disables spell casting for 3 rounds
+Special: -1 Dexterity for 3 rounds~
+
+
+
+
+@2111 = ~Perfume~
+@2112 = ~This beautifully shaped and engraved bottle contains an exclusive (and expensive) perfume. You cannot place the scent exactly, though it seems somewhere between roses and chocolate.
+
+STATISTICS:
+
+Special: +1 Charisma for 24 hours~
+
+// ----------------------------------------------------------------------------
+// Arrows
+// ----------------------------------------------------------------------------
+@3001 = ~Arrows of Silencing~
+@3002 = ~There are a few simple and effective ways of neutralising a hostile spell-thrower - one is to get up close and stick a sword through their ribs, another is stop them casting spells against you. These enchanted arrows carry a specialised form of the common Silence spell, capable of preventing any sounds from being created within it's sphere of radius. However, since the enchantment is not entirely reliable, and is relatively short lived, the best way of neutralising a hostile spell-thrower is never to meet one!
+         
+STATISTICS:
+
+Special: 50% chance target is silenced for 2 rounds (save vs spells to resist)
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3003 = ~Silenced!~
+
+
+
+
+@3011 = ~Arrows of Slowing~
+@3012 = ~Archers have long played a vital role in combat. The ability to reign arrow after arrow down upon an enemy while they are unable to retaliate can easily win a battle. The major weakness of the archer appears when the enemy force closes and engages in hard-to-hand combat - this can often result in the slaughter of the archers. Arrows of Slowing were conceived to lengthen the time taken for enemy forces to close on archers, and therefore give more time for arrows to be launched.
+
+STATISTICS:
+
+Special: 15% chance target is slowed for 4 rounds (save vs spells to resist)
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3013 = ~Slowed!~
+
+
+
+
+@3021 = ~Arrows of Pacifism~
+@3022 = ~Perhaps the most useful arrow in any archers collection is the Arrows of Pacifism, mainly due to the many uses it can be put to. The effects of such arrows are simple; any target struck has a chance to be instantly pacified, and filled with feelings of peace and serenity, meaning there is a greatly reduced chance of melee attacks taking place. The uses to which an arrow of this type may be put are many and varied.
+
+STATISTICS:
+
+Special: 5% chance target is pacified for 2 rounds
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3023 = ~Pacified!~
+
+
+
+
+@3031 = ~Arrows of Healing~
+@3032 = ~In times past, innovative adventurers under pressure resorted to firing arrows dipped in healing solutions at their companions to save their lives. The arrow would cause damage, though the healing solution would heal it, and other wounds the target may have had. This is a dangerous practice, as the initial shock of the arrow impact may cause death, which the healing solution can not reverse, and so the practice has remained in use only by desperate people in desperate situations.
+
+STATISTICS:
+
+Special: Restore 18 HP
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3033 = ~Healed!~
+
+
+
+
+@3041 = ~Barbed Arrows~
+@3042 = ~Barbed Arrows are identical to normal arrows in all respects save one; they are augmented with several sharp, vicious barbs along the arrowhead. These barbs prevent the arrows from being easily removed, and causes extra damage and bleeding, tearing the muscles under the skin.
+
+STATISTICS:
+
+Special: Bleeding damage
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3043 = ~Bleeding!~
+
+
+
+
+@3051 = ~Arrows of Stone to Flesh~
+@3052 = ~This type of arrow is a standard arrow, though with a magical enchantment to cast the Stone to Flesh spell on the target. These arrows are not common, though can be extremely useful in the right situation.
+
+STATISTICS:
+
+Special: Cast Stone to Flesh on target
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3053 = ~Un-petrified!~
+
+
+
+
+@3061 = ~Arrows of Fatigue~
+@3062 = ~Arrows of Fatigue are primarily intended to act as a combat averter in crowd control situations. Instead of intending to kill the target, Arrows of Fatigue are magically enchanted to increase fatigue and tiredness. This means that targets are less likely to be inclined to pursue a fight, and if they are still so inclined, there ability to right effectively is reduced. Note that Arrows of Fatigue do not produce instant fatigue, and are a cumulative effect.
+
+STATISTICS:
+
+Special: Increase fatigue of target
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3063 = ~Fatigue increased!~
+
+
+
+
+@3071 = ~Arrows of Restriction~
+@3072 = ~Arrows of Restriction were specially developed as the ultimate arrow for use in large army engagements. The arrows were intended to prevent charges, eliminate the rapid repositioning required by the enemy battle-plan, and to prevent retreat of the enemy, if required.
+
+Although the arrows proved useful in army warfare, it wasn't long until enterprisingly adventurers began using them in their roles; the arrows often prove their use by immobilising fast foes, preventing warnings being sounded, and protecting more fragile adventurers.
+
+
+STATISTICS:
+
+Special: Prevent movement for 5 rounds (save vs spell to resist)
+Damage:  1D6
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid~
+@3073 = ~Restricted!~
+
+
+
+
+@3081 = ~Far Range Arrows~
+@3082 = ~The Far Range Arrow has the longest range of all commonly used arrows. Far Range Arrows are small and lightweight, and so cause less damage than standard arrows, however in many cases the extra range these arrows gives outweighs the immediate damage inflicted. 
+
+STATISTICS:
+
+Special: Extra long range
+Damage:  1D4
+Damage type:  missile (piercing)
+Weight:  0
+Launcher:  Bow
+Not usable by:
+ Cleric
+ Druid
+ Mage~
+
+// ----------------------------------------------------------------------------
+// Armor
+// ----------------------------------------------------------------------------
+@4001 = ~Skeleton Ribcage~
+@4002 = ~This is the complete skeletal ribcage of a human being. Though the bones are old, they are not brittle or even chipped. With a bit of effort, you could slide the ribcage over yourself, to server as armor.
+
+STATISTICS:
+
+Armor Class: 8
+Weight: 15
+Requires: 4 Strength
+Not Usable By:
+ Mage~
+
+
+
+
+@4003 = ~Skeleton Ribcage~
+@4004 = ~This skeletal ribcage has been specially enchanted to have a rather interesting power. While equipped, the wearer appears invisible to skeletal undead creatures - in effect the creatures see the wearer as one of their own, and completely ignore them. How this is accomplish is not known, for the process to enchant armor in such a way has long been lost, however there is an interesting side-effect, the wearer develops a sympathetic link with skeletal creatures, to the point of sub-consciously despising doing physical damage to such a creature.
+
+STATISTICS:
+
+Special: Invisible to skeletons
+Special: 10pt THAC0 penalty vs. skeletons
+Armor Class: 8
+Weight: 15
+Requires: 4 Strength
+Not Usable By:
+ Mage~
+
+
+
+
+@4013 = ~Gubbie Armor~
+@4014 = ~This suit of armor is commonly known as Gubbie Armor. No-one knows what the origins of the name are, nor what the strange purpose of the armor is. The only known power of this armor is to prevent the wearer from becoming invisible via magical means (spells or potions). What use this could be to anyone us unknown.
+
+STATISTICS:
+
+Special: Immune to invisibility
+Armor Class: 3
+Weight: 50
+Requires: 12 Strength
+Not Usable By:
+ Bard 
+ Druid
+ Mage
+ Thief~
+
+
+
+
+@4023 = ~Mucky Robes~
+@4024 = ~Although these robes are extremely dirty and are held together as much by the mud that covers them as by the original stitching, there is something 'lucky' about them, something that discourages you from washing them. While wearing the robes, you have a slight, but general sense that things are just going to work out ok.
+
+STATISTICS:
+
+Special: 1pt saving throw bonus
+Weight: 3
+Only usable by:
+Mage (single, dual, & multi-class)~
+
+
+
+
+@4031 = ~Smoke Armor~
+@4032 = ~This wondrous armor seems to be crafted from contained smoke. Light and supple, yet strong, this armor would seem to conform to your body shape, if you were to wear it. How armor can be crafted from smoke it far beyond your comprehension.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 7
+Requires: 5 Strength~
+
+
+
+
+@4033 = ~Smoke Armor~
+@4034 = ~This wonderous armor seems to be crafted from contained smoke. Light and supple, yet strong, this Armor conforms to your body shape, and imposes no restrictions your actions.
+
+The origin of this armor is unknown, no smith or mage has ever been known to work with smoke as a medium. While providing protection from swords and the like, it is unknown how the armor would withstand other attacks, from wind or water. Despite this, the armor is most definitely a wonder work, and whoever created it must surely want it back.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 7
+Requires: 5 Strength~
+
+
+
+
+@4041 = ~Chain Mail~
+@4042 = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.  
+
+This particular armor bears no makers mark, no inscription or decoration, no dents of scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal. The only adornment on the armor are the dozens of sticky red stains, of various shades.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 40
+Requires: 8 Strength
+Not Usable By:
+ Druid 
+ Mage 
+ Thief~
+
+
+
+
+@4043 = ~Voice of Doom~
+@4044 = ~The history of the Voice of Doom is unknown. The armor bears no makers mark, no inscription or decoration, no dents of scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal.
+
+The only adornment on the armor are the dozens of sticky red stains, of various shades. The origin of these stains becomes clear when the armor is worn. Several vicious spikes stick into the wearer, deeply piecing the skin and causing significant pain. This would normally be enough to convince anyone to remove the armor immediately, were it not for the Voice of Doom the amour is named after.
+
+Once worn, the armor begins to speak, subtly and insidiously communicating to the wearer. The subject of communication is unknown, for after removing the armor the wearer cannot remember, except that the armor often whispered secrets and weaknesses of enemies into their mind, allowing for more accurate strikes and attacks.
+
+STATISTICS:
+
+Special: 3pt Dexterity penalty
+Special: Increased chance of critical hit (25%)
+Armor Class: 5
+Weight: 40
+Requires: 8 Strength
+Not Usable By:
+ Druid 
+ Mage 
+ Thief~
+
+
+
+
+@4051 = ~Leafy Cloak~
+@4052 = ~The cloak can be made in every possible shape with just about every type of fabric.  The most common forms are a circular piece of fabric with a hole in the centre for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.  
+
+This cloak seems to be made from interlocking leaves, though you cannot rip of tear them away from the cloak.
+
+STATISTICS:
+
+Weight: 3~
+
+
+
+
+@4053 = ~Leafy Cloak~
+@4054 = ~Some people are born into Druidry, others have it thrust upon them, while other discover it within themselves. Ardin was on such person.
+
+According to legend, the story goes something like this; Ardin lived with his family, in a small village deep in the forest. One night, a powerful lightning storm caused a devastating forest fire, which rapidly spread throughout the forest, and into the village. Ardin and the other villages worked frantically, pitching water over the flames, and after hours of hard labour the village was saved, though the forest still burned.
+
+While the rest of the villagers tentatively rested, Ardin carried on the fight against the fire, trying to protect the trees, the shrubs and the animals within. Hours later, overcome with exhaustion, breathing poorly due to the thick acrid smoke, and bleeding and burnt, Ardin collapsed unconscious, deep in the forest. When he awoke, he discovered this cloak hanging from a nearby tree. The cloak healed him, and allowed him to clear the smoke from the area.
+
+STATISTICS:
+
+Special: 3x/day Goodberries
+Special: 3x/day Zone of Sweet Air
+Armor Class Bonus: 1
+Weight: 3~
+
+
+
+
+@4063 = ~Cloak of Protection: Mirrored Action~
+@4064 = ~Wreadi was a very, very cowardly man. Although his profession was not one many would say was particularly dangerous, being a baker by trade, Wreadi was indeed very cowardly. He amassed a horde of magical items to protect himself (from "them" he explained to anyone who listened, though he never explained who "they" were - though many have speculated he meant the armed gang who killed him for his horde of magical items), including Rings of Protection, Boots of Speed and even a few scrolls of Protection.
+
+Despiste all this, Wreadi felt naked - an enemy could still strike directly at him, even if he would survive the attack. Wreadi found this rather disconcerting, and so he had this cloak specially made. The cloak has an in-built Mirror Image spell, which creates two identical images of the wearer. These images can be disrupted, as in the standard Mirror Image spell, however they will reappear every 5 rounds.
+
+STATISTICS:
+
+Special: Constant 2 Mirror Images
+Armor Class: 8
+Weight: 3~
+
+
+
+
+@4073 = ~Anti-Imprisonment Armor~
+@4074 = ~Heroes are rarely stupid, even if they appear so. Iudre-Th was a prime example. After a heavy night drinking with fellow adventurers found himself agreeing to a rather suicidal dare; to tap Rtholiag the Demi-lich on his skull-like head with a piece of limp celery.
+
+Now, most intelligent, sane people would back out of this dare, however even after the hangover wore off, Iudre-Th still agreed to follow through on the dare, where-upon everyone considered him one of those stupid, more brawn than brains adventurers.
+
+Unknown to the local populace though, was Iudre-Th vast array of magical equipment, which was potent enough to render him almost immune to even the most powerful spells of a Demi-lich. Chief among his possessions was this armor, which made him immune to the feared Imprisonment spell. Wearing this armor, and several other magical items, and carrying a limp piece of celery, Iudre-Th set off to the lair of Rtholiag.
+
+Iudre-Th was never seen again, though there are several legends and stories from all over Faerun, of a man appearing during pitched battles, and gently tapping everyone present on the head with limp piece of celery.
+ 
+STATISTICS:
+
+Special: Immune to Imprisonment
+Armor Class: 6
+Move Silently: -20
+Lock Picking: -10
+Find/Remove Traps: -10
+Pick Pockets: -10
+Weight: 40
+Requires: 6 Strength
+Not Usable By:
+ Mage~
+
+// ----------------------------------------------------------------------------
+// Gloves
+// ----------------------------------------------------------------------------
+@5001 = ~Bracers of Defence AC 1: Refound Glory~
+@5002 = ~These bracers were recently found in a dusty attic, by a shy retiring old woman. She knew nothing of their history, though excited by the possibility of a good selling price due to the obvious high quality of workmanship, she took them to a local merchant.
+
+The merchant had them magically identified, and discovered that the bracers belonged to none other than Freha, the Naked Highway Woman. Freha preyed on caravans and wagons around Luiren and was famous for three things; her remarkable ability to dodge melee attacks, throwing daggers and arrows, her extreme beauty and the fact that she always fought almost nude.
+
+These magical bracers worn by Freha explain her first ability, though it seems her other abilities are left to your imagination.
+
+STATISTICS:
+
+Armor Class: 1
+Weight: 2~
+
+
+
+
+@5011 = ~Bracers of Non-archery~
+@5012 = ~The Bracers of Non-archery were originally intended as a purely defensive item. Hearing tales of archers of incredible prowess, able to place arrow after arrow along the same path, and capable of hitting the smallest of targets at the farthest of ranges, Gruguth the Mighty asked the mages of his court to create a discrete item to protect him from such archers.
+
+Only after seeing their effectiveness during a failed assassination attempt did Gruguth think to use the Bracers for attacking. The magical power of the Bracers made Gruguth all but impervious to arrows, allowing him to charge archers across great distances, closing to melee range and fighting in hand to hand combat.
+ 
+STATISTICS:
+
+Special: Bounce arrows
+Weight: 2~
+
+
+
+
+@5021 = ~Bracers of Improved Health~
+@5022 = ~It is a sad fact that to become proficient in the arcane arts requires dedication. Perhaps the most obvious element of this dedication is the time spent in study, in meditation, in contemplation and in practice. A lifetime of such acts will often leave the resultant mage physically weak, and prone to sickness.
+
+The Bracers of Improved Health are an effort to combat this. The Bracers work by boosting the life-force of the wearer, granting extra vitality. This alteration of life-force does have a draw back, the mages connection to the magical Weave can be affected, resulting in an increased chance of mis-casting spells.
+
+
+STATISTICS:
+
+Special: 10pt HP bonus
+Special: 5% casting failure chance
+Weight: 2
+Useable By:
+  Mage~
+
+
+
+
+@5031 = ~Severed Hand~
+@5032 = ~This appears to be a severed hand, crudely hacked of from its host body with a not-so-sharp object. The blood covered the hand seems to be recent, although on closer appearance the hand continually produces new blood and never seems to decay, making the age of the hand impossible to determine.
+
+STATISTICS:
+
+Weight: 2~
+
+
+
+
+@5033 = ~Severed Hand~
+@5034 = ~Even the most powerful identification spell can reveal nothing about the previous owner of this hand, though they all confirm it is an actual severed human hand. Identification of the hand does indicate that it protects from the Disintegration spell, though the exact method as to how it accomplishes this is unknown.
+
+To 'wear' the hand, you must cut off one of your own hands, and attach the severed one in its place. This is an extreme cause of action, and could cause serious health issues while the hand is attached, though indications show that your own hand will miraculously 're-grow' if the severed hand is removed.
+
+STATISTICS:
+
+Special: Cursed item
+Special: Immune to Disintegration spell
+Special: 1pt DEX penalty while equipped
+Special: dpt CON penalty while equipped
+Weight: 2~
+
+
+
+
+@5043 = ~Yuanti Devourer~
+@5044 = ~Upon donning these gauntlets, the wearer discovers they are almost sentient. The gauntlets bear an extreme hatred for Yuanti, and almost seem to speak to the wearer, persuading them to wage unceasing war against the Yuanti.
+
+When given a chance, in hand to hand combat, the gauntlets physically attack Yuanti, seeming to bite and chew at their flesh.
+
+STATISTICS:
+
+Special:  +5 damage bonus vs Yuanti
+Weight:  1
+Useable By:
+ Fighters
+ Paladins
+ Rangers~
+
+
+
+
+@5053 = ~Sure Grip Gloves~
+@5054 = ~Sure Grip Gloves rely on a special type of glue, created by the smith Olynpon in Shadowdale. Treated correctly, and with a few simple cantrips during construction, the glue can be activated and deactivated at will, with a simple thought.
+
+Olynpon tried to market the glue for many purposes, including a replacement for door locks, nails, string and even soap, however combining the glue with gloves provided his best success; eager adventurers, tired of dropping their weapons in a panic caused by an approaching flight of dragons, coven of Lichs or horde of gibberlings bought the gloves in droves.
+
+STATISTICS:
+
+Special:  Will never drop weapons
+Weight:  1~
+
+// ----------------------------------------------------------------------------
+// Belts
+// ----------------------------------------------------------------------------
+@6001 = ~Girdle of Clarity~
+@6002 = ~Though constructed of simple materials, and of a basic design, the Girdle of Clarity is sought by mages throughout the Realms.
+
+Created little over a hundred years ago by the mage Yugun Boldstar, as part of a series of experiments concerned with the nature of magic, the Girdle of Clarity allows the wearer to perceive the magical Weave more strongly. This allows the Weave to be manipulated faster and easier, which in turn, allows spells to be cast faster.
+
+STATISTICS:
+
+Special:  1pt casting speed bonus
+Weight:  2~
+
+
+
+
+@6011 = ~Belt of Life~
+@6012 = ~The Belt of Life seems to hum with an internal magic as the beat of life pulses through the fibres. Though no-one knows where this belt originally came from, or the name of the craftsman who created it, the power it possesses is well known; the Belt somehow acts on undead creatures, confusing even mindless zombies, slowing their attacks and decreasing the accuracy of their strikes.
+
+STATISTICS:
+
+Special:  2pt AC bonus vs. Undead
+Weight:  2~
+
+
+
+
+@6021 = ~Second Sense Belt~
+@6022 = ~Having eyes in the back of your head is a useful skill for anyone, and especially so for a thief. Knowing when someone is sneaking up on you, whether it be the long arm of the law or a rival thief is a useful can literally be a life saver.
+
+When worn, this belt increases the perceptiveness and 'second sense' of the wearer, effectively making them immune to sneak attacks, and allowing them to spot illusions easier.
+
+STATISTICS:
+
+Special:  Immune to backstab
+Special:  10pt Detect Illusion bonus
+Weight:  2~
+
+
+
+
+@6031 = ~Belt of Self~
+@6032 = ~The Charm spell can be very useful in drawing out small tidbits of vital information, or for receiving a hefty discount, or for simply walking into a guarded compound. This makes the Charm spell very useful, and helpful - unless you happen to know vital information, run a store or live in a guarded compound!
+
+Baron Akthid had several dozen belts specially enchanted, and distributed to his personal guard, so that none of them could be charmed into betraying him.
+
+STATISTICS:
+
+Special:  Immune to Charm spell
+Weight:  2~
+
+// ----------------------------------------------------------------------------
+// Amulets
+// ----------------------------------------------------------------------------
+@7001 = ~Amulet of Firm Standing~
+@7002 = ~'The Rocking Hand' was an adventuring group, consisting of 6 people, that travelled near Calimshan. It was a long running joke within the party that Rasimm, the thief, would almost always miss every significant battle (through no fault of his own, he always insisted). Rasimm was Imprisoned, Mazed or blown away by dragon wings again and again.
+
+After a particularly close battle against a powerful Lich, during which Rasimm had again be mazed, the party decided to solve the issue once and for all - they commissed this amulet for Rasimm to wear.
+
+STATISTICS:
+
+Special:  Immune to Imprisonment spell
+Special:  Immune to Maze spell
+Special:  Immune to Wing Buffet~
+
+
+
+
+@7011 = ~Amulet of Knowledge~
+@7012 = ~Saii was a mage, at least in name. She spent much of her time identifies magical trinkets people bought to her. One day, just after identifying a Kettle of Rapid Heating, she decided to magically store her knowledge in an amulet, which she could then give to an apprentice, freeing her time up to do more important things.
+
+This amulet appears to be the one Saii crafted. How it came to be where you found it is unknown, for Saii is still practicing her magic in Waterdeep. No doubt she would be happy to have this amulet back. 
+
+STATISTICS:
+
+Special:  10pt Lore bonus~
+
+
+
+
+@7021 = ~Tymora's Curse~
+@7022 = ~Priests of Tymora must lead a dangerous life, for their god demands that they live (or die) by their luck.
+
+This amulet will let a priest live dangerously without having to actively seek out danger, for 1 in 4 of their spells will fail. This could be disastrous - failing that smite ravenous monsters as their charge towards the priest, or failing to heal the priests rich sponsor!
+
+To compensate for this propensity for relying on luck, the amulet increases the luckiness of the priest in other areas - typically making them more likely to survive hostile spells.
+
+STATISTICS:
+
+Special:  25% casting failure
+Special:  1pt saving throw bonus~
+
+
+
+
+@7031 = ~Arachnid Defence~
+@7032 = ~Many people have an innate fear of spiders - lots of legs, lots of eyes, not to mention those webs! Supfi The Brave was one such person, he really really hated spiders. However, his fear of spiders and his (relatively) well deserved name didn't go well together.
+
+For this reason Supfi The Brave had this amulet fashion and enchanted. The amulet acts like a second set of armor against attacks by spiders. This gave Supfi The Brave the resolve to jump straight into the nearest spider den, with the intention of killing all the spiders. Supfi The Brave hadn't bargained on a Drow raiding party exiting the Underdark via the spider den though. Though his body has never been found, it is thought unlikely that he survived.
+
+STATISTICS:
+
+Special:  3pt AC bonus vs. spiders~
+
+
+// ----------------------------------------------------------------------------
+// Helmets
+// ----------------------------------------------------------------------------
+@8001 = ~Skull~
+@8002 = ~This appears to be a human skull, with runes engraved upon it. Although the skull should be much too small to fit upon your heard, you somehow sense that it would fit.
+
+STATISTICS:
+
+Weight: 1~
+
+@8003 = ~Skull of Theolon~
+@8004 = ~Theolon was a particularly devout priest of an ancient god, who adventured across the realms with a few friends, defeating evil wherever they found it. In reward for his devotion, Theolon was granted special protection by his patron god. Though this protection centred on Theolon, in recognition for the help and support Theolon had received from his adventuring colleages over the years, the protection also extended to those who travelled with him.
+
+Theolon disappeared a few years ago, while exploring the Nether Mountains. Since you hold his vilely enchanted skull it your hands, it appears he met a rather gruesome end. Despite his death, the skull seems to continue to bear his special protection.
+
+STATISTICS:
+
+Special: 2pt AC bonus for all party members
+Weight: 1~
+
+
+
+
+@8011 = ~Helm of Absorption~
+@8012 = ~Enchanting an item to provide immunity to a specific spell is a long, arduous and complex tasks, often taking several weeks. Unfortunately for him, the young mage Ambldun did not take this into account when issuing his Great Challenge.
+
+The Great Challenge (as Ambldun referred to it) was sent to all mages for several leagues around, and was along the lines of "I bet you harm kill me using magic". After sending the Challenge, Ambldun set to work enacting his plan - enchanting a helmet with immunity to every single magic spell he knew. Ambldun, was dismayed at the unexpected time required, he had just managed to finish the first enchantment and was considering rescinding the Great Challenge, just for a short while, until his work was finished when his entire dwelling disintegrated in a puff of smoke - the handiwork of the very first mage to receive word of his Challenge.
+
+STATISTICS:
+
+Special: Immune to Magic Missile spell
+Armor Class Bonus:  None
+Special:  Protects Against Critical Hits
+Weight: 2
+Not Usable By:
+Mage
+Bard
+Thief~
+
+
+
+
+@8021 = ~Helmet~
+@8022 = ~This class of open-face helmet, made of reinforced leather or metal, covers most of the head, save the face and neck.  These helmets commonly provide protection for the nose.  
+
+STATISTICS:
+
+Armor Class Bonus:  None
+Special:  Protects Against Critical Hits
+Weight: 2
+Usable By:
+Thief~
+
+@8023 = ~Thieves Helmet~
+@8024 = ~Thieves Helmet DESC
+
+Ranij was a skilled young man who lived in Athkatla several decades ago. Ranij was also a brilliant thief, indeed Ranij was one of the most successful thieves who ever lived. Or at least he would have been, if he'd been able to pass the entrance tests for the Thieves Guild.
+
+While Ranij could pick-pocket even the most suspicious noble without breaking a sweat, or walk down a street in broad daylight and avoid being seen or even spot a trap from 10 paces away, and disarm it without seconds, he could not set a trap of his own.
+
+Ranij was barred from the Thieves Guild due this gap in his skill set, and to make up for his short-comings he had this Helm commissioned. While worn, the Helm implants knowledge on setting traps directly into the wearer.
+
+The Helm was a complete success, and Ranij re-applied for Guild entrance while wearing it. Ranij easily passed all the tests the Guildmasters could devise, even the trap setting test. Upon successful completion of the tests, Ranij was eagerly looking forward to being accepted into the Guild. Unfortunately, and some would say strangely, the Thieves Guild frowns upon cheating, especially on their entrance test.
+
+Ranijs body was never found...
+
+STATISTICS:
+
+Special:  25pt Set Traps bonus
+Special:  Protects Against Critical Hits
+Weight: 2
+Usable By:
+Thief~
+
+
+/*
+  OMG - cut content!!
+  Where is the iiItem UB? Or iiItem fixpack? Developer intent???
+
+  Diseased arrows (10% chance various disease type, while equipped suffer-1 CON)
+  Glass bottle (breaks after x hits)
+    Harp of Haste
+  Healing Harp
+  Kobold Flute (invisible to kobolds while playing?) - set bard song while equipped?
+*/

@@ -1,0 +1,415 @@
+// ----------------------------------------------------------------------------
+// Name:   Add_Item_To_Store
+// Author: igi
+// Date:   08/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Add a reference to an itm to a sto file, duplicating the ADD_ITEM_TO_STORE
+  command, but allowing use of random numbers, and adding a new position
+  option (usetype). Includes additional checks, such as the item must exist.
+
+Variables
+  StoreFilename - The .sto to add the .itm to
+  ItemName      - The .itm to add
+  BeforeItem    - Add the new item before the specified item
+  AfterItem     - Add the new item after the specified item
+  first         - 
+  last          -
+  usetype       - Position the item after the last item of a matching type
+  mustadd       - The item must be added, even if usetype/before/after fail
+  randomchance  - Chance the item will be added
+
+  charge1max    - 
+  charge2max    - 
+  charge3max    - 
+  flagsmax      - 
+  amountmax     - 
+
+  Charge1       - Number of primary charges*
+  Charge2       - Number of secondary charges*
+  Charge3       - Number of tertiary charges*
+  Flags         - Flags of the item*
+  Amount        - Amount of the item*
+  Infinite      - Infinite stock of the item*
+
+Notes
+  Variables marked with a * are given a random value if initialised to -1
+  Variables marked with a * are initialised to 0 (except flags, which is initialised to 1)
+  All variables are lower-case (except storefilename and itemname)
+
+Priority
+  usetype (after the last item of a matching item type)
+  before
+  after
+  first
+  last
+  first (default)
+
+Example usage
+  RANDOM_SEED USE_SYSTEM_TIME
+    //------------------------------
+    // Adventurers Mart
+    //------------------------------
+    //SPRINT storefilename ribald3.sto
+    //SPRINT itemname POTN08
+    //SET usetype  = 1
+    //SET last     = 1
+    //SET first    = 1
+    //SET charge1  = 0
+    //SET charge2  = 0
+    //SET charge3  = 0
+    //SET amount   = -1
+    //SET infinite = -1
+    //SET "charge1max" = 50
+    //SET "charge2max" = 50
+    //SET "charge3max" = 50
+    //SET "flagsmax"   = 16
+    //SET "amountmax"  = 100
+    //SPRINT beforeitem SCRL8Y
+    //SPRINT afteritem SCRL8Y
+    //LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  BUT_ONLY_IF_IT_CHANGES
+
+TODO
+  Ensure selling flag is set
+  Check item is not already in store
+*/
+
+DEFINE_ACTION_MACRO ii_Add_Item_To_Store
+BEGIN
+  PRINT ~Attempting to add %itemname% to %storefilename%~
+
+  ACTION_IF (FILE_EXISTS_IN_GAME ~%itemname%.ITM~) AND (FILE_EXISTS_IN_GAME ~%storefilename%~) THEN
+  BEGIN
+    PRINT ~Resources exist~
+
+        //------------------------------
+        // Set default values, if required
+        //------------------------------
+        ACTION_IF !(VARIABLE_IS_SET %charge1%) THEN
+        BEGIN
+          OUTER_SET "charge1" = 0
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %charge2%) THEN
+        BEGIN
+          OUTER_SET "charge2" = 0
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %charge3%) THEN
+        BEGIN
+          OUTER_SET "charge3" = 0
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %flags%) THEN
+        BEGIN
+          OUTER_SET "flags" = 1
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %amount%) THEN
+        BEGIN
+          OUTER_SET "amount" = 1
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %infinite%) THEN
+        BEGIN
+          OUTER_SET "infinite" = 0
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %charge1max%) THEN
+        BEGIN
+          OUTER_SET "charge1max" = 50
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %charge2max%) THEN
+        BEGIN
+          OUTER_SET "charge2max" = 50
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %charge3max%) THEN
+        BEGIN
+          OUTER_SET "charge3max" = 50
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %flagsmax%) THEN
+        BEGIN
+          OUTER_SET "flagsmax" = 16
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %amountmax%) THEN
+        BEGIN
+          OUTER_SET "amountmax" = 100
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %mustadd%) THEN
+        BEGIN
+          OUTER_SET "mustadd" = 0
+        END
+
+        ACTION_IF !(VARIABLE_IS_SET %randomchance%) THEN
+        BEGIN
+          OUTER_SET "randomchance" = 100
+        END
+
+
+    //------------------------------
+    // Backup variables we may change, so we can restore when done
+    //------------------------------
+    OUTER_SET backupcharge1  = charge1
+    OUTER_SET backupcharge2  = charge2
+    OUTER_SET backupcharge3  = charge3
+    OUTER_SET backupflags    = flags
+    OUTER_SET backupamount   = amount
+    OUTER_SET backupinfinite = infinite
+
+    COPY_EXISTING ~%storefilename%~ ~override~
+      PATCH_IF (SOURCE_SIZE > 0x74) THEN
+      BEGIN
+        PATCH_PRINT ~Valid .sto size~
+        //------------------------------
+        // Read in values
+        //------------------------------
+        READ_LONG 0x34 "sale_offset"
+        READ_LONG 0x38 "sale_num"
+        READ_LONG 0x2C "item_offset"
+        READ_LONG 0x4C "drink_offset"
+        READ_LONG 0x70 "cure_offset"
+
+        //------------------------------
+        // Set internal variables
+        //------------------------------
+        SET "orig_sale_num"      = "%sale_num%"
+        SET "item_added"         = 0
+        SET "item_insert"        = ~-1~
+        SET "item_offset_patch"  = 0
+        SET "drink_offset_patch" = 0
+        SET "cure_offset_patch"  = 0
+
+        PATCH_IF (RANDOM(1 100) <= %randomchance%) THEN
+        BEGIN
+          PATCH_PRINT ~Random check returned true - item is being added~
+
+          //------------------------------
+          // Randomize default variables, if required
+          //------------------------------
+          PATCH_IF (%charge1% == ~-1~) THEN
+          BEGIN
+            SET "charge1" = RANDOM (1 %charge1max%)
+          END
+  
+          PATCH_IF (%charge2% == ~-1~) THEN
+          BEGIN
+            SET "charge2" = RANDOM (1 %charge2max%)
+          END
+  
+          PATCH_IF (%charge3% == ~-1~) THEN
+          BEGIN
+            SET "charge3" = RANDOM (1 %charge3max%)
+          END
+  
+          PATCH_IF (%flags% == ~-1~) THEN
+          BEGIN
+            SET "flags" = RANDOM (1 %flagsmax%)
+          END
+
+          PATCH_IF (%amount% == ~-1~) THEN
+          BEGIN
+            SET amount = RANDOM (1 %amountmax%)
+          END
+
+          PATCH_IF (%infinite% == ~-1~) THEN
+          BEGIN
+            SET "infinite" = RANDOM (0 1)
+            PATCH_IF (%infinite% == 1) THEN
+            BEGIN
+              SET "amount"   = 0
+            END
+          END
+
+          //------------------------------
+          // Position by item type
+          //------------------------------
+          PATCH_IF (VARIABLE_IS_SET "%usetype%") AND (%item_insert% == ~-1~) THEN
+          BEGIN
+            INNER_ACTION
+            BEGIN
+              // Read the item-type of the new item
+              COPY_EXISTING ~%itemname%.ITM~ ~override~
+                PATCH_IF (SOURCE_SIZE > 0x71) THEN
+                BEGIN
+                  READ_SHORT 0x001c "addingitemtype"
+                END
+              BUT_ONLY_IF_IT_CHANGES
+            END
+  
+            // Find a matching item in the .sto
+            WHILE (("%sale_num%" > 0) AND ("%item_insert%" < 0))
+            BEGIN
+              // Read the item name
+              READ_ASCII ("%sale_offset%" + (("%sale_num%" - 1) * 0x1C)) "storeitemname"
+              INNER_ACTION
+              BEGIN
+                ACTION_IF (FILE_EXISTS_IN_GAME ~%storeitemname%.ITM~) THEN
+                BEGIN
+                  COPY_EXISTING ~%storeitemname%.ITM~ ~override~
+                    PATCH_IF (SOURCE_SIZE > 0x71) THEN
+                    BEGIN
+                      READ_SHORT 0x001c "storeitemtype"
+                      WHILE ((%storeitemtype% == "%addingitemtype%") AND ("%item_insert%" < 0))
+                      BEGIN
+                        SET "item_insert" = "%sale_num%"
+                        PATCH_PRINT ~Adding %itemname% after %storeitemname% (type %addingitemtype%)~
+                      END
+                    END
+                  BUT_ONLY_IF_IT_CHANGES
+                END
+              END
+              SET "sale_num" = ("%sale_num%" - 1)
+            END
+          END
+
+
+          //------------------------------
+          // Find the item to insert this item before (if we are doing BEFORE)
+          //------------------------------
+          PATCH_IF (VARIABLE_IS_SET "%beforeitem%") AND (%item_insert% == ~-1~) THEN
+          BEGIN
+            WHILE ("%sale_num%" > 0)
+            BEGIN
+              READ_ASCII ("%sale_offset%" + (("%sale_num%" - 1) * 0x1C)) "storeitemname"
+              WHILE (("%storeitemname%" STRING_EQUAL_CASE "%beforeitem%") AND ("%item_insert%" < 0))
+              BEGIN
+                SET "item_insert" = ("%sale_num%" - 1)
+                PATCH_PRINT ~Adding before %beforeitem%~
+              END
+              SET "sale_num" = ("%sale_num%" - 1)
+            END
+          END
+  
+ 
+          //------------------------------
+          // Find the item to insert this item after (if we are doing AFTER)
+          //------------------------------
+          PATCH_IF (VARIABLE_IS_SET "%afteritem%") AND (%item_insert% == ~-1~) THEN
+          BEGIN
+            WHILE ("%sale_num%" > 0)
+            BEGIN
+              READ_ASCII ("%sale_offset%" + (("%sale_num%" - 1) * 0x1C)) "storeitemname"
+              WHILE (("%storeitemname%" STRING_EQUAL_CASE "%afteritem%") AND ("%item_insert%" < 0))
+              BEGIN
+                SET "item_insert" = "%sale_num%"
+                PATCH_PRINT ~Adding after %afteritem%~
+              END
+              SET "sale_num" = ("%sale_num%" - 1)
+            END
+          END
+
+          //------------------------------
+          // Set variables to add the item at the start of the item list
+          //------------------------------
+          PATCH_IF (VARIABLE_IS_SET "%first%") THEN
+          BEGIN
+            // If first is set, or before/after was set - but failed
+            PATCH_IF ("%first%" == 1) AND (%item_insert% = ~-1~) THEN
+            BEGIN
+              PATCH_PRINT ~Adding first~
+              SET "item_insert" = "0"
+            END
+          END
+
+
+          //------------------------------
+          // Set variables to add the item at the end of the item list
+          //------------------------------
+          PATCH_IF (VARIABLE_IS_SET "%last%") THEN
+          BEGIN
+            // If last is set, or before/after was set - but failed
+            PATCH_IF ("%last%" == 1) AND (%item_insert% = ~-1~) THEN
+            BEGIN
+              SET "item_insert" = "%sale_num%"
+              PATCH_PRINT ~Adding last~
+            END
+          END
+  
+
+          //------------------------------
+          // If we've not found anywhere to put the item, default to FIRST
+          //------------------------------
+          PATCH_IF (%item_insert% = ~-1~) AND (%mustadd% = 1)THEN
+          BEGIN
+            SET "item_insert" = "0"
+            PATCH_PRINT ~Adding first (default)~
+          END
+
+  
+          //------------------------------
+          // Insert the item
+          //------------------------------
+          WHILE (("%item_added%" = 0) AND ("%item_insert%" >= 0))
+          BEGIN
+            INSERT_BYTES ("%sale_offset%" + ("%item_insert%" * 0x1C)) 28
+            WRITE_EVALUATED_ASCII ("%sale_offset%" + ("%item_insert%" * 0x1C)) "%itemname%" #8
+            WRITE_LONG  ("%sale_offset%" + 0x0a + ("%item_insert%" * 0x1C))    ~%charge1%~
+            WRITE_LONG  ("%sale_offset%" + 0x0c + ("%item_insert%" * 0x1C))    ~%charge2%~
+            WRITE_LONG  ("%sale_offset%" + 0x0e + ("%item_insert%" * 0x1C))    ~%charge3%~
+            WRITE_LONG  ("%sale_offset%" + 0x10 + ("%item_insert%" * 0x1C))    ~%flags%~
+            WRITE_LONG  ("%sale_offset%" + 0x14 + ("%item_insert%" * 0x1C))    ~%amount%~
+            WRITE_LONG  ("%sale_offset%" + 0x18 + ("%item_insert%" * 0x1C))    ~%infinite%~
+            SET "item_added" = 1
+          END
+  
+          //------------------------------
+          // Update the item count
+          //------------------------------
+          WRITE_LONG 0x38 ("%orig_sale_num%" + "%item_added%")
+  
+          //------------------------------
+          // Update the offsets
+          //------------------------------
+          WHILE (("%item_added%" = 1) AND ("%item_offset_patch%" = 0) AND NOT ("%item_offset%" < "%sale_offset%"))
+          BEGIN
+            WRITE_LONG 0x2C ("%item_offset%" + 0x1C)
+            SET "item_offset_patch" = 1
+          END
+      
+          WHILE (("%item_added%" = 1) AND ("%drink_offset_patch%" = 0) AND NOT ("%drink_offset%" < "%sale_offset%"))
+          BEGIN
+            WRITE_LONG 0x4C ("%drink_offset%" + 0x1C)
+            SET "drink_offset_patch" = 1
+          END
+      
+          WHILE (("%item_added%" = 1) AND ("%cure_offset_patch%" = 0) AND NOT ("%cure_offset%" < "%sale_offset%"))
+          BEGIN
+            WRITE_LONG 0x70 ("%cure_offset%" + 0x1C)
+            SET "cure_offset_patch" = 1
+          END
+  
+          PATCH_IF (%item_added% == 1) THEN
+          BEGIN
+            PATCH_PRINT ~Added %itemname% to %storefilename% successfully~
+          END
+          ELSE
+          BEGIN
+            PATCH_PRINT ~Added %itemname% to %storefilename% NOT successfully~
+          END
+        END  // random check
+      END  // .sto has valid size
+
+      BUT_ONLY_IF_IT_CHANGES
+
+    END  // copy .sto file
+  END  // file_exists_in_game
+
+  //------------------------------
+  // Restore original variable values
+  //------------------------------
+  //OUTER_SET charge1  = backupcharge1
+  //OUTER_SET charge2  = backupcharge2
+  //OUTER_SET charge3  = backupcharge3
+  //OUTER_SET flags    = backupflags
+  //OUTER_SET amount   = backupamount
+  //OUTER_SET infinite = backupinfinite
+
+END  // define_action_macro

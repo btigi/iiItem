@@ -1,0 +1,58 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Add_Potions
+// Author: igi
+// Date:   09/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Add the potions from the iiItem mod to a specified sto.
+  Farmed out to macro to prevent massive code duplication.
+*/
+
+DEFINE_ACTION_MACRO ii_iiItem_Add_Potions
+BEGIN
+    RANDOM_SEED USE_SYSTEM_TIME
+
+      OUTER_SET    usetype   = 1
+  
+      OUTER_SET charge1      = 0
+      OUTER_SET charge2      = 0
+      OUTER_SET charge3      = 0
+      OUTER_SET amount       = ~-1~
+      OUTER_SET infinite     = ~-1~
+      OUTER_SET randomchance = 55
+  
+      OUTER_SPRINT itemname i1po001
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po002
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po003
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po004
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po005
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po006
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po007
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po008
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po009
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po010
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+  
+      OUTER_SPRINT itemname i1po011
+      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+END

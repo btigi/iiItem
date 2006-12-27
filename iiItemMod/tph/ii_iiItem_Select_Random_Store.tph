@@ -1,0 +1,76 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Select_Random_Store
+// Author: igi
+// Date:   11/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Select one of the hard-coded 'random' stores randomly.
+  Farmed out to macro to prevent massive code duplication.
+
+  A better method would be to iterate over the set of .sto files, and select
+  one from the matching container type.
+
+  returns storefilename set to the name of the selected sto
+*/
+
+DEFINE_ACTION_MACRO ii_iiItem_Select_Random_Store
+BEGIN
+    OUTER_SET storeresult = RANDOM(1 90)
+    OUTER_SET added       = 0
+
+    ACTION_IF ((storeresult <= 10) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename roger.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 20) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename ribald2.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 30) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename amsmug01.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 40) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename gorch.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 50) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename thumb.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 60) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename trinnk01.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 70) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename uddrow23.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 80) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename uhmer02.sto
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((storeresult <= 90) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename suelf10.sto
+      OUTER_SET added = 1
+    END
+END  // define_action_macro

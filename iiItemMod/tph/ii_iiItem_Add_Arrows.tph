@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Add_Arrows
+// Author: igi
+// Date:   09/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Add the arrows from the iiItem mod to a specified sto.
+  Farmed out to macro to prevent massive code duplication.
+*/
+
+DEFINE_ACTION_MACRO ii_iiItem_Add_Arrows
+BEGIN
+    RANDOM_SEED USE_SYSTEM_TIME
+
+    OUTER_SET    usetype   = 1
+
+    OUTER_SET charge1      = 40
+    OUTER_SET charge2      = 0
+    OUTER_SET charge3      = 0
+    OUTER_SET amount       = ~-1~
+    OUTER_SET infinite     = ~-1~
+    OUTER_SET randomchance = 65
+
+    OUTER_SPRINT itemname i1ar000
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar001
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar002
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar003
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar004
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar005
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar006
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar007
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+    OUTER_SPRINT itemname i1ar008
+    LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+END

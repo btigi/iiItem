@@ -1,0 +1,77 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItem_Select_Random_i1arxxx
+// Author: igi
+// Date:   11/12/2006
+// ----------------------------------------------------------------------------
+
+/*
+Summary
+  Select one of the hard-coded iiselecteditem files randomly.
+  Farmed out to macro to prevent massive code duplication.
+
+  returns iiselecteditem set to the name of the selected itm
+*/
+
+DEFINE_PATCH_MACRO ii_iiItem_Select_Random_i1arxxx
+BEGIN
+
+  INNER_ACTION
+  BEGIN    
+    OUTER_SET i1arxxxresult = RANDOM(1 90)
+    OUTER_SET added       = 0
+
+    ACTION_IF ((i1arxxxresult <= 10) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar000
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 20) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar001
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 30) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar002
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 40) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar003
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 50) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar004
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 60) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar005
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 70) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar006
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 80) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar007
+      OUTER_SET added = 1
+    END
+
+    ACTION_IF ((i1arxxxresult <= 90) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT iiselecteditem i1ar008
+      OUTER_SET added = 1
+    END
+  END
+END  // define_patch_macro

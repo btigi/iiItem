@@ -1,0 +1,64 @@
+// ----------------------------------------------------------------------------
+// Name:   Add_RandomItem_To_Creatures
+// Author: igi
+// Date:   11/12/2006
+// ----------------------------------------------------------------------------
+
+DEFINE_ACTION_MACRO ii_Add_RandomItem_To_Creatures
+BEGIN
+
+  COPY_EXISTING_REGEXP GLOB ~.*\.CRE~ ~override~
+    SET iihasitem = 0
+    PATCH_IF (SOURCE_SIZE > 0x02cc) THEN
+    BEGIN
+      READ_LONG 0x02bc item_offset
+      READ_LONG 0x02c0 item_count
+
+      WHILE ((0 < "%item_count%") AND ("%iihasitem%" = 0))
+      BEGIN
+        READ_ASCII ("%item_offset%" + (("%item_count%"-1) * 20)) iithisitem
+        PATCH_PRINT "%iithisitem%"
+
+        INNER_ACTION
+        BEGIN
+          ACTION_IF FILE_EXISTS_IN_GAME ~%iithisitem%.ITM~ THEN
+          BEGIN
+            COPY_EXISTING ~%iithisitem%.itm~ ~override~
+              PATCH_IF (SOURCE_SIZE > 0x71) THEN
+              BEGIN
+                READ_SHORT 0x001c iiitemtype
+
+                PATCH_IF ("%iiitemtype%" == %iicheckitemtype%) THEN
+                BEGIN
+                  SET iihasitem = 1
+                END
+
+              END
+            BUT_ONLY_IF_IT_CHANGES
+          END
+        END
+
+        SET "item_count" = ("%item_count%" - 1)
+      END
+
+      LAUNCH_PATCH_MACRO ~%iimacro_name%~
+
+      PATCH_IF (iihasitem == 1) THEN
+      BEGIN
+        SET iiaddchance = existing_item_add_chance
+      END
+      ELSE
+      BEGIN
+        SET iiaddchance = new_item_add_chance
+      END
+
+      PATCH_IF (RANDOM(1 100) <= %iiaddchance%) THEN
+      BEGIN
+        ADD_CRE_ITEM ~%iiselecteditem%~ #0 #0 #0 ~NONE~ ~INV~  // FIXME - new macro, so we can have random amounts
+      END
+
+    END
+
+  BUT_ONLY_IF_IT_CHANGES
+
+END  // define_patch_macro

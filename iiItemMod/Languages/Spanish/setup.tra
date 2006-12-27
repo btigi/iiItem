@@ -1,0 +1,787 @@
+// ----------------------------------------------------------------------------
+// Name:   iiItemMod
+// Author: igi
+// Date:   21/11/2006
+// ----------------------------------------------------------------------------
+
+// Readme
+@1000 = ~Léeme~
+@1010 = ~Mostrar el Léeme luego de la instalación~
+@1020 = ~No mostrar el Léeme luego de la instalación~
+
+// Components
+@500 = ~Posiciones de los Objetos~
+@550 = ~Objetos sólo en tiendas~
+@600 = ~Objetos sólo en el juego~
+@650 = ~Objetos en tiendas y durante el juego (únicos sólo en tiendas)~
+@700 = ~Objetos en tiendas y durante el juego (únicos durante el juego)~
+@750 = ~Objetos en tiendas y durante el juego (únicos mezclados)~
+
+
+@51 = ~Objetos~
+
+// ----------------------------------------------------------------------------
+// Potions
+// ----------------------------------------------------------------------------
+@1100  = ~¡Gulp!~ [GULP]
+
+@2001 = ~Poción de Imágen espejada~
+@2002 = ~Uno de los hechizos más útiles en el repertorio del mago es la Imágen espejada. Reduce las posibilidades de ser golpeado por un hechizo, flecha o espada, confundiendo al enemigo e intimidando animales y monstruos. 
+
+Este es el dicho comercial de los creadores de esta poción. El consumirla es lo mismo que lanzar el hechizo Imágen espejada en el bebedor.~
+
+
+
+
+@2021 = ~Poción de Restauración Menor~
+@2022 = ~Thuzinn nunca fue un Clérigo honesto, incluso antes de que lo echaran de la Orden, ¡así que sí que se sorprendió cuando sus planes de hacerse rico rápidamente funcionaron!
+
+Usando unas hierbas comunes, mezcladas de forma correcta, calentadas durante la noche y diciendo algunas "bendiciones", Thuzinn logró embotellar el hechizo de Restauración Menor. Un milagro.
+
+La poción es brillante y parece tener mucha energía al punto de calentar la misma botella que la contiene.
+
+ESTADÍSTICAS:
+
+Especial: Restauración Menor en el bebedor~
+
+
+
+
+@2031 = ~Poción de Protección contra Parar el tiempo~
+@2032 = ~El parar el tiempo es uno de los hechizos más poderosos que pueden lanzarse. Un mago puede destrozar el ejército oponente, limpiar una mazmorra él solo o matar a sus enemigos más fuertes.
+
+Esta simple Poción concede al bebedor protección contra el hechizo de parar el tiempo durante un momento.
+
+ESTADÍSTICAS:
+
+Especial: protección contra parar el tiempo durante 5 turnos~
+
+
+
+
+@2041 = ~Poción de Refresco~
+@2042 = ~Luego (o durante) una batalla, la mayoría de los aventureros siguen varios pasos: beber una poción de curación, tomar los tesoros de los enemigos caídos, descansar para recuperar energía y hechizos, y esas cosas. Esta poción elimina la necesidad de varios de esos pasos; el jugo concentrado restaurativo cura heridas, quita el cansancio y fatiga y refresca la mente, haciendo que los hechizos sean re-memorizados.
+
+ESTADÍSTICAS:
+
+Especial: Curación
+Especial: Quita la fatiga
+Especial: Re-memoriza hechizos lanzados~
+
+
+
+
+@2051 = ~Poción de Estabilidad Elemental~
+@2052 = ~Hay muchos elementos mágicos que permiten a los aventureros el resistir ataques elementales, incluyendo bolas de fuego, hielo o hechizos de electricidad. Así mismo, hay muchos hechizos que pueden contrarrestarlos.
+
+La Poción de Estabilidad Elemental es el paso siguiente en la cadena: previene que las resistencias elementales del bebedor se alteren (de forma tanto positiva como negativa) por un tiempo, usualmente el necesario para protegerse de la amenaza del momento.
+
+ESTADÍSTICAS:
+
+Especial: Fija las resistencias elementales en los valores actuales durante 1 turno~
+
+
+
+
+@2061 = ~Poción de Vocalizar~
+@2062 = ~Una de las peores torturas que se le puede infligir a un mago es ser presa de un hechizo de Silenciar. Este hechizo previene al mago de lanzar conjuros, potencialmente enviándolo a la tumba, ya que los magos dependen Magos de ellos para mantenerse vivos en situaciones preligrosas.
+
+Esta poción púrpura y de sabor dulce actúa como salvavidas en tales situaciones, contrarrestando al hechizo de Silencio y permitiendo al bebedor hablar normalmente.
+
+ESTADÍSTICAS:
+Especial: Lanza Vocalizar en el bebedor~
+
+
+
+
+@2071 = ~Poción de Recuperación Nigromántica~
+@2072 = ~Intentando duplicar la regeneración natural de los trolls y otras criaturas, los Magos han podido conseguir aún más efectos. Esta poción es producto de terribles experimentos que reflejan el funcionamiento de la poción. Al beber este líquido amargo, el bebedor cae al suelo en un coma profundo. Mientras se encuentre bajo el efecto, parecerá muerto (y es ignorado por los monstruos), aunque en realidad está recuperando puntos de golpe muy rápidamente. Esta poción funciona utilizando la energía negativa que poseen todos los seres, y por eso causa la pérdida permanente de vitalidad.
+
+ESTADÍSTICAS:
+Especial: Regenera 1 punto de golpe por segundo durante 5 turnos
+Especial: -5 puntos de golpe máximos por uso~
+
+
+
+
+@2081 = ~Poción de Habilidad Crítica~
+@2082 = ~Desde hace mucho es sabido que ciertas bayas y raíces ayudan a la concentración. Es apoción utiliza varios de esos ingredientes en forma concentrada y peligrosa. La concentración se incrementa inmensamente y permite al bebedor hacer hazañas de inteligencia o combate, aunque los ingredientes necesarios hacen que la poción sea venenosa, enfermando al bebedor.
+
+ESTADÍSTICAS:
+
+Especial: Cada golpe es crítico durante 5 turnos
+Especial: Enferma al bebedor~
+
+
+
+
+@2091 = ~Sangre de Mole Sombría~
+@2092 = ~Este líquido de olor asqueroso es en realidad Sangre de Mole Sombría. Consumiéndolo, el bebedor se hace iinvisible ante las Moles Sombrías, gracias a las complejas feromonas que contiene.
+
+Esta poción es extremadamente rara tanto para comprar como para beber: No se suelen encontrar muchas Moles Sombrías muertas en los círculos alquímicos, y aunque los aventureros puedan tener algunos inconvenientes en sus viajes, el oler a Mole Sombría no es uno de ellos.
+
+ESTADÍSTICAS:
+
+Especial: Invisible para las Moles Sombrías durante un turno~
+
+
+
+
+@2101 = ~Sal de Roca~
+@2102 = ~El líquido de esta poción es fino y tiene el color arenoso de su ingrediente principal: Sal de Roca. con algunos hechizos lanzados, la Sal de Roca adquiere propiedades especiales. Cuando se usa, la poción endurece la piel del bebedor, haciendo que esta poción sea una elección excelente para los aventureros con armas cuerpo a cuerpo. Lo malo de esta poción es la pérdida momentánea de destreza, que en muchos casos no se nota, aunque ya no permite lanzar hechizos, ya que es imposible realizar los movimientos requeridos para lanzarlos .
+
+ESTADÍSTICAS:
+
+Especial: CA +3 durante 3 turnos
+Especial: No se pueden lanzar hechizos durante 3 turnos
+Especial: -1 a la destreza durante 3 turnos~
+
+
+
+
+@2111 = ~Perfume~
+@2112 = ~Esta preciosa botella contiene un perfume exclusivo (y caro). No puedes decir si se trata de perfume de rosas o chocolate.
+
+ESTADÍSTICAS:
+
+Especial: Carisma +1 durante 24 horas~
+
+// ----------------------------------------------------------------------------
+// Flechas
+// ----------------------------------------------------------------------------
+@3001 = ~Flechas de Silenciar~
+@3002 = ~Hay formas simples y efectivas de neutralizar a un lanzador de hechizos, una de ellas es acercarse y clavar una espada entre sus costillas, otra es hacer que deje de lanzar hechizos. Estas Flechas flechas encantadas están creadas para silenciar al mago, haciendo que los sonidos queden neutralizados dentro del radio de una esfera. Aunque este encantamiento no es de los mejores y tiene poca duración, ¡la mejor forma de neutralizar un mago es nunca encontrarse con ninguno!
+         
+ESTADÍSTICAS:
+
+Especial: 50% de posibilidad de que el lanzador sea silenciado por 2 turnos (salvación contra conjuros para resistir)
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3003 = ~¡Silenciado!~
+
+
+
+
+@3011 = ~Flechas de Enlentecer~
+@3012 = ~Los arqueros siempre han jugado un rol vital en combate. La habilidad de lanzar flecha tras flecha contra los enemigos sin que estos tengan oportunidad de evitarlo ha ayudado a ganar una que otra batalla. La mayor debilidad de un arquero se da cuando las fuerzas enemigas se acercan y comienzan un ataque mano a mano. Esto puede resultar en la muerte de los arqueros. Las Flechas de Enlentecer se crearon para evitar que los enemigos se acerquen a los arqueros, permitiéndoles así poder seguir lanzando sin preocupaciones.
+
+ESTADÍSTICAS:
+
+Especial: 15% de posibilidad de que el lanzador sea enlentecido por 2 turnos (salvación contra conjuros para resistir)
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3013 = ~¡Enlentecido!~
+
+
+
+
+@3021 = ~Flechas de Pacifismo~
+@3022 = ~Tal vez las mejores flechas en el repertorio de los arqueros son las Flechas de Pacifismo por ser tan versátiles. El efecto de estas Flechas es simple; cada objetivo tiene una posibilidad de ser pacificado, y llenado de sensaciones de paz y serenidad, lo que se traduce en la posibilidad de reducir los ataques que puedan producirse. Los usos para estas flechas pueden ser muy variados.
+
+ESTADÍSTICAS:
+
+Especial: 5% de probabilidad de que el objetivo sea pacificado por 2 turnos
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3023 = ~¡Pacificado!~
+
+
+
+
+@3031 = ~Flechas de Curación~
+@3032 = ~En tiempos pasados, los aventureros ingeniosos crearon flechas embebidas en soluciones curativas para salvar la vida de sus compañeros. La flecha puede causar daño, pero la solución curativa lo sanará junto con cualquier otra herida que pudiera tener. Esta es una práctica peligrosa, porque el daño inicial de la flecha puede causar la muerte, cosa que la solución curativa no puede revertir, así que esta practica sólamente es utilizada en situaciones desesperadas.
+
+ESTADÍSTICAS:
+
+Especial: Cura 18 HP
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3033 = ~¡Sanado!~
+
+
+
+
+@3041 = ~Flechas de púas~
+@3042 = ~Las Flechas de púas son idénticas a las flechas normales, excepto  en la punta, donde tienen púas. Esto previene que las flechas puedan ser removidas facilmente, y causan daño extra y sangrado, rajando los músculos bajo la piel.
+
+ESTADÍSTICAS:
+
+Especial: Sangrado
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3043 = ~¡Sangrando!~
+
+
+
+
+@3051 = ~Flechas de De la Piedra a la Carne~
+@3052 = ~Este tipo de flechas es normal, aunque encantadas con el hechizo De la Piedra a la Carne. Estas Flechas no son comunes, aunque pueden ser muy útiles en ciertas situaciones.
+
+ESTADÍSTICAS:
+
+Especial: Lanza De la Piedra a la Carne sobre el objetivo
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3053 = ~¡De la Piedra a la Carne!~
+
+
+
+
+@3061 = ~Flechas de Fatiga~
+@3062 = ~Las Flechas de Fatiga son utilizadas en combate para controlar a las masas. En vez de intentar matar al enemigo, las Flechas de Fatiga incrementan mágicamente la fatiga y el cansancio. Esto quiere decir que el objetivo tendrá menos ganas de luchar, y si aún les queda algo de fuerza, su habilidad en combate se reduce. Hay que hacer notar que las Flechas de Fatiga no produgen cansancio inmediatamente y que su efecto es acumulativo.
+
+ESTADÍSTICAS:
+
+Especial: Incrementa la Fatiga del objetivo
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3063 = ~Fatiga increased!~
+
+
+
+
+@3071 = ~Flechas de Restricción~
+@3072 = ~Las Flechas de Restricción fuero creadas como la flecha más efectiva contra grandes ejércitos. Fueron creadas para evitar cargas, eliminar las formaciones rápidas y el plan de batalla del enemigo y prevenir la retirada de los ejércitos enemigos, si es requerido.
+
+Aunque las Flechas son muy útiles en tiempos de guerra, no pasó mucho tiempo antes de que los aventureros también comenzaran a utilizarlas; las Flechas son magníficas para inmobilizar enemigos rápidos y protegiendo a los aventureros más débiles.
+
+
+ESTADÍSTICAS:
+
+Especial: Previene el movimiento durante 5 turnos (salvación contra conjuros para resistir)
+Daño:  1D6
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida~
+@3073 = ~¡Restringido!~
+
+
+
+
+@3081 = ~Flechas de Largo Alcance~
+@3082 = ~Las flechas de largo alcance son tal vez las más usadas. Las Flechas de Largo Alcance son pequeñas y ligeras, y por lo tanto causan menos daño, aunque en muchos casos el largo alcance de estas flechas es más útil. 
+
+ESTADÍSTICAS:
+
+Especial: Largo Alcance
+Daño:  1D4
+Tipo de Daño:  misil (punzante)
+Peso:  0
+Lanzador:  Arco
+No usable por:
+ Clérigo
+ Druida
+ Mago~
+
+// ----------------------------------------------------------------------------
+// Armor
+// ----------------------------------------------------------------------------
+@4001 = ~Torso de Esqueleto~
+@4002 = ~Este es el torso de un esqueleto humano. Aunque los huesos son viejos, no están rotos. Con un poco de esfuerzo, podrías meterte dentro para hacerlo servir como armadura.
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 8
+Peso: 15
+Requiere: 4 Fuerza
+No usable por:
+ Mago~
+
+
+
+
+@4003 = ~Torso de Esqueleto~
+@4004 = ~Este torso de esqueleto ha sido especialmente encantado con un poder interesante. Mientras esté equipado, quien lo utiliza es invisible a los esqueletos y demás criaturas no-muertas. El cómo se produce esto no se sabe, ya que el conocimiento del como encantar la armadura hace tiempo que se perdió. Aún así, esta armadura tiene un efecto interesante, quien la utiliza crea un enlace especial con las criaturas no-muertas, al punto de no querer lastimarlas.
+
+ESTADÍSTICAS:
+
+Especial: Invisible a los esqueletos
+Especial: 10pt THAC0 de penalizacion contra esqueletos
+Clase de Armadura: 8
+Peso: 15
+Requiere: 4 Fuerza
+No usable por:
+ Mago~
+
+
+
+
+@4013 = ~Armadura Gubbie~
+@4014 = ~Esta armadura es conocida como Armadura Gubbie. Nadie conoce el orígen del nombre, o qué propósito sirve. El único poder de esta armadura es el evitar que el portador sea invisibilizado. Qué uso podría dar alguien a esto es lo que no se sabe.
+
+ESTADÍSTICAS:
+
+Especial: Inmunidad contra invisibilidad
+Clase de Armadura: 3
+Peso: 50
+Requiere: 12 Fuerza
+No usable por:
+ Bardo 
+ Druida
+ Mago
+ Ladrón~
+
+
+
+
+@4023 = ~Túnica Sucia~
+@4024 = ~Aunque esta túnica está completamente sucia y embarrada, hay algo "suertudo" acerca de ella, algo que evita el querer lavarla. Mientras se utilice esta túnica, se tiene la sensación de que las cosas van a salir bien.
+
+ESTADÍSTICAS:
+
+Especial: bonificación +1 a las tiradas de salvación
+Peso: 3
+Sólo usable por:
+Mago (simple, dual y multiclase)~
+
+
+
+
+@4031 = ~Armadura de Humo~
+@4032 = ~Esta maravillosa armadura parece haber sido creada con humo. Liviana y fuerte al mismo tiempo, esta armadura se ajustará a tu cuerpo si la usas. El cómo puede ser una armadura creada con humo va más allá de tu comprensión.
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 5
+Peso: 7
+Requiere: 5 Fuerza~
+
+
+
+
+@4033 = ~Armadura de Humo~
+@4034 = ~Esta maravillosa armadura parece haber sido creada con humo. Liviana y fuerte al mismo tiempo, esta armadura se ajustará a tu cuerpo, sin imponer restricciones a tus movimientos.
+
+El orígen de esta armadura se desconoce, ningún herrero o mago podría haber sido capaz de trabajar con humo de esta forma. Mientras protege contra espadas y demás, no se sabe como puede la armadura contrarrestar otros ataques. A pesar de esto, la armadura es maravillosa, y quién quiera que la haya creado, de seguro que la quiere de vuelta.
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 5
+Peso: 7
+Requiere: 5 Fuerza~
+
+
+
+
+@4041 = ~Cota de Malla~
+@4042 = ~La cota de mallas está fabricada de anillas de metal entrelazadas. Siempre se lleva sobre un acolchado de cuero blando para evitar los roces y amortiguar el impacto de los golpes.   
+
+Esta armadura en particular no muestra marcas, inscripciones o decoración alguna, y parece haberse forjado en una sola pieza con algún metal indestructible. El único adorno de la armadura parecen ser una docena de manchitas rojas pegajosas de varios tonos.
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 5
+Peso: 40
+Requiere: 8 Fuerza
+No usable por:
+ Druida 
+ Mago 
+ Ladrón~
+
+
+
+
+@4043 = ~Voz de la Perdición~
+@4044 = ~La historia de la Voz de la Perdición es desconocida. Esta armadura en particular no muestra marcas, inscripciones o decoración alguna, y parece haberse forjado en una sola pieza con algún metal indestructible.
+
+El único adorno de la armadura parecen ser una docena de manchitas rojas pegajosas de varios tonos. el origen de estas marcas se hace evidente cuando se utiliza. Varias púas se clavan en quien la utiliza, punzando la piel y causando dolor. Esto normalmente convencería a cualquiera de quitarse la armadura.
+
+Una vez puesta, la armadura conversará con quien la usa. EL por qué la existencia de esta comunicación se desconoce, y luego de quitarse la armadura, el sujeto no puede recordar de qué se ha hablado en concreto, sólo que oyó las debilidades de sus enemigos en su mente, permitiéndole hacer más daño crítico.
+
+ESTADÍSTICAS:
+
+Especial: penalización a la destreza -3
+Especial: 25% de incremento en la posibilidad de dar golpes críticos
+Clase de Armadura: 5
+Peso: 40
+Requiere: 8 Fuerza
+No usable por:
+ Druida 
+ Mago 
+ Ladrón~
+
+
+
+
+@4051 = ~Manto Frondoso~
+@4052 = ~El manto puede tener cualquier forma y hacerse con cualquier tipo de tela. La forma más habitual es una pieza redonda de tela con un agujero en el centro para la cabeza, con la tela drapeada desde el cuello con una cadena, un broche, un cordón o alfileres.  
+
+Este manto parece haber sido creado con hojas, las cuales no pueden ser rotas o quitadas.
+
+ESTADÍSTICAS:
+
+Peso: 3~
+
+
+
+
+@4053 = ~Manto Frondoso~
+@4054 = ~Algunas personas nacen siendo druidas, otras deciden serlo, mientras que otras lo descubren en su interior. Ardin fue una de estas personas.
+
+Según la leyenda: Ardin vivía con su familia en un pequeño pueblito en el bosque. Una noche una tormenta de rayos causó un incendio forestal que rapidamente se extendió al pueblo. Ardin y otros trabajaron frenéticamente intentando lanzar agua sobre las llamas, y luego de horas, el pueblo pudo ser salvado, aunque el bosque seguía ardiendo.
+
+Mientras el resto de los pueblerinos descansaban, Ardin continuó su batalla contra el juego, intentando proteger a los árboles y los animales. Horas después, completamente exhausto y con respiración pobre debido al humo, quemado y sangriento, Ardin cayó inconsciente en el bosque. Cuando despertó, encontró la capa colgando de la rama de un arbol. La capa le curó, y le permitió limpiar el área de humoa.
+
+ESTADÍSTICAS:
+
+Especial: buenas bayas 3 veces al día
+Especial: Zona de Aire Dulce 3 veces al día
+Bonificación a la CA: 1
+Peso: 3~
+
+
+
+
+@4063 = ~Capa de protección: Acción Espejada~
+@4064 = ~Wreadi era un hombre muy muy cobarde. Aunque su profesión no era nada fuera de lo común, siendo panadero, Wreadi era verdaderamente cobarde. Tuvo una gran cantidad de objetos mágicos para protegerse (protegerse de "ellos", como él decía, aunque nunca explicó quienes eran), que incluían anillos de protección, botas de velocidad e incluso pergaminos de protección.
+
+A pesar de esto, Wreadi se sentía desprotegido, un enemigo podría matarlo en cualquier momento. Wreadi encomendó entonces la creación de esta capa. La capa está hechizada con la Imágen espejada, que crea una imágen idéntica al portador. Estas imágenes pueden ser rotas como en el hechizo normal, aunque reaparecerán cada 5 turnos.
+
+ESTADÍSTICAS:
+
+Especial: 2 Imágenes espejadas constantes
+Clase de Armadura: 8
+Peso: 3~
+
+
+
+
+@4073 = ~Armadura anti-cautiverio~
+@4074 = ~Los héroes no suelen ser estúpidos aunque a veces lo parezcan. Iudre-Th es un gran ejemplo. Luego de pasar una noche bebiendo con sus compañeros aventureros, se encontró aceptando una prueba suicida; darle una palmada a Rtholiag, el semiliche en su cabeza con una rama de apio.
+
+La mayoría de la gente hubiera dado un paso atrás cuando el alcohol hubiera terminado su efecto, Iudre-Th aún así siguió aceptando el reto, aunque todos le creyeron estúpido.
+
+Nadie sabía, sin embargo que Iudre-Th tenía en su poder muchos artefactos mágicos, lo suficientemente poderosos como para hacerlo inmune contra los hechizos más poderosos del semiliche. La más preciada de sus posesiones era su armadura, que le daba inmunidad contra el Cautiverio. Con esta armadura y varios objetos mágicos más, y con la ramita de apio, Iudre-Th marchó a la guarida de Rtholiag.
+
+Iudre-Th nunca más fue visto, aunque hay varias leyendas sobre él en Faerun, de un hombre apareciendo en las peores batallas, y suavemente dando palmaditas en las cabezas de los guerreros con una rama de apio.
+ 
+ESTADÍSTICAS:
+
+Especial: Inmunidad contra Cautiverio
+Clase de Armadura: 6
+Movimiento Sigiloso: -20
+Abrir Cerraduras: -10
+Encontrar/Desactivar Trampas: -10
+Robar: -10
+Peso: 40
+Requiere: 6 Fuerza
+No usable por:
+ Mago~
+
+// ----------------------------------------------------------------------------
+// Gloves
+// ----------------------------------------------------------------------------
+@5001 = ~Guantes de Defensa CA 1: Gloria Reencontrada~
+@5002 = ~Estos guantes fueron encontrados hace poco en un ático por una mujer. Ella no sabía nada sobre ellos, aunque interesada por la posibilidad de obtener un buen precio al venderlos, los llevó a un mercader local.
+
+El mercader los identificó mágicamente y descubrió que habían pertenecido a Freha, la Mujer Desnuda de las Calles. Freha acechaba caravanas y vagones cerca de Luiren y era famosa por tres cosas: su habilidad de esquivar ataques cuerpo a cuerpo, lanzar dagas y flechas, y su belleza y el que casi siempre andara desnuda.
+
+Estos guantes mágicos usados por explican su primera habilidad, aunque las otras dos quedan a tu imaginación.
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 1
+Peso: 2~
+
+
+
+
+@5011 = ~Guantes de No-arquería~
+@5012 = ~Los Guantes de No-arquería fueron creados como objeto totalmente defensivo. Habiendo escuchado historias de arqueros de tremenda habilidad, siendo capaces de lanzar flechas y flechas siguiendo el exacto mismo camino y siendo capaz de dar en el centro de los objetivos más pequeños y distantes, Gruguth el Grande le pidió a los magos de su corte que crearan un objeto discreto que le protegiera contra tales arqueros.
+
+Sólamente viendo su efectividad durante un intento de asesinato fallido contra Gruguth se les tomó en serio. El poder mágico de los guantes hizo que Gruguth fuera insensible a las Flechas, permitiéndole luchar contra arqueros ya fuera a distancia o cuerpo a cuerpo.
+ 
+ESTADÍSTICAS:
+
+Especial: Las Flechas Rebotan
+Peso: 2~
+
+
+
+
+@5021 = ~Guantes de Salud Mejorada~
+@5022 = ~Es una realidad triste el que para ser eficiente en las artes arcanas se requiera dedicación. Tal vez el elemento más obvio de la dedicación es el tiempo que se gasta estudiando, meditando y contemplando las prácticas. A lo largo de la vida, es probable que la persona resulte ser de complexión débil.
+
+Los Guantes de Salud Mejorada se crearon para combatir tal problema. Los guantes mejoran la salud de quien los usa, dandoles vitalidad extra. Esta alteración de la fuerza vital tiene un problema, la conexión que tienen los magos con la ola mágica puede ser afectada, resultando en un incremento de probabilidad de fallar echizos.
+
+
+ESTADÍSTICAS:
+
+Especial: bonificación de 10 puntos de golpe
+Especial: 5% posibilidad de fallar lanzamiento de echizos
+Peso: 2
+Usable por:
+  Mago~
+
+
+
+
+@5031 = ~Mano Cortada~
+@5032 = ~Esto parece ser una Mano Cortada, crudamente cortada de su propietario por un objeto no muy afilado. La sangre que cubre la mano parece ser reciente, aunque examinándola con detenimiento se ve que produce nueva sangre y nunca parece pudrirse, lo que hace imposible el saber la edad de la mano.
+
+ESTADÍSTICAS:
+
+Peso: 2~
+
+
+
+
+@5033 = ~Mano Cortada~
+@5034 = ~Ni el hechizo más poderoso de identificar puede revelar nada sobre el dueño de esta mano, aunque todos confirman que es una mano cortada real. La identificación de la mano indica que protege contra el hechizo de desintegrar, aunque no se sabe cómo.
+
+Para "usar" la mano, debes cortar una de las tuyas, y en su lugar usar esta. Este es un caso extremo y podría causar problemas serios a la salud mientras la mano esté unida a tu cuerpo. Las investigaciones, además parecen apuntar a que tu propia mano volverá a crecer si no estás usando la Mano Cortada.
+
+ESTADÍSTICAS:
+
+Especial: Objeto Maldito
+Especial: Inmunidad contra el hechizo de desintegrar
+Especial: Penalización de 1 a la destreza mientras esté equipada
+Especial: Penalización de 1 a la constitución mientras esté equipada
+Peso: 2~
+
+
+
+
+@5043 = ~Devorador de Yuanti~
+@5044 = ~Al usar estos guantes, el portador descubre que es casi consciente. Los guantes causan un odio tremendo contra los Tuanti, y parecen hablar al portador, persuadiéndolo a hacer la guerra a esta raza.
+
+Cuando tienen posibilidad de estar en combate cuerpo a cuerpo, los guantes atacarán a los Yuanti, pareciendo morder y masticar su carne.
+
+ESTADÍSTICAS:
+
+Especial:  +5 Daño contra Yuanti
+Peso:  1
+Usable por:
+ Luchadores
+ Paladines
+ Exploradores~
+
+
+
+
+@5053 = ~Guantes de Agarre Seguro~
+@5054 = ~Los Guantes de Agarre Seguro dependen de un tipo especial de goma, creada por el herrero Olynpon del Valle de las Sombras. Tratados bien y con una creación bastante simple, la goma puede ser activada y desactivada con el pensamiento.
+
+Olynpon intentó crear la goma para varios usos, incluyendo el cambio de cerraduras, clavos, e incluso jabón, sin embargo, al combinarla con los guantes encontró el éxito; los aventureros cansados de tirar sus armas en pánico causado por dragones y otras criaturas, compraron muchísimas unidades.
+
+ESTADÍSTICAS:
+
+Especial:  Nunca soltarás tu arma
+Peso:  1~
+
+// ----------------------------------------------------------------------------
+// Belts
+// ----------------------------------------------------------------------------
+@6001 = ~Cinturón de Claridad~
+@6002 = ~Aunque construído con materiales simples y de diseño básico, el Cinturón de Claridad es buscado por los magos de los reinos.
+
+Creado hace un poco más de cien años por el mago Yugun Boldstar como parte de una serie de experimentos concentrados en la naturaleza de la magia, el Cinturón de Claridad permite a quien lo usa percibir la magia más fuertemente. Esto hace que la pueda manipular más fácil y rápidamente, lo que permite que los hechizos sean lanzados con más rapidez.
+
+ESTADÍSTICAS:
+
+Especial:  Bonificación +1 al tiempo de lanzamiento
+Peso:  2~
+
+
+
+
+@6011 = ~Cinturón de la vida~
+@6012 = ~El Cinturón de la vida parece vibrar con magia interna. Aunque nadie sabe a ciencia cierta de dónde salió este cinturón o quién lo creó, el poder que posee es bien conocido; el cinturón de alguna forma actúa sobre las criaturas no muertas, confundiendo incluso a los zombies, enlenteciendo sus ataques y empeorando su habilidad de ataque.
+
+ESTADÍSTICAS:
+
+Especial:  CA +2 contra muertos vivientes
+Peso:  2~
+
+
+
+
+@6021 = ~Cinturón del Segundo Sentido~
+@6022 = ~El tener ojos en la nuca sería útil para todos, pero sobretodo para un Ladrón. El saber cuando alguien se está moviendo sigilosamente hacia ti puede salvar tu vida.
+
+Cuando se equipa, este cinturón mejora el segundo sentido de quien lo usa, dando inmunidad contra ataques rastreros, y permitiendo encontrar ilusiones.
+
+ESTADÍSTICAS:
+
+Especial:  Inmunidad contra apuñalamiento por la espalda
+Especial:  Bonificación a Detectar Ilusión 10pt.
+Peso:  2~
+
+
+
+
+@6031 = ~Cinturón de Uno mismo~
+@6032 = ~Hechizar puede ser muy útil en el momento de conseguir información vital, recibir un descuento, o simplemente al caminar dentro de un complejo lleno de guardias. Esto hace que el hechizar sea util... ¡a menos que seas tú quien tiene la información vital, seas dueño de una tienda o vivas en un complejo resguardado!
+
+Baron Akthid tuvo varias docenas de cinturones especialmente encantados y distribuídos a su guardia personal para que nadie pudiera hechizarlos para hacer que le traicionaran.
+
+ESTADÍSTICAS:
+
+Especial:  Inmunidad contra Hechizar
+Peso:  2~
+
+// ----------------------------------------------------------------------------
+// Amulets
+// ----------------------------------------------------------------------------
+@7001 = ~Amuleto de Estancia Firme~
+@7002 = ~'La Mano de Piedra' era un grupo de aventureros, consistía de 6 personas que viajaban cerca de Calimshan. Era una broma conocida entre los del grupo que Rasimm, el Ladrón, siempre se escaqueaba a alguna batalla (aunque él insistía que no era su culpa). Rasimm siempre terminaba siendo presa de un cautiverio, laberinto o alazo.
+
+Luego de una batalla bastante particular contra un liche, durante la cual, Rasimm terminó otra vez en un laberinto, el grupo decidió solventar el problema de una vez por todas: Crearon un amuleto para Rasimm.
+
+ESTADÍSTICAS:
+
+Especial:  Inmunidad contra Cautiverio
+Especial:  Inmunidad contra Laberinto
+Especial:  Inmunidad contra Alazo~
+
+
+
+
+@7011 = ~Amuleto de Conocimiento~
+@7012 = ~Saii era una maga, o al menos eso decía. Ella pasaba la mayor parte del tiempo identificando objetos que le traían. Un día, luego de identificar la Caldera de Calentado Rápido, decidió poner su conocimiento en un amuleto, el cual podría dar a un aprendiz, para así poder dedicarse a otras cosas más importantes.
+
+Este parece ser el amuleto que creó Saii. El cómo lo encontraste aquí es un misterio, porque Saii aún continúa practicando magia en Aguas Profundas. No hay duda que le gustaría recuperar el amuleto. 
+
+ESTADÍSTICAS:
+
+Especial:  Bonificación de 10 al Conocimiento~
+
+
+
+
+@7021 = ~Maldición de Tymora~
+@7022 = ~Los sacerdotes de Tymora viven peligrosamente, porque su dios demanda que vivan (o mueran) dependiendo de su suerte.
+
+El amuleto permitirá a un sacerdote vivir peligrosamente sin tener que estar buscando el peligro en sí, porque 1 de cada 4 hechizos fallará. Esto puede ser desastroso: el fallar al querer matar monstruos que atacan al sacerdote o el fallar curar a otra persona.
+
+Para compensar por esto, el amuleto incrementa la fortuna del sacerdote en otras áreas, típicamente haciendolo más resistente a hechizos hostiles.
+
+ESTADÍSTICAS:
+
+Especial:  25% fallar hechizos
+Especial:  1pt bonificación a las tiradas de salvación~
+
+
+
+
+@7031 = ~Defensa Arácnida~
+@7032 = ~Mucha gente tiene un miedo natural a las arañas: muchas patas, muchos ojos, ¡sin mencionar las telas! Supfi El Valiente era uno de ellos, de verdad odiaba a las arañas. Sin embargo, su miedo a las arañas y su (relativamente) bien merecido título no iban bien juntos.
+
+Por esta razón Supfi el Valiente mandó crear este amuleto, que actúa como una segunda piel frente a ataques de arañas. Esto le dió el valor suficiente como para saltar dentro de una guarida de arañas, con la intención de matarlas. Sin embargo, no esperaba encontrarse con aventureros Drow ahí dentro. Aunque su cuerpo nunca fue encontrado, no es probable que haya sobrevivido.
+
+ESTADÍSTICAS:
+
+Especial:  Bonificación +3 a la CA contra arañas~
+
+
+// ----------------------------------------------------------------------------
+// Cascos
+// ----------------------------------------------------------------------------
+@8001 = ~Calavera~
+@8002 = ~Esta parece ser una Calavera humana, con runas marcadas. Aunque la Calavera debería ser mucho más pequeña para sentarte bien, de alguna forma sientes que será de tu medida.
+
+ESTADÍSTICAS:
+
+Peso: 1~
+
+@8003 = ~Calavera of Theolon~
+@8004 = ~Theolon era un sacerdote muy devoto de un dios antiguo, que se aventuraba en los reinos con unos amigos, venciendo al mal donde lo encontrara. Como agradecimiento a su devoción, le concedió su dios a Theolon una protección especial. Aunque esta protección se centraba en Theolon, en reconocimiento a su ayuda, también se extendió a sus acompañantes.
+
+Theolon desapareció hace unos años esplorando las Montañas Nezher. Ahora que tienes esta calavera en tus manos, parece que su portador encontró un final bastante feo. Sin importar su muerte, parece que la calavera aún tiene sus protecciones.
+
+ESTADÍSTICAS:
+
+Especial: Bonificación +2 a la CA para todos los miembros del grupo
+Peso: 1~
+
+
+
+
+@8011 = ~Yelmo de Absorción~
+@8012 = ~El encantar un objeto para que proteja contra cierto hechizo es una tarea ardua y compleja que requiere varias semanas. Desafortunadamente para él, el joven Ambldun no tomó esto en cuenta mientras se preparaba para la Gran Prueba.
+
+La Gran Prueba (Como se refería a ella Ambldun) era enviada a todos los magos a kilómetros de distancia y hablaba de "Apuesto a que no me matas usando magia". Con esto, Ambldun comenzó a crear un plan: encantar un yelmo que le diera inmunidad a cada uno de los hehizos existentes. Ambldun, quedó de piedra al darse cuenta de todo el tiempo que esto requería, y justo terminó de crear el primer encanto el dia de la Gran Prueba.
+
+ESTADÍSTICAS:
+
+Especial: Inmunidad contra proyectil mágico
+Bonificación a la CA:  Ninguna
+Especial:  Protege contra golpes críticos
+Peso: 2
+No usable por:
+Mago
+Bardo
+Ladrón~
+
+
+
+
+@8021 = ~Casco~
+@8022 = ~Esta clase de casco de rostro descubierto, hecho con cuero reforzado o con metal, cubre casi toda la cabeza, salvo la cara y el cuello. Estos cascos suelen incluir una protección para la nariz.  
+
+ESTADÍSTICAS:
+
+Bonificación a la CA:  Ninguna
+Especial:  Protege contra golpes críticos
+Peso: 2
+Usable By:
+Ladrón~
+
+@8023 = ~Casco del Ladrón~
+@8024 = ~Casco del Ladrón DESC
+
+Ranij era un hombre habilidoso que vivió en Athkatla hace varias décadas. Ranij también era un gran Ladrón, uno de los mejores que ha vivido nunca. O lo hubiera sido, si hubiera pasado la prueba de admisión a la Cofradía de ladrones.
+
+Mientras Ranij podía robar a cualquier persona sin que se diera cuenta, o caminar por la calle en plena luz del día evitando ser visto o incluso podía ver una trampa a varios metros de distancia y desarmarla en segundos, no podía poner trampas solo.
+
+Ranij fue echado de la cofradía por no poder poner trampas, y esa fue la razón por la cual comisionó la creación de este casco. Mientras esté equipado, el casco da conocimiento sobre trampas directamente a quien lo usa.
+
+El casco funcionó tan bien que Ranij volvió a la cofradía con el casco puesto. Ranij pasó facilmente todas las pruebas que le impusieron, incluso la de poner trampas. Al completar todas las pruebas, Ranij estaba excitadísimo con la posibilidad de entrar finalmente en la Cofradía. Desafortunadamente, y algunos dirían extrañamente, a la cofradía no le gustan las trampas, especialmente en su prueba de entrada.
+
+El cuerpo de Ranij nunca fue encontrado...
+
+ESTADÍSTICAS:
+
+Especial:  25pt de bonificación a colocar trampas
+Especial:  Protege contra golpes críticos
+Peso: 2
+Usable por:
+Ladrón~
