@@ -1,4 +1,4 @@
-iiItem Mod V1
+iiItem Mod V2
 -------------
 
 +) Contents
@@ -117,6 +117,9 @@ Amulet of Knowledge permanently increases Lore by 10pt per equipping of the item
 
 +) Section 6. Version History
 =============================
+V2 [29/12/2006]
+  - Corrected non-showing arrow icons
+
 V1 [27/12/2006]
   - Initial Release
 
