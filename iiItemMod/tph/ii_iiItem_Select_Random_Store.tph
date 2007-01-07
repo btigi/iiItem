@@ -17,6 +17,79 @@ Summary
 
 DEFINE_ACTION_MACRO ii_iiItem_Select_Random_Store
 BEGIN
+
+  ACTION_IF FILE_EXISTS ~override/_sw1h01.itm~ THEN BEGIN // Tutu
+
+    OUTER_SET storeresult = RANDOM(1 90)
+    OUTER_SET added       = 0
+
+    // FAI
+    ACTION_IF ((storeresult <= 10) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _friend.sto
+      OUTER_SET added = 1
+    END
+
+    // High Hedge
+    ACTION_IF ((storeresult <= 20) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _ighhedg.sto
+      OUTER_SET added = 1
+    END
+
+    // Carnival
+    ACTION_IF ((storeresult <= 30) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _sto4909.sto
+      OUTER_SET added = 1
+    END
+
+    // Thunderhammer Smithy
+    ACTION_IF ((storeresult <= 40) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _taerum.sto
+      OUTER_SET added = 1
+    END
+
+    // Sorcerous Sundries
+    ACTION_IF ((storeresult <= 50) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _sto0703.sto
+      OUTER_SET added = 1
+    END
+
+    // Ulgoth
+    ACTION_IF ((storeresult <= 60) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _ulgoth.sto
+      OUTER_SET added = 1
+    END
+
+    // High Hall of Wonders
+    ACTION_IF ((storeresult <= 70) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _TEM0131.sto
+      OUTER_SET added = 1
+    END
+
+    // Gullykin Temple
+    ACTION_IF ((storeresult <= 80) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _TEM4003.sto
+      OUTER_SET added = 1
+    END
+
+    // Jovial Juggler
+    ACTION_IF ((storeresult <= 90) AND (added = 0)) THEN
+    BEGIN
+      OUTER_SPRINT storefilename _INN3304.sto
+      OUTER_SET added = 1
+    END
+
+  END
+  ELSE
+  BEGIN
+
     OUTER_SET storeresult = RANDOM(1 90)
     OUTER_SET added       = 0
 
@@ -73,4 +146,5 @@ BEGIN
       OUTER_SPRINT storefilename suelf10.sto
       OUTER_SET added = 1
     END
+  END
 END  // define_action_macro
