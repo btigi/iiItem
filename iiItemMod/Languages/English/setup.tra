@@ -16,6 +16,9 @@
 @650 = ~Items in stores AND items throughout game (uniques in stores)~
 @700 = ~Items in stores AND items throughout game (uniques scattered)~
 @750 = ~Items in stores AND items throughout game (uniques mixed)~
+@800 = ~Should flavour items be included
+  0 Flavour items not included
+  1 Flavour items are included~
 
 
 @51 = ~Items~
@@ -95,9 +98,10 @@ Special: Casts Vocalize on imbiber~
 
 
 @2071 = ~Potion of Necromantic Recuperation~
-@2072 = ~In trying to duplicate the natural regeneration abilities of trolls and other creatures, mages have pushed the boundaries further and further. The mixture for this potion is the result of a particularly gruesome series of experiments, which are reflecting in how the potion works. Upon drinking the bitter tasting liquid, the imbiber falls to the ground in a deep coma. While in this deep coma, the target appears dead (and is hence ignored by ravenous monsters), though in reality the opposite is true - the target is recuperating wounds and damage at a rapid rate. The real negative to using this potion comes form the fact that it works by accessing the negative energy inherent within all beings - this causes a permanent loss of vitality.
+@2072 = ~In trying to duplicate the natural regeneration abilities of trolls and other creatures, mages have pushed the boundaries further and further. The mixture for this potion is the result of a particularly gruesome series of experiments, which are reflected in how the potion works. Upon drinking the bitter tasting liquid, the imbiber falls to the ground in a deep coma. While in this deep coma, the target appears dead (and is hence ignored by ravenous monsters), though in reality the opposite is true - the target is recuperating wounds and damage at a rapid rate. The real negative to using this potion comes from the fact that it works by accessing the negative energy inherent within all beings - this causes a permanent loss of vitality.
 
 STATISTICS:
+Special: Imbiber will not be directly targetted by enemies
 Special: Regain 1hp/second for 5 rounds
 Special: -5 Maximum HP per use~
 
@@ -110,13 +114,14 @@ Special: -5 Maximum HP per use~
 STATISTICS:
 
 Special: Every strike is a critical hit (5 rounds)
-Special: Infects imbiber with disease~
+Special: Imbiber suffers effects of slow (10 rounds)
+Special: Imbiber suffers 1d20 disease damage~
 
 
 
 
 @2091 = ~Umberhulk Blood~
-@2092 = ~This bright, pungent, foul smelling liquid is made form actual Umberhulk blood. By consuming the liquid, the imbiber becomes effectively invisible to Umberhulks, due to the complex pheromones given off.
+@2092 = ~This bright, pungent, foul smelling liquid is made from actual Umberhulk blood. By consuming the liquid, the imbiber becomes effectively invisible to Umberhulks, due to the complex pheromones given off.
 
 This potion is quite rare, both in its sale and its use - dead Umberhulks are not a common appearance in the alchemist quarters of most cities, and though adventurers will often put up with some inconveniences, smelling strongly of an Umberhulk is not usually one of them.
 
@@ -128,7 +133,7 @@ Special: Invisible to Umber Hulks for 1 turn~
 
 
 @2101 = ~Rocksalt~
-@2102 = ~The liquid of this potion is thin and flows easily, and has the sandy pick colour of it's main physical ingredient - rocksalt. With a few magical spells cast on it during it's mixing, the rocksalt takes on special properties. Upon use, the potion hardens the skin of the imbiber, making it harder to piece, and hence making this potion an excellent choice for melee adventurers. The downside of this skin hardening process is slight a loss of dexterity - this is not noticeable in many cases, though it does disable spell-casting, as the complex and movements required are no longer possible.
+@2102 = ~The liquid of this potion is thin and flows easily, and has the sandy pick colour of its main physical ingredient - rocksalt. With a few magical spells cast on it during its mixing, the rocksalt takes on special properties. Upon use, the potion hardens the skin of the imbiber, making it harder to piece, and hence making this potion an excellent choice for melee adventurers. The downside of this skin hardening process is slight a loss of dexterity - this is not noticeable in many cases, though it does disable spell-casting, as the complex and movements required are no longer possible.
 
 STATISTICS:
 
@@ -144,7 +149,7 @@ Special: -1 Dexterity for 3 rounds~
 
 STATISTICS:
 
-Special: +1 Charisma for 24 hours~
+Special: +2 Charisma for 24 hours~
 
 // ----------------------------------------------------------------------------
 // Arrows
@@ -161,7 +166,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3003 = ~Silenced!~
 
 
@@ -179,7 +185,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3013 = ~Slowed!~
 
 
@@ -197,7 +204,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3023 = ~Pacified!~
 
 
@@ -215,7 +223,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3033 = ~Healed!~
 
 
@@ -233,7 +242,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3043 = ~Bleeding!~
 
 
@@ -251,7 +261,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3053 = ~Un-petrified!~
 
 
@@ -269,7 +280,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3063 = ~Fatigue increased!~
 
 
@@ -278,7 +290,7 @@ Not usable by:
 @3071 = ~Arrows of Restriction~
 @3072 = ~Arrows of Restriction were specially developed as the ultimate arrow for use in large army engagements. The arrows were intended to prevent charges, eliminate the rapid repositioning required by the enemy battle-plan, and to prevent retreat of the enemy, if required.
 
-Although the arrows proved useful in army warfare, it wasn't long until enterprisingly adventurers began using them in their roles; the arrows often prove their use by immobilising fast foes, preventing warnings being sounded, and protecting more fragile adventurers.
+Although the arrows proved useful in army warfare, it wasn't long until enterprising adventurers began using them in their roles; the arrows often prove their use by immobilising fast foes, preventing warnings being sounded, and protecting more fragile adventurers.
 
 
 STATISTICS:
@@ -290,7 +302,8 @@ Weight:  0
 Launcher:  Bow
 Not usable by:
  Cleric
- Druid~
+ Druid
+ Mage~
 @3073 = ~Restricted!~
 
 
@@ -315,7 +328,7 @@ Not usable by:
 // Armor
 // ----------------------------------------------------------------------------
 @4001 = ~Skeleton Ribcage~
-@4002 = ~This is the complete skeletal ribcage of a human being. Though the bones are old, they are not brittle or even chipped. With a bit of effort, you could slide the ribcage over yourself, to server as armor.
+@4002 = ~This is the complete skeletal ribcage of a human being. Though the bones are old, they are not brittle or even chipped. With a bit of effort, you could slide the ribcage over yourself, to serve as armor.
 
 STATISTICS:
 
@@ -329,7 +342,7 @@ Not Usable By:
 
 
 @4003 = ~Skeleton Ribcage~
-@4004 = ~This skeletal ribcage has been specially enchanted to have a rather interesting power. While equipped, the wearer appears invisible to skeletal undead creatures - in effect the creatures see the wearer as one of their own, and completely ignore them. How this is accomplish is not known, for the process to enchant armor in such a way has long been lost, however there is an interesting side-effect, the wearer develops a sympathetic link with skeletal creatures, to the point of sub-consciously despising doing physical damage to such a creature.
+@4004 = ~This skeletal ribcage has been specially enchanted to have a rather interesting power. While equipped, the wearer appears invisible to skeletal undead creatures - in effect the creatures see the wearer as one of their own, and completely ignore them. How this is accomplished is not known, for the process to enchant armor in such a way has long been lost, however there is an interesting side-effect, the wearer develops a sympathetic link with skeletal creatures, to the point of sub-consciously despising doing physical damage to such a creature.
 
 STATISTICS:
 
@@ -404,7 +417,7 @@ Requires: 5 Strength~
 @4041 = ~Chain Mail~
 @4042 = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.  
 
-This particular armor bears no makers mark, no inscription or decoration, no dents of scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal. The only adornment on the armor are the dozens of sticky red stains, of various shades.
+This particular armor bears no makers mark, no inscription or decoration, no dents or scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal. The only adornment on the armor are the dozens of sticky red stains, of various shades.
 
 STATISTICS:
 
@@ -420,7 +433,7 @@ Not Usable By:
 
 
 @4043 = ~Voice of Doom~
-@4044 = ~The history of the Voice of Doom is unknown. The armor bears no makers mark, no inscription or decoration, no dents of scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal.
+@4044 = ~The history of the Voice of Doom is unknown. The armor bears no makers mark, no inscription or decoration, no dents or scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal.
 
 The only adornment on the armor are the dozens of sticky red stains, of various shades. The origin of these stains becomes clear when the armor is worn. Several vicious spikes stick into the wearer, deeply piecing the skin and causing significant pain. This would normally be enough to convince anyone to remove the armor immediately, were it not for the Voice of Doom the amour is named after.
 
@@ -574,7 +587,7 @@ STATISTICS:
 Special: Cursed item
 Special: Immune to Disintegration spell
 Special: 1pt DEX penalty while equipped
-Special: dpt CON penalty while equipped
+Special: 1pt CON penalty while equipped
 Weight: 2~
 
 
@@ -787,6 +800,77 @@ Usable By:
 Thief~
 
 
+// ----------------------------------------------------------------------------
+// Daggers
+// ----------------------------------------------------------------------------
+@9001 = ~Razoredge Dagger +1~
+@9002 = ~This dagger is very dangerous, even to the wielder - for it has no handle! Whether this is by design, or whether the handle has worn away over time is unknown. The blade of the dagger is razor sharp, and can pierce deep into flesh causing much more damage than a normal dagger, though their is a price for this extra damage - the blade will severely cut the palm of the wielder upon each successful strike.
+
+There is one more feaure of the blade which may affect its usability. Carved into the blade approximately halfway from the tip is a very small glyph, which bears no resemblance to anything you have ever seen. This glyph gives off a faint glow, and seems to offer a limited form of magic resistance.
+
+
+STATISTICS:
+
+Special: +10% magic resistance
+Special: 1D4 damage to wielder per strike
+THACO:  +1 bonus
+Damage:  1D9+1
+Damage type:  piercing
+Weight: 1
+Speed Factor: 2 
+Proficiency Type: Dagger
+Type:  1-handed
+Requires:3 Strength
+Not Usable By:
+ Cleric~
+
+
+// ----------------------------------------------------------------------------
+// Hammers
+// ----------------------------------------------------------------------------
+@10001 = ~Icehammer +1~
+@10002 = ~You have often heard rumours of strange weapons made from ice instead of metal - now you hold one in your hand. There is no clue of where the weapon originated, the hammer is perfectly smooth and bears no markings or runes. Though cold to the touch, you are able to handle this weapon with no difficulty. Despite the clearly magical nature of the weapon you suspect it is still relatively fragile, and may eventually break.
+
+
+STATISTICS:
+
+Special: 1% chance of ice shattering
+Special: 1D5 cold damage
+THACO:  +1 bonus
+Damage:  1D5
+Damage type:  crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type:  1-handed
+Requires: 9 Strength
+Not Usable By:
+ Druid
+ Mage 
+ Thief~
+@10003 = ~Hammer shattered!~
+
+
+// ----------------------------------------------------------------------------
+// Quarterstaff
+// ----------------------------------------------------------------------------
+@11001 = ~Staff of Knocking~
+@11002 = ~This baton-like staff is short, green and strange. The staff seems to weigh as much as a normal quarterstaff, perhaps even more, while at the same time it dances and drifts on the air without effort. Even a glancing blow from the weapon has the potential to knock the target back several feet, and the staff can also easily break the locks on doors and chests with just a gentle tap.
+
+
+STATISTICS:
+
+Special: 5% knock back target
+Special: Cast Knock 3x per day
+Damage:  1D6
+Damage type:  crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Staff
+Type:  2-handed
+Requires: 5 Strength~
+@11003 = ~Knockback!~
+
 /*
   OMG - cut content!!
   Where is the iiItem UB? Or iiItem fixpack? Developer intent???
@@ -796,4 +880,18 @@ Thief~
     Harp of Haste
   Healing Harp
   Kobold Flute (invisible to kobolds while playing?) - set bard song while equipped?
+
+  Shield of Deflection
+    Deflect all throwing daggers back at the attacker
+
+  Weightless (Axe?)
+    Axe +1, but with 0 weight
+
+  Hammer of Magical Might
+    Immune to all level 1 spells while equipped
+    2pt luck penalty - it's just bad karma
+
+  Cursed cloak of the Dawn
+    Immune to Learn Spell
+    1pt movement rate bonus
 */

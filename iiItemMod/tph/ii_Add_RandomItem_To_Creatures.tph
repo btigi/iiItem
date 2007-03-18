@@ -13,49 +13,72 @@ BEGIN
     BEGIN
       READ_LONG 0x02bc item_offset
       READ_LONG 0x02c0 item_count
+      READ_BYTE 0x0271 general_type
 
-      WHILE ((0 < "%item_count%") AND ("%iihasitem%" = 0))
+      PATCH_IF (%general_type% = 1) THEN
       BEGIN
-        READ_ASCII ("%item_offset%" + (("%item_count%"-1) * 20)) iithisitem
-        PATCH_PRINT "%iithisitem%"
-
-        INNER_ACTION
+        WHILE ((0 < "%item_count%") AND ("%iihasitem%" = 0))
         BEGIN
-          ACTION_IF FILE_EXISTS_IN_GAME ~%iithisitem%.ITM~ THEN
+          READ_ASCII ("%item_offset%" + (("%item_count%"-1) * 20)) iithisitem
+          PATCH_PRINT "%iithisitem%"
+  
+          INNER_ACTION
           BEGIN
-            COPY_EXISTING ~%iithisitem%.itm~ ~override~
-              PATCH_IF (SOURCE_SIZE > 0x71) THEN
-              BEGIN
-                READ_SHORT 0x001c iiitemtype
-
-                PATCH_IF ("%iiitemtype%" == %iicheckitemtype%) THEN
+            ACTION_IF FILE_EXISTS_IN_GAME ~%iithisitem%.ITM~ THEN
+            BEGIN
+              COPY_EXISTING ~%iithisitem%.itm~ ~override~
+                PATCH_IF (SOURCE_SIZE > 0x71) THEN
                 BEGIN
-                  SET iihasitem = 1
+                  READ_SHORT 0x001c iiitemtype
+  
+                  PATCH_IF ("%iiitemtype%" == %iicheckitemtype%) THEN
+                  BEGIN
+                    SET iihasitem = 1
+                  END
+  
                 END
-
-              END
-            BUT_ONLY_IF_IT_CHANGES
+              BUT_ONLY_IF_IT_CHANGES
+            END
           END
+  
+          SET "item_count" = ("%item_count%" - 1)
+        END
+  
+        LAUNCH_PATCH_MACRO ~%iimacro_name%~
+  
+        PATCH_IF (iihasitem == 1) THEN
+        BEGIN
+          SET iiaddchance = existing_item_add_chance
+        END
+        ELSE
+        BEGIN
+          SET iiaddchance = new_item_add_chance
+        END
+  
+        PATCH_IF (RANDOM(1 100) <= %iiaddchance%) THEN
+        BEGIN
+          INNER_ACTION
+          BEGIN
+            ACTION_IF !(VARIABLE_IS_SET %iimaxitemcount%) THEN
+            BEGIN
+              OUTER_SET "iithismaxitemcount" = 40
+            END
+            ELSE
+            BEGIN
+              OUTER_SET "iithismaxitemcount" = %iimaxitemcount%
+            END
+    
+            ACTION_IF (iiitemcount = "-1") THEN
+            BEGIN
+              OUTER_SET iithisitemcount = RANDOM(1 %iithismaxitemcount%)
+            END
+          END
+  
+  
+          ADD_CRE_ITEM ~%iiselecteditem%~ (%iithisitemcount%) #0 #0 ~NONE~ ~INV~
         END
 
-        SET "item_count" = ("%item_count%" - 1)
-      END
-
-      LAUNCH_PATCH_MACRO ~%iimacro_name%~
-
-      PATCH_IF (iihasitem == 1) THEN
-      BEGIN
-        SET iiaddchance = existing_item_add_chance
-      END
-      ELSE
-      BEGIN
-        SET iiaddchance = new_item_add_chance
-      END
-
-      PATCH_IF (RANDOM(1 100) <= %iiaddchance%) THEN
-      BEGIN
-        ADD_CRE_ITEM ~%iiselecteditem%~ #0 #0 #0 ~NONE~ ~INV~  // FIXME - new macro, so we can have random amounts
-      END
+      END  
 
     END
 

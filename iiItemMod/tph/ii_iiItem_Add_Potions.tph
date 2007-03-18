@@ -25,12 +25,18 @@ BEGIN
   
       OUTER_SPRINT itemname i1po001
       LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+      ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+      BEGIN  
+        OUTER_SPRINT itemname i1po002
+        LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+      END
   
-      OUTER_SPRINT itemname i1po002
-      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
-  
-      OUTER_SPRINT itemname i1po003
-      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+      ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+      BEGIN
+        OUTER_SPRINT itemname i1po003
+        LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+      END
   
       OUTER_SPRINT itemname i1po004
       LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
@@ -47,8 +53,11 @@ BEGIN
       OUTER_SPRINT itemname i1po008
       LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
   
-      OUTER_SPRINT itemname i1po009
-      LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+      ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+      BEGIN
+        OUTER_SPRINT itemname i1po009
+        LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+      END
   
       OUTER_SPRINT itemname i1po010
       LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~

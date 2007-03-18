@@ -33,6 +33,29 @@ SUBCOMPONENT @1000
 //!----------------------------------------------------------------------------
 BEGIN @51
 DESIGNATED 1
+
+
+  ACTION_IF FILE_EXISTS ~override/_sw1h01.itm~ THEN BEGIN // Tutu
+    OUTER_SET done = 0
+    OUTER_WHILE (done = 0)
+    BEGIN
+      PRINT @800
+      ACTION_READLN _INCLUDE_FLAVOUR_
+      ACTION_IF (IS_AN_INT %_INCLUDE_FLAVOUR_%) THEN
+      BEGIN
+        ACTION_IF (%_INCLUDE_FLAVOUR_% = 0) OR (%_INCLUDE_FLAVOUR_% = 1) THEN
+        BEGIN
+          OUTER_SET done = 1
+        END
+      END
+    END
+  END
+  ELSE
+  BEGIN
+    OUTER_SET _INCLUDE_FLAVOUR_ = 1
+  END
+
+
   // ----------------------------------------------------------------------------
   // Potions
   // ----------------------------------------------------------------------------
@@ -44,16 +67,22 @@ DESIGNATED 1
   SAY 0xde  @1100
 
   // Restoration
-  COPY ~iiItemMod/potions/itm/i1po002.itm~ ~override~
-  SAY NAME2 @2021
-  SAY DESC  @2022
-  SAY 0xde  @1100
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/potions/itm/i1po002.itm~ ~override~
+    SAY NAME2 @2021
+    SAY DESC  @2022
+    SAY 0xde  @1100
+  END
 
   // Protection Timestop
-  COPY ~iiItemMod/potions/itm/i1po003.itm~ ~override~
-  SAY NAME2 @2031
-  SAY DESC  @2032
-  SAY 0xde  @1100
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/potions/itm/i1po003.itm~ ~override~
+    SAY NAME2 @2031
+    SAY DESC  @2032
+    SAY 0xde  @1100
+  END
 
   // Refreshment
   COPY ~iiItemMod/potions/itm/i1po004.itm~ ~override~
@@ -86,10 +115,13 @@ DESIGNATED 1
   SAY 0xde  @1100
 
   // Umberhulk Blood
-  COPY ~iiItemMod/potions/itm/i1po009.itm~ ~override~
-  SAY NAME2 @2091
-  SAY DESC  @2092
-  SAY 0xde  @1100
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/potions/itm/i1po009.itm~ ~override~
+    SAY NAME2 @2091
+    SAY DESC  @2092
+    SAY 0xde  @1100
+  END
 
   // Rocksalt
   COPY ~iiItemMod/potions/itm/i1po010.itm~ ~override~
@@ -164,9 +196,9 @@ DESIGNATED 1
   SAY 0xde  @3073
 
   // Far Range Arrows
-  COPY ~iiItemMod/arrows/itm/i1ar008.itm~ ~override~
-  SAY NAME2 @3081
-  SAY DESC  @3082
+//  COPY ~iiItemMod/arrows/itm/i1ar008.itm~ ~override~
+//  SAY NAME2 @3081
+//  SAY DESC  @3082
 
   // BAM files
   COPY ~iiItemMod/arrows/bam/copy~ ~override~
@@ -223,9 +255,12 @@ DESIGNATED 1
   COPY ~iiItemMod/armor/eff/i1ck003.eff~ ~override~
 
   // Anti-Imprisonment Armor
-  COPY ~iiItemMod/armor/itm/i1lt002.itm~ ~override~
-  SAY NAME2 @4073
-  SAY DESC  @4074
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/armor/itm/i1lt002.itm~ ~override~
+    SAY NAME2 @4073
+    SAY DESC  @4074
+  END
 
   // BAM files
   COPY ~iiItemMod/armor/bam/copy~ ~override~
@@ -250,16 +285,22 @@ DESIGNATED 1
   SAY DESC  @5022
 
   // Severed Hand
-  COPY ~iiItemMod/gloves/itm/i1br004.itm~ ~override~
-  SAY NAME1 @5031
-  SAY UNIDENTIFIED_DESC @5032
-  SAY NAME2 @5033
-  SAY DESC  @5034
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/gloves/itm/i1br004.itm~ ~override~
+    SAY NAME1 @5031
+    SAY UNIDENTIFIED_DESC @5032
+    SAY NAME2 @5033
+    SAY DESC  @5034
+  END
 
   // Yuanti Devourer
-  COPY ~iiItemMod/gloves/itm/i1br005.itm~ ~override~
-  SAY NAME2 @5043
-  SAY DESC  @5044
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/gloves/itm/i1br005.itm~ ~override~
+    SAY NAME2 @5043
+    SAY DESC  @5044
+  END
 
   COPY ~iiItemMod/gloves/eff/i1br005.eff~ ~override~
 
@@ -305,9 +346,12 @@ DESIGNATED 1
   // ----------------------------------------------------------------------------
 
   // Amulet of Firm Standing
-  COPY ~iiItemMod/amulets/itm/i1am001.itm~ ~override~
-  SAY NAME2 @7001
-  SAY DESC  @7002
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/amulets/itm/i1am001.itm~ ~override~
+    SAY NAME2 @7001
+    SAY DESC  @7002
+  END
 
   // Amulet of Knowledge
   COPY ~iiItemMod/amulets/itm/i1am002.itm~ ~override~
@@ -352,6 +396,40 @@ DESIGNATED 1
   // BAM files
   COPY ~iiItemMod/helmets/bam/copy~ ~override~
 
+  // ----------------------------------------------------------------------------
+  // Daggers
+  // ----------------------------------------------------------------------------
+  // Razoredge Dagger
+  COPY ~iiItemMod/daggers/itm/i1dg001.itm~ ~override~
+  SAY NAME2 @9001
+  SAY DESC  @9002
+
+  // BAM files
+  COPY ~iiItemMod/daggers/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Hammers
+  // ----------------------------------------------------------------------------
+  // Icehammer +1
+  COPY ~iiItemMod/hammers/itm/i1hr001.itm~ ~override~
+  SAY NAME2 @10001
+  SAY DESC  @10002
+  SAY 0x19e @10003
+
+  // BAM files
+  COPY ~iiItemMod/hammers/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Quarterstaff
+  // ----------------------------------------------------------------------------
+  // Staff of Knocking
+  COPY ~iiItemMod/quarterstaff/itm/i1qs001.itm~ ~override~
+  SAY NAME2 @11001
+  SAY DESC  @11002
+  SAY 0x1a6 @11003
+
+  // BAM files
+  COPY ~iiItemMod/quarterstaff/bam/copy~ ~override~
 
 
   //---------------------------------------------------------------------------
@@ -378,16 +456,20 @@ DESIGNATED 1
   PRINT ~Adding infinites (potions) to creatures~
   OUTER_SPRINT iimacro_name ii_iiItem_Select_Random_i1poxxx
   OUTER_SET iicheckitemtype = 9
-  OUTER_SET new_item_add_chance = 20
-  OUTER_SET existing_item_add_chance = 60
+  OUTER_SET new_item_add_chance = 5
+  OUTER_SET existing_item_add_chance = 20
+  OUTER_SET iimaxitemcount = 3
+  OUTER_SET iiitemcount = ~-1~
   LAUNCH_ACTION_MACRO ~ii_Add_RandomItem_To_Creatures~
 
   // Arrows (max 1 arrow type per creature)
   PRINT ~Adding infinites (arrows) to creatures~
   OUTER_SPRINT iimacro_name ii_iiItem_Select_Random_i1arxxx
   OUTER_SET iicheckitemtype = 5
-  OUTER_SET new_item_add_chance = 20
-  OUTER_SET existing_item_add_chance = 60
+  OUTER_SET new_item_add_chance = 5
+  OUTER_SET existing_item_add_chance = 15
+  OUTER_SET iimaxitemcount = 40
+  OUTER_SET iiitemcount = ~-1~
   LAUNCH_ACTION_MACRO ~ii_Add_RandomItem_To_Creatures~
 
   //------------------------------
@@ -398,7 +480,7 @@ DESIGNATED 1
 
   //------------------------------
   // Add the unique items to stores
-  // We add uniques to creatures (not stores/areas) for several reasons:
+  // We add uniques to stores (not creatures/areas) for several reasons:
   //  Creature files are re-used throughout the game
   //  Not all creatures may be encountered in the game
   //  Adding to stores is easier
@@ -512,6 +594,18 @@ DESIGNATED 1
 
   LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
   OUTER_SPRINT itemname  i1hm003
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1dg001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hr001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1qs001
   LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
 
 // ----------------------------------------------------------------------------

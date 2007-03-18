@@ -16,7 +16,9 @@
 @650 = ~Objetos en tiendas y durante el juego (únicos sólo en tiendas)~
 @700 = ~Objetos en tiendas y durante el juego (únicos durante el juego)~
 @750 = ~Objetos en tiendas y durante el juego (únicos mezclados)~
-
+@800 = ~¿Deberían incluirse objetos que agregan a la atmósfera del juego?
+  0 No
+  1 Sí~
 
 @51 = ~Objetos~
 
@@ -40,7 +42,7 @@ Usando unas hierbas comunes, mezcladas de forma correcta, calentadas durante la 
 
 La poción es brillante y parece tener mucha energía al punto de calentar la misma botella que la contiene.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Restauración Menor en el bebedor~
 
@@ -52,7 +54,7 @@ Especial: Restauración Menor en el bebedor~
 
 Esta simple Poción concede al bebedor protección contra el hechizo de parar el tiempo durante un momento.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: protección contra parar el tiempo durante 5 turnos~
 
@@ -62,7 +64,7 @@ Especial: protección contra parar el tiempo durante 5 turnos~
 @2041 = ~Poción de Refresco~
 @2042 = ~Luego (o durante) una batalla, la mayoría de los aventureros siguen varios pasos: beber una poción de curación, tomar los tesoros de los enemigos caídos, descansar para recuperar energía y hechizos, y esas cosas. Esta poción elimina la necesidad de varios de esos pasos; el jugo concentrado restaurativo cura heridas, quita el cansancio y fatiga y refresca la mente, haciendo que los hechizos sean re-memorizados.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Curación
 Especial: Quita la fatiga
@@ -76,7 +78,7 @@ Especial: Re-memoriza hechizos lanzados~
 
 La Poción de Estabilidad Elemental es el paso siguiente en la cadena: previene que las resistencias elementales del bebedor se alteren (de forma tanto positiva como negativa) por un tiempo, usualmente el necesario para protegerse de la amenaza del momento.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Fija las resistencias elementales en los valores actuales durante 1 turno~
 
@@ -88,7 +90,7 @@ Especial: Fija las resistencias elementales en los valores actuales durante 1 tu
 
 Esta poción púrpura y de sabor dulce actúa como salvavidas en tales situaciones, contrarrestando al hechizo de Silencio y permitiendo al bebedor hablar normalmente.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 Especial: Lanza Vocalizar en el bebedor~
 
 
@@ -97,7 +99,7 @@ Especial: Lanza Vocalizar en el bebedor~
 @2071 = ~Poción de Recuperación Nigromántica~
 @2072 = ~Intentando duplicar la regeneración natural de los trolls y otras criaturas, los Magos han podido conseguir aún más efectos. Esta poción es producto de terribles experimentos que reflejan el funcionamiento de la poción. Al beber este líquido amargo, el bebedor cae al suelo en un coma profundo. Mientras se encuentre bajo el efecto, parecerá muerto (y es ignorado por los monstruos), aunque en realidad está recuperando puntos de golpe muy rápidamente. Esta poción funciona utilizando la energía negativa que poseen todos los seres, y por eso causa la pérdida permanente de vitalidad.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 Especial: Regenera 1 punto de golpe por segundo durante 5 turnos
 Especial: -5 puntos de golpe máximos por uso~
 
@@ -107,10 +109,11 @@ Especial: -5 puntos de golpe máximos por uso~
 @2081 = ~Poción de Habilidad Crítica~
 @2082 = ~Desde hace mucho es sabido que ciertas bayas y raíces ayudan a la concentración. Es apoción utiliza varios de esos ingredientes en forma concentrada y peligrosa. La concentración se incrementa inmensamente y permite al bebedor hacer hazañas de inteligencia o combate, aunque los ingredientes necesarios hacen que la poción sea venenosa, enfermando al bebedor.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Especial: Cada golpe es crítico durante 5 turnos
-Especial: Enferma al bebedor~
+Especial: Cada golpe es crítico durante 5 rondas
+Especial: El que lo bebe sufre efectos de lentitud (10 rondas)
+Especial: El que lo bebe sufre 1d20 de daño de enfermedad~
 
 
 
@@ -120,7 +123,7 @@ Especial: Enferma al bebedor~
 
 Esta poción es extremadamente rara tanto para comprar como para beber: No se suelen encontrar muchas Moles Sombrías muertas en los círculos alquímicos, y aunque los aventureros puedan tener algunos inconvenientes en sus viajes, el oler a Mole Sombría no es uno de ellos.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Invisible para las Moles Sombrías durante un turno~
 
@@ -130,7 +133,7 @@ Especial: Invisible para las Moles Sombrías durante un turno~
 @2101 = ~Sal de Roca~
 @2102 = ~El líquido de esta poción es fino y tiene el color arenoso de su ingrediente principal: Sal de Roca. con algunos hechizos lanzados, la Sal de Roca adquiere propiedades especiales. Cuando se usa, la poción endurece la piel del bebedor, haciendo que esta poción sea una elección excelente para los aventureros con armas cuerpo a cuerpo. Lo malo de esta poción es la pérdida momentánea de destreza, que en muchos casos no se nota, aunque ya no permite lanzar hechizos, ya que es imposible realizar los movimientos requeridos para lanzarlos .
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: CA +3 durante 3 turnos
 Especial: No se pueden lanzar hechizos durante 3 turnos
@@ -142,9 +145,9 @@ Especial: -1 a la destreza durante 3 turnos~
 @2111 = ~Perfume~
 @2112 = ~Esta preciosa botella contiene un perfume exclusivo (y caro). No puedes decir si se trata de perfume de rosas o chocolate.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Especial: Carisma +1 durante 24 horas~
+Especial: Carisma +2 durante 24 horas~
 
 // ----------------------------------------------------------------------------
 // Flechas
@@ -152,7 +155,7 @@ Especial: Carisma +1 durante 24 horas~
 @3001 = ~Flechas de Silenciar~
 @3002 = ~Hay formas simples y efectivas de neutralizar a un lanzador de hechizos, una de ellas es acercarse y clavar una espada entre sus costillas, otra es hacer que deje de lanzar hechizos. Estas Flechas flechas encantadas están creadas para silenciar al mago, haciendo que los sonidos queden neutralizados dentro del radio de una esfera. Aunque este encantamiento no es de los mejores y tiene poca duración, ¡la mejor forma de neutralizar un mago es nunca encontrarse con ninguno!
          
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: 50% de posibilidad de que el lanzador sea silenciado por 2 turnos (salvación contra conjuros para resistir)
 Daño:  1D6
@@ -161,7 +164,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3003 = ~¡Silenciado!~
 
 
@@ -170,7 +174,7 @@ No usable por:
 @3011 = ~Flechas de Enlentecer~
 @3012 = ~Los arqueros siempre han jugado un rol vital en combate. La habilidad de lanzar flecha tras flecha contra los enemigos sin que estos tengan oportunidad de evitarlo ha ayudado a ganar una que otra batalla. La mayor debilidad de un arquero se da cuando las fuerzas enemigas se acercan y comienzan un ataque mano a mano. Esto puede resultar en la muerte de los arqueros. Las Flechas de Enlentecer se crearon para evitar que los enemigos se acerquen a los arqueros, permitiéndoles así poder seguir lanzando sin preocupaciones.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: 15% de posibilidad de que el lanzador sea enlentecido por 2 turnos (salvación contra conjuros para resistir)
 Daño:  1D6
@@ -179,7 +183,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3013 = ~¡Enlentecido!~
 
 
@@ -188,7 +193,7 @@ No usable por:
 @3021 = ~Flechas de Pacifismo~
 @3022 = ~Tal vez las mejores flechas en el repertorio de los arqueros son las Flechas de Pacifismo por ser tan versátiles. El efecto de estas Flechas es simple; cada objetivo tiene una posibilidad de ser pacificado, y llenado de sensaciones de paz y serenidad, lo que se traduce en la posibilidad de reducir los ataques que puedan producirse. Los usos para estas flechas pueden ser muy variados.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: 5% de probabilidad de que el objetivo sea pacificado por 2 turnos
 Daño:  1D6
@@ -197,7 +202,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3023 = ~¡Pacificado!~
 
 
@@ -206,7 +212,7 @@ No usable por:
 @3031 = ~Flechas de Curación~
 @3032 = ~En tiempos pasados, los aventureros ingeniosos crearon flechas embebidas en soluciones curativas para salvar la vida de sus compañeros. La flecha puede causar daño, pero la solución curativa lo sanará junto con cualquier otra herida que pudiera tener. Esta es una práctica peligrosa, porque el daño inicial de la flecha puede causar la muerte, cosa que la solución curativa no puede revertir, así que esta practica sólamente es utilizada en situaciones desesperadas.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Cura 18 HP
 Daño:  1D6
@@ -215,7 +221,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3033 = ~¡Sanado!~
 
 
@@ -224,7 +231,7 @@ No usable por:
 @3041 = ~Flechas de púas~
 @3042 = ~Las Flechas de púas son idénticas a las flechas normales, excepto  en la punta, donde tienen púas. Esto previene que las flechas puedan ser removidas facilmente, y causan daño extra y sangrado, rajando los músculos bajo la piel.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Sangrado
 Daño:  1D6
@@ -233,7 +240,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3043 = ~¡Sangrando!~
 
 
@@ -242,7 +250,7 @@ No usable por:
 @3051 = ~Flechas de De la Piedra a la Carne~
 @3052 = ~Este tipo de flechas es normal, aunque encantadas con el hechizo De la Piedra a la Carne. Estas Flechas no son comunes, aunque pueden ser muy útiles en ciertas situaciones.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Lanza De la Piedra a la Carne sobre el objetivo
 Daño:  1D6
@@ -251,7 +259,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3053 = ~¡De la Piedra a la Carne!~
 
 
@@ -260,7 +269,7 @@ No usable por:
 @3061 = ~Flechas de Fatiga~
 @3062 = ~Las Flechas de Fatiga son utilizadas en combate para controlar a las masas. En vez de intentar matar al enemigo, las Flechas de Fatiga incrementan mágicamente la fatiga y el cansancio. Esto quiere decir que el objetivo tendrá menos ganas de luchar, y si aún les queda algo de fuerza, su habilidad en combate se reduce. Hay que hacer notar que las Flechas de Fatiga no produgen cansancio inmediatamente y que su efecto es acumulativo.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Incrementa la Fatiga del objetivo
 Daño:  1D6
@@ -269,7 +278,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3063 = ~Fatiga increased!~
 
 
@@ -281,7 +291,7 @@ No usable por:
 Aunque las Flechas son muy útiles en tiempos de guerra, no pasó mucho tiempo antes de que los aventureros también comenzaran a utilizarlas; las Flechas son magníficas para inmobilizar enemigos rápidos y protegiendo a los aventureros más débiles.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Previene el movimiento durante 5 turnos (salvación contra conjuros para resistir)
 Daño:  1D6
@@ -290,7 +300,8 @@ Peso:  0
 Lanzador:  Arco
 No usable por:
  Clérigo
- Druida~
+ Druida
+ Mago~
 @3073 = ~¡Restringido!~
 
 
@@ -299,7 +310,7 @@ No usable por:
 @3081 = ~Flechas de Largo Alcance~
 @3082 = ~Las flechas de largo alcance son tal vez las más usadas. Las Flechas de Largo Alcance son pequeñas y ligeras, y por lo tanto causan menos daño, aunque en muchos casos el largo alcance de estas flechas es más útil. 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Largo Alcance
 Daño:  1D4
@@ -317,7 +328,7 @@ No usable por:
 @4001 = ~Torso de Esqueleto~
 @4002 = ~Este es el torso de un esqueleto humano. Aunque los huesos son viejos, no están rotos. Con un poco de esfuerzo, podrías meterte dentro para hacerlo servir como armadura.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Clase de Armadura: 8
 Peso: 15
@@ -331,7 +342,7 @@ No usable por:
 @4003 = ~Torso de Esqueleto~
 @4004 = ~Este torso de esqueleto ha sido especialmente encantado con un poder interesante. Mientras esté equipado, quien lo utiliza es invisible a los esqueletos y demás criaturas no-muertas. El cómo se produce esto no se sabe, ya que el conocimiento del como encantar la armadura hace tiempo que se perdió. Aún así, esta armadura tiene un efecto interesante, quien la utiliza crea un enlace especial con las criaturas no-muertas, al punto de no querer lastimarlas.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Invisible a los esqueletos
 Especial: 10pt THAC0 de penalizacion contra esqueletos
@@ -347,7 +358,7 @@ No usable por:
 @4013 = ~Armadura Gubbie~
 @4014 = ~Esta armadura es conocida como Armadura Gubbie. Nadie conoce el orígen del nombre, o qué propósito sirve. El único poder de esta armadura es el evitar que el portador sea invisibilizado. Qué uso podría dar alguien a esto es lo que no se sabe.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Inmunidad contra invisibilidad
 Clase de Armadura: 3
@@ -365,7 +376,7 @@ No usable por:
 @4023 = ~Túnica Sucia~
 @4024 = ~Aunque esta túnica está completamente sucia y embarrada, hay algo "suertudo" acerca de ella, algo que evita el querer lavarla. Mientras se utilice esta túnica, se tiene la sensación de que las cosas van a salir bien.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: bonificación +1 a las tiradas de salvación
 Peso: 3
@@ -378,7 +389,7 @@ Mago (simple, dual y multiclase)~
 @4031 = ~Armadura de Humo~
 @4032 = ~Esta maravillosa armadura parece haber sido creada con humo. Liviana y fuerte al mismo tiempo, esta armadura se ajustará a tu cuerpo si la usas. El cómo puede ser una armadura creada con humo va más allá de tu comprensión.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Clase de Armadura: 5
 Peso: 7
@@ -392,7 +403,7 @@ Requiere: 5 Fuerza~
 
 El orígen de esta armadura se desconoce, ningún herrero o mago podría haber sido capaz de trabajar con humo de esta forma. Mientras protege contra espadas y demás, no se sabe como puede la armadura contrarrestar otros ataques. A pesar de esto, la armadura es maravillosa, y quién quiera que la haya creado, de seguro que la quiere de vuelta.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Clase de Armadura: 5
 Peso: 7
@@ -406,7 +417,7 @@ Requiere: 5 Fuerza~
 
 Esta armadura en particular no muestra marcas, inscripciones o decoración alguna, y parece haberse forjado en una sola pieza con algún metal indestructible. El único adorno de la armadura parecen ser una docena de manchitas rojas pegajosas de varios tonos.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Clase de Armadura: 5
 Peso: 40
@@ -426,7 +437,7 @@ El único adorno de la armadura parecen ser una docena de manchitas rojas pegajos
 
 Una vez puesta, la armadura conversará con quien la usa. EL por qué la existencia de esta comunicación se desconoce, y luego de quitarse la armadura, el sujeto no puede recordar de qué se ha hablado en concreto, sólo que oyó las debilidades de sus enemigos en su mente, permitiéndole hacer más daño crítico.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: penalización a la destreza -3
 Especial: 25% de incremento en la posibilidad de dar golpes críticos
@@ -446,7 +457,7 @@ No usable por:
 
 Este manto parece haber sido creado con hojas, las cuales no pueden ser rotas o quitadas.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Peso: 3~
 
@@ -460,7 +471,7 @@ Según la leyenda: Ardin vivía con su familia en un pequeño pueblito en el bosque
 
 Mientras el resto de los pueblerinos descansaban, Ardin continuó su batalla contra el juego, intentando proteger a los árboles y los animales. Horas después, completamente exhausto y con respiración pobre debido al humo, quemado y sangriento, Ardin cayó inconsciente en el bosque. Cuando despertó, encontró la capa colgando de la rama de un arbol. La capa le curó, y le permitió limpiar el área de humoa.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: buenas bayas 3 veces al día
 Especial: Zona de Aire Dulce 3 veces al día
@@ -475,7 +486,7 @@ Peso: 3~
 
 A pesar de esto, Wreadi se sentía desprotegido, un enemigo podría matarlo en cualquier momento. Wreadi encomendó entonces la creación de esta capa. La capa está hechizada con la Imágen espejada, que crea una imágen idéntica al portador. Estas imágenes pueden ser rotas como en el hechizo normal, aunque reaparecerán cada 5 turnos.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: 2 Imágenes espejadas constantes
 Clase de Armadura: 8
@@ -493,7 +504,7 @@ Nadie sabía, sin embargo que Iudre-Th tenía en su poder muchos artefactos mágico
 
 Iudre-Th nunca más fue visto, aunque hay varias leyendas sobre él en Faerun, de un hombre apareciendo en las peores batallas, y suavemente dando palmaditas en las cabezas de los guerreros con una rama de apio.
  
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Inmunidad contra Cautiverio
 Clase de Armadura: 6
@@ -516,7 +527,7 @@ El mercader los identificó mágicamente y descubrió que habían pertenecido a Freh
 
 Estos guantes mágicos usados por explican su primera habilidad, aunque las otras dos quedan a tu imaginación.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Clase de Armadura: 1
 Peso: 2~
@@ -529,7 +540,7 @@ Peso: 2~
 
 Sólamente viendo su efectividad durante un intento de asesinato fallido contra Gruguth se les tomó en serio. El poder mágico de los guantes hizo que Gruguth fuera insensible a las Flechas, permitiéndole luchar contra arqueros ya fuera a distancia o cuerpo a cuerpo.
  
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Las Flechas Rebotan
 Peso: 2~
@@ -543,7 +554,7 @@ Peso: 2~
 Los Guantes de Salud Mejorada se crearon para combatir tal problema. Los guantes mejoran la salud de quien los usa, dandoles vitalidad extra. Esta alteración de la fuerza vital tiene un problema, la conexión que tienen los magos con la ola mágica puede ser afectada, resultando en un incremento de probabilidad de fallar echizos.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: bonificación de 10 puntos de golpe
 Especial: 5% posibilidad de fallar lanzamiento de echizos
@@ -557,7 +568,7 @@ Usable por:
 @5031 = ~Mano Cortada~
 @5032 = ~Esto parece ser una Mano Cortada, crudamente cortada de su propietario por un objeto no muy afilado. La sangre que cubre la mano parece ser reciente, aunque examinándola con detenimiento se ve que produce nueva sangre y nunca parece pudrirse, lo que hace imposible el saber la edad de la mano.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Peso: 2~
 
@@ -569,7 +580,7 @@ Peso: 2~
 
 Para "usar" la mano, debes cortar una de las tuyas, y en su lugar usar esta. Este es un caso extremo y podría causar problemas serios a la salud mientras la mano esté unida a tu cuerpo. Las investigaciones, además parecen apuntar a que tu propia mano volverá a crecer si no estás usando la Mano Cortada.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Objeto Maldito
 Especial: Inmunidad contra el hechizo de desintegrar
@@ -585,7 +596,7 @@ Peso: 2~
 
 Cuando tienen posibilidad de estar en combate cuerpo a cuerpo, los guantes atacarán a los Yuanti, pareciendo morder y masticar su carne.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  +5 Daño contra Yuanti
 Peso:  1
@@ -602,7 +613,7 @@ Usable por:
 
 Olynpon intentó crear la goma para varios usos, incluyendo el cambio de cerraduras, clavos, e incluso jabón, sin embargo, al combinarla con los guantes encontró el éxito; los aventureros cansados de tirar sus armas en pánico causado por dragones y otras criaturas, compraron muchísimas unidades.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Nunca soltarás tu arma
 Peso:  1~
@@ -615,7 +626,7 @@ Peso:  1~
 
 Creado hace un poco más de cien años por el mago Yugun Boldstar como parte de una serie de experimentos concentrados en la naturaleza de la magia, el Cinturón de Claridad permite a quien lo usa percibir la magia más fuertemente. Esto hace que la pueda manipular más fácil y rápidamente, lo que permite que los hechizos sean lanzados con más rapidez.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Bonificación +1 al tiempo de lanzamiento
 Peso:  2~
@@ -626,7 +637,7 @@ Peso:  2~
 @6011 = ~Cinturón de la vida~
 @6012 = ~El Cinturón de la vida parece vibrar con magia interna. Aunque nadie sabe a ciencia cierta de dónde salió este cinturón o quién lo creó, el poder que posee es bien conocido; el cinturón de alguna forma actúa sobre las criaturas no muertas, confundiendo incluso a los zombies, enlenteciendo sus ataques y empeorando su habilidad de ataque.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  CA +2 contra muertos vivientes
 Peso:  2~
@@ -639,7 +650,7 @@ Peso:  2~
 
 Cuando se equipa, este cinturón mejora el segundo sentido de quien lo usa, dando inmunidad contra ataques rastreros, y permitiendo encontrar ilusiones.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Inmunidad contra apuñalamiento por la espalda
 Especial:  Bonificación a Detectar Ilusión 10pt.
@@ -653,7 +664,7 @@ Peso:  2~
 
 Baron Akthid tuvo varias docenas de cinturones especialmente encantados y distribuídos a su guardia personal para que nadie pudiera hechizarlos para hacer que le traicionaran.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Inmunidad contra Hechizar
 Peso:  2~
@@ -666,7 +677,7 @@ Peso:  2~
 
 Luego de una batalla bastante particular contra un liche, durante la cual, Rasimm terminó otra vez en un laberinto, el grupo decidió solventar el problema de una vez por todas: Crearon un amuleto para Rasimm.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Inmunidad contra Cautiverio
 Especial:  Inmunidad contra Laberinto
@@ -680,7 +691,7 @@ Especial:  Inmunidad contra Alazo~
 
 Este parece ser el amuleto que creó Saii. El cómo lo encontraste aquí es un misterio, porque Saii aún continúa practicando magia en Aguas Profundas. No hay duda que le gustaría recuperar el amuleto. 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Bonificación de 10 al Conocimiento~
 
@@ -694,7 +705,7 @@ El amuleto permitirá a un sacerdote vivir peligrosamente sin tener que estar bus
 
 Para compensar por esto, el amuleto incrementa la fortuna del sacerdote en otras áreas, típicamente haciendolo más resistente a hechizos hostiles.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  25% fallar hechizos
 Especial:  1pt bonificación a las tiradas de salvación~
@@ -707,7 +718,7 @@ Especial:  1pt bonificación a las tiradas de salvación~
 
 Por esta razón Supfi el Valiente mandó crear este amuleto, que actúa como una segunda piel frente a ataques de arañas. Esto le dió el valor suficiente como para saltar dentro de una guarida de arañas, con la intención de matarlas. Sin embargo, no esperaba encontrarse con aventureros Drow ahí dentro. Aunque su cuerpo nunca fue encontrado, no es probable que haya sobrevivido.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  Bonificación +3 a la CA contra arañas~
 
@@ -718,7 +729,7 @@ Especial:  Bonificación +3 a la CA contra arañas~
 @8001 = ~Calavera~
 @8002 = ~Esta parece ser una Calavera humana, con runas marcadas. Aunque la Calavera debería ser mucho más pequeña para sentarte bien, de alguna forma sientes que será de tu medida.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Peso: 1~
 
@@ -727,7 +738,7 @@ Peso: 1~
 
 Theolon desapareció hace unos años esplorando las Montañas Nezher. Ahora que tienes esta calavera en tus manos, parece que su portador encontró un final bastante feo. Sin importar su muerte, parece que la calavera aún tiene sus protecciones.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Bonificación +2 a la CA para todos los miembros del grupo
 Peso: 1~
@@ -740,7 +751,7 @@ Peso: 1~
 
 La Gran Prueba (Como se refería a ella Ambldun) era enviada a todos los magos a kilómetros de distancia y hablaba de "Apuesto a que no me matas usando magia". Con esto, Ambldun comenzó a crear un plan: encantar un yelmo que le diera inmunidad a cada uno de los hehizos existentes. Ambldun, quedó de piedra al darse cuenta de todo el tiempo que esto requería, y justo terminó de crear el primer encanto el dia de la Gran Prueba.
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial: Inmunidad contra proyectil mágico
 Bonificación a la CA:  Ninguna
@@ -757,7 +768,7 @@ Ladrón~
 @8021 = ~Casco~
 @8022 = ~Esta clase de casco de rostro descubierto, hecho con cuero reforzado o con metal, cubre casi toda la cabeza, salvo la cara y el cuello. Estos cascos suelen incluir una protección para la nariz.  
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Bonificación a la CA:  Ninguna
 Especial:  Protege contra golpes críticos
@@ -778,10 +789,82 @@ El casco funcionó tan bien que Ranij volvió a la cofradía con el casco puesto. R
 
 El cuerpo de Ranij nunca fue encontrado...
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Especial:  25pt de bonificación a colocar trampas
 Especial:  Protege contra golpes críticos
 Peso: 2
 Usable por:
 Ladrón~
+
+
+// ----------------------------------------------------------------------------
+// Dagas
+// ----------------------------------------------------------------------------
+@9001 = ~Daga Razoredge +1~
+@9002 = ~Esta daga es peligrosa incluso para el portador: ¡no tiene mango! Si es por diseño o si se ha caído no se sabe. La hoja es filosa y puede punzar la carne fácilmente causando más que el daño normal de una daga, aunque hay un precio a pagar por tal daño: La daga corta la palma de la mano del portador en cada golpe.
+
+La daga además tiene otra particularidad. Tallada en la hoja, más o menos en la mitad, aparece un pequeño glifo que se te hace irreconocible. El glifo brilla débilmente y parece ofrecer una limitada resistencia mágica.
+
+
+CARACTERÍSTICAS:
+
+Especial: +10% resistencia mágica
+Especial: 1D4 daño al portador en cada golpe
+THACO:   bonificación +1
+Daño:  1D9+1
+Tipo de Daño:  punzante
+Peso: 1
+Factor de velocidad: 2 
+Tipo de talento: Daga
+Tipo:  1-puño
+Requiere: 3 Fuerza
+No usable por:
+ Clerigo~
+
+
+// ----------------------------------------------------------------------------
+// Hammers
+// ----------------------------------------------------------------------------
+@10001 = ~Martillo de hielo +1~
+@10002 = ~Has escuchado rumores acerca de armas extrañas creadas con hielo en vez de metal. Ahora tienes una en tu mano. No sabes de dónde proviene, ya que no tiene marcas ni runas. aunque es frío al tacto, puedes maniobrarlo sin dificultad. A pesar de la clara naturaleza mágica de esta arma, sospechas que es relativamente frágil y puede terminar rompiéndose.
+
+
+CARACTERÍSTICAS:
+
+Especial: 1% posibilidad de romper el hielo
+Especial: 1D5 daño por frío
+THACO:  bonificación +1
+Daño:  1D5
+Tipo de Daño:  aplastante
+Peso: 6
+Factor de velocidad: 4
+Tipo de talento: Martillo de guerra
+Tipo:  1-puño
+Requiere: 9 Fuerza
+No usable por:
+ Druida
+ Mago 
+ Ladrón~
+@10003 = ~¡Martillo roto!~
+
+
+// ----------------------------------------------------------------------------
+// Quarterstaff
+// ----------------------------------------------------------------------------
+@11001 = ~Bastón de Golpe~
+@11002 = ~Este es un bastón corto, verde y muy extraño. El bastón pesa como uno normal, tal vez más, mientras que al mismo tiempo baila y se mueve en el aire sin soporte alguno. Incluso el golpe más pequeño del bastón puede tumbar al objetivo. Además, claramente puede romper las cerraduras de puertas y cofres con un simple golpe ligero.
+
+
+CARACTERÍSTICAS:
+
+Especial: 5% derribar al objetivo
+Especial: Abrir cerraduras 3x al día
+Daño:  1D6
+Tipo de Daño:  aplastante
+Peso: 4
+Factor de velocidad: 4
+Tipo de talento: Bastón
+Tipo:  2-puño
+Requiere: 5 Fuerza~
+@11003 = ~¡Derribado!~
