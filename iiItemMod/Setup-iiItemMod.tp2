@@ -1,7 +1,8 @@
 // ----------------------------------------------------------------------------
-// Name:   iiItemMod
-// Author: igi
-// Date:   29/11/2006
+// Name:    iiItemMod
+// Author:  igi
+// Date:    2007/11/11
+// Version: 5
 // ----------------------------------------------------------------------------
 BACKUP ~iiItemMod/backup~
 AUTHOR ~igi~
@@ -10,22 +11,31 @@ LANGUAGE ~English~ ~English~ ~iiItemMod/Languages/English/setup.tra~
 LANGUAGE ~Spanish~ ~Spanish~ ~iiItemMod/Languages/Spanish/setup.tra~
 
 
-// ------------------------------------------------------------------------------------------------------------------------
+//!----------------------------------------------------------------------------
 // Readme stuff
-// Some people like to view the readme
+//!----------------------------------------------------------------------------
+// Some people like to view the readme at the start
+BEGIN @1005
+NO_LOG_RECORD
+DESIGNATED 900
+SUBCOMPONENT @1000
+  AT_INTERACTIVE_NOW ~VIEW iiItemMod/Readme/%LANGUAGE%/Readme-iiItemMod.txt~
+
+
+// Some people like to view the readme at the end
 BEGIN @1010
 NO_LOG_RECORD
 DESIGNATED 1000
 SUBCOMPONENT @1000
-  AT_INTERACTIVE_EXIT ~VIEW iiItemMod/Readme-iiItemMod.txt~
+  AT_INTERACTIVE_EXIT ~VIEW iiItemMod/Readme/%LANGUAGE%/Readme-iiItemMod.txt~
 
 
-// And some people don't like to view the readme
+// And some people don't like to view the readme at all
 BEGIN @1020
 DESIGNATED 2000
 NO_LOG_RECORD
 SUBCOMPONENT @1000
-// Do nothing
+  // Do nothing
 
 
 //!----------------------------------------------------------------------------
@@ -75,20 +85,23 @@ DESIGNATED 1
     SAY 0xde  @1100
   END
 
-  // Protection Timestop
-  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
-  BEGIN
-    COPY ~iiItemMod/potions/itm/i1po003.itm~ ~override~
-    SAY NAME2 @2031
-    SAY DESC  @2032
-    SAY 0xde  @1100
-  END
+  // Protection Timestop - removed due to balace reasons
+//  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+//  BEGIN
+//    COPY ~iiItemMod/potions/itm/i1po003.itm~ ~override~
+//    SAY NAME2 @2031
+//    SAY DESC  @2032
+//    SAY 0xde  @1100
+//  END
 
   // Refreshment
   COPY ~iiItemMod/potions/itm/i1po004.itm~ ~override~
   SAY NAME2 @2041
   SAY DESC  @2042
   SAY 0xde  @1100
+  SAY 0x22e  @2043
+  SAY 0x25e  @2044
+  SAY 0x28e  @2045
 
   // Elemental Stability
   COPY ~iiItemMod/potions/itm/i1po005.itm~ ~override~
@@ -338,6 +351,15 @@ DESIGNATED 1
   SAY NAME2 @6031
   SAY DESC  @6032
 
+  // Belt of Concentration
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/belts/itm/i1bl005.itm~ ~override~
+    SAY NAME2 @6041
+    SAY DESC  @6042
+    SAY 0x76  @6043
+  END
+
   // BAM files
   COPY ~iiItemMod/belts/bam/copy~ ~override~
 
@@ -393,6 +415,20 @@ DESIGNATED 1
   SAY NAME2 @8023
   SAY DESC  @8024
 
+  COPY ~iiItemMod/helmets/itm/i1hm004.itm~ ~override~
+  SAY NAME2 @8033
+  SAY DESC  @8034
+
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/helmets/itm/i1hm005.itm~ ~override~
+    SAY NAME2 @8043
+    SAY DESC  @8044
+
+    COPY ~iiItemMod/helmets/eff/i1hm005.eff~ ~override~
+    COPY ~iiItemMod/helmets/spl/i1hm005.spl~ ~override~
+  END
+
   // BAM files
   COPY ~iiItemMod/helmets/bam/copy~ ~override~
 
@@ -403,6 +439,11 @@ DESIGNATED 1
   COPY ~iiItemMod/daggers/itm/i1dg001.itm~ ~override~
   SAY NAME2 @9001
   SAY DESC  @9002
+
+  // Flicker
+  COPY ~iiItemMod/daggers/itm/i1dg002.itm~ ~override~
+  SAY NAME2 @9003
+  SAY DESC  @9004
 
   // BAM files
   COPY ~iiItemMod/daggers/bam/copy~ ~override~
@@ -416,6 +457,11 @@ DESIGNATED 1
   SAY DESC  @10002
   SAY 0x19e @10003
 
+  // Hammer of Magical Might
+  COPY ~iiItemMod/hammers/itm/i1hr002.itm~ ~override~
+  SAY NAME2 @10005
+  SAY DESC  @10006
+
   // BAM files
   COPY ~iiItemMod/hammers/bam/copy~ ~override~
 
@@ -428,8 +474,72 @@ DESIGNATED 1
   SAY DESC  @11002
   SAY 0x1a6 @11003
 
+  // Dream of a Man
+  ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+  BEGIN
+    COPY ~iiItemMod/quarterstaff/itm/i1qs002.itm~ ~override~
+    SAY NAME2 @11011
+    SAY DESC  @11012
+  END
+
   // BAM files
   COPY ~iiItemMod/quarterstaff/bam/copy~ ~override~
+
+  // ----------------------------------------------------------------------------
+  // Clubs
+  // ----------------------------------------------------------------------------
+  // Empty Bottle
+  COPY ~iiItemMod/clubs/itm/i1cl001.itm~ ~override~
+  SAY NAME2 @12001
+  SAY DESC  @12002
+  SAY 0xae  @12003
+
+  COPY ~iiItemMod/clubs/eff/i1cl001.eff~ ~override~
+
+  // Broken Bottle
+  COPY ~iiItemMod/clubs/itm/i1cl002.itm~ ~override~
+  SAY NAME2 @12005
+  SAY DESC  @12006
+  SAY 0xae  @12007
+
+  // BAM files
+  COPY ~iiItemMod/clubs/bam/copy~ ~override~
+
+
+  // ----------------------------------------------------------------------------
+  // Axes
+  // ----------------------------------------------------------------------------
+  // Weightless Axe: The Wonder
+  COPY ~iiItemMod/axes/itm/i1ax001.itm~ ~override~
+  SAY NAME2 @13001
+  SAY DESC  @13002
+
+  // BAM files
+  COPY ~iiItemMod/axes/bam/copy~ ~override~
+
+
+  // ----------------------------------------------------------------------------
+  // Shields
+  // ----------------------------------------------------------------------------
+  // Bouncing Shield
+  COPY ~iiItemMod/shields/itm/i1sh001.itm~ ~override~
+  SAY NAME2 @14001
+  SAY DESC  @14002
+
+  // BAM files
+  COPY ~iiItemMod/shields/bam/copy~ ~override~
+
+
+  // ----------------------------------------------------------------------------
+  // Harps
+  // ----------------------------------------------------------------------------
+  // Healing Harp
+  COPY ~iiItemMod/harps/itm/i1hp001.itm~ ~override~
+  SAY NAME2 @15001
+  SAY DESC  @15002
+
+  // BAM files
+  COPY ~iiItemMod/harps/bam/copy~ ~override~
 
 
   //---------------------------------------------------------------------------
@@ -607,6 +717,128 @@ DESIGNATED 1
   LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
   OUTER_SPRINT itemname  i1qs001
   LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  // V5
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hr002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1bl005
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1qs002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hm004
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hm005
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1cl001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1cl002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1dg002
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1ax001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1sh001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+  LAUNCH_ACTION_MACRO ~ii_iiItem_Select_Random_Store~
+  OUTER_SPRINT itemname  i1hp001
+  LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+
+
+/*
+//!----------------------------------------------------------------------------
+// Test store
+//!----------------------------------------------------------------------------
+BEGIN ~Test store~
+  COPY ~iiItemMod/Stores/i1test.sto~ ~override/roger.sto~
+    ADD_STORE_ITEM + ~i1am001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1am002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1am003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1am004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ch001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ch002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ck001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ck002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ck003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1lt001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1lt002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1pl001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar000~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar005~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar006~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ar007~ #10 #0 #0 ~IDENTIFIED~ #5
+    //ADD_STORE_ITEM + ~i1ar008~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1ax001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1bl001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1bl002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1bl003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1bl004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1bl005~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1cl001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1cl002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1dg001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1dg002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br005~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1br006~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hr001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hr002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hp001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hm001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hm002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hm003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hm004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1hm005~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po002~ #10 #0 #0 ~IDENTIFIED~ #5
+//    ADD_STORE_ITEM + ~i1po003~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po004~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po005~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po006~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po007~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po008~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po009~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po010~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1po011~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1qs001~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1qs002~ #10 #0 #0 ~IDENTIFIED~ #5
+    ADD_STORE_ITEM + ~i1sh001~ #10 #0 #0 ~IDENTIFIED~ #5
+*/
+
+
+<<<<<<<< .../iiItem-inlined/mod-installation.mod
+mod installation marker file
+>>>>>>>>
+
+COPY ~.../iiItem-inlined/mod-installation.mod~ ~override/iiItemMod_1.mod~  // modname_designated.mod
+  APPEND_OUTER ~override/iiItemMod_1.mod~ "_INCLUDE_FLAVOUR_ %_INCLUDE_FLAVOUR_%"
+
 
 // ----------------------------------------------------------------------------
 // EOF

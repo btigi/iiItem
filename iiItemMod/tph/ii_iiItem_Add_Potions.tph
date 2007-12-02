@@ -32,11 +32,11 @@ BEGIN
         LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
       END
   
-      ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
-      BEGIN
-        OUTER_SPRINT itemname i1po003
-        LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
-      END
+//      ACTION_IF (%_INCLUDE_FLAVOUR_% = 1) THEN
+//      BEGIN
+//        OUTER_SPRINT itemname i1po003
+//        LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~
+//      END
   
       OUTER_SPRINT itemname i1po004
       LAUNCH_ACTION_MACRO ~ii_Add_Item_To_Store~

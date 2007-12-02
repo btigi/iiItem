@@ -1,4 +1,4 @@
-iiItem Mod V4
+iiItem Mod V5
 -------------
 
 +) Contents
@@ -16,7 +16,7 @@ iiItem Mod V4
 ===================
   The iiItem Mod adds several dozen new items to the game, concentrating on lesser known item types (such as potions, bracers, arrows etc). The mod does not (currently) add any upgradable items, item parts or smiths. Game balance has been taken into account during item creation, and over-powered items have (hopefully) been avoided - there are no +5 katanas!
 
-Items are scattered throughout the game world; being added to creature inventories and stores (none of the new items are currently added to area containers). 'Unique' items (i.e. items with a specific individual history) are added only to stores. 
+Items are scattered throughout the game world; being added to creature inventories and stores (none of the new items are currently added to area containers). 'Unique' items (i.e. items with a specific individual history) are added only to stores. iiItem should be installed after mods which add new creatures or stores, to ensure that the new items are scattered equally through the game, and not just added to the stock game files.
 
 When installing onto Tutu, the player is presented with an extra option - whether to install 'flavour items'. These are items that have no immediate use in Tutu (such as weapons with bonus damage against Yuan-ti, which don't exist in Tutu, and anti-level drain items, which have no use in BG1), though they may add to the 'flavour' of the game - not everything exists to be used by the Protagonist, right then and there.
 
@@ -64,16 +64,26 @@ Arrows
   Arrows of Fatigue
   Arrows of Restriction
 
+Axes
+----
+  Weightless Axe: The Wonder
+
 Belts
 -----
   Girdle of Clarity
   Belt of Life
   Second Sense Belt
   Belt of Self
+  Belt of Concentration [flavour item]
+
+Clubs
+-----
+  Empty Bottle/Broken Bottle
 
 Daggers
 -------
   Razoredge Dagger 
+  Flicker
 
 Gloves
 ------
@@ -87,18 +97,24 @@ Gloves
 Hammers
 -------
   Icehammer +1
+  Hammer of Magical Might +2
+
+Harps
+-------
+  Healing Harp
 
 Helmets
 -------
   Skull of Theolon
   Helm of Absorption
   Thieves Helmet
+  Helm of Twilight
+  Might of Magic [flavour item]
 
 Potions
 -------
   Potion of Mirror Image
   Potion of Lesser Restoration [flavour item]
-  Potion of Protection from Timestop [flavour item]
   Potion of Refreshment
   Potion of Elemental Stability
   Potion of Vocalize
@@ -111,6 +127,11 @@ Potions
 Quarterstaff
 ------------
   Staff of Knocking
+  Dream of a Man [flavour item]
+
+Shields
+-------
+  Bouncing Shield
 
 
 +) Section 4. Known Issues
@@ -131,7 +152,27 @@ Amulet of Knowledge permanently increases Lore by 10pt per equipping of the item
 
 +) Section 6. Version History
 =============================
-V4 [18/03/2007]
+V5 [2007/12/02]
+  - Added Hammer of Magical Might
+  - Added Empty Bottle/Broken Bottle
+  - Added Flicker (Throwing Dagger)
+  - Added Helm of Twilight
+  - Added Weightless Axe: The Wonder
+  - Added Bouncing Shield
+  - Added Healing Harp
+  - Added Belt of Concentration
+  - Added Might of Magic helm
+  - Added Dream of a Man quarterstaff
+  - Allow spell-casting while wearing Cloak of Protection: Mirrored Action
+  - Increased price of Potion of Refreshment 1200 -> 4000
+  - Altered Potion of Refreshment:
+      15% chance of 1 pt CON penalty 
+      10% chance of 1 pt STR penalty
+      5% chance of 1 pt DEX penalty
+  - Removed Potion of Protection from Timestop due to balance concerns
+  - Fixed potential error where items were still being given to non-humanoid creatures
+
+V4 [2007/03/18]
   - Fixed typos in descriptions
   - Perfume - CHA bonus increased to 2 points (from 1 point)
   - Removed Far Range arrows (an engine limitation severly limited their usefulness)
@@ -169,13 +210,13 @@ V4 [18/03/2007]
       Icehammer +1
       Staff of Knocking
 
-V3 [07/01/2006]
+V3 [2006/01/07]
   - Added unique items into stores (for Tutu)
 
-V2 [29/12/2006]
+V2 [2006/12/29]
   - Corrected non-showing arrow icons
 
-V1 [27/12/2006]
+V1 [2006/12/27]
   - Initial Release
 
 

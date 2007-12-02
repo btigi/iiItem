@@ -15,12 +15,12 @@ BEGIN
       READ_LONG 0x02c0 item_count
       READ_BYTE 0x0271 general_type
 
-      PATCH_IF (%general_type% = 1) THEN
+      PATCH_IF ("%general_type%" = 1) THEN
       BEGIN
         WHILE ((0 < "%item_count%") AND ("%iihasitem%" = 0))
         BEGIN
           READ_ASCII ("%item_offset%" + (("%item_count%"-1) * 20)) iithisitem
-          PATCH_PRINT "%iithisitem%"
+          PATCH_PRINT "[[ %iithisitem% %SOURCE_RES% %general_type% ]]"
   
           INNER_ACTION
           BEGIN

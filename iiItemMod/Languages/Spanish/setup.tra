@@ -6,6 +6,7 @@
 
 // Readme
 @1000 = ~Léeme~
+@1005 = ~Ver el léeme ahora~
 @1010 = ~Mostrar el Léeme luego de la instalación~
 @1020 = ~No mostrar el Léeme luego de la instalación~
 
@@ -16,11 +17,16 @@
 @650 = ~Objetos en tiendas y durante el juego (únicos sólo en tiendas)~
 @700 = ~Objetos en tiendas y durante el juego (únicos durante el juego)~
 @750 = ~Objetos en tiendas y durante el juego (únicos mezclados)~
-@800 = ~¿Deberían incluirse objetos que agregan a la atmósfera del juego?
-  0 No
-  1 Sí~
+@800 = ~Los objetos en el mod iiItem están separados en dos categorías: normales y especiales. Los objetos especiales ('flavour') son objetos que pueden no tener relevancia en el juego, aunque son añadidos para dar atmósfera (por ejemplo, lanza +5 contra dragones en BG1, donde no hay dragones).
 
-@51 = ~Objetos~
+Los objetos normales se instalan siempre, puedes elegir si instalar los objetos especiales.
+
+¿Quieres instalar los objetos especiales?
+  0 Instalar los objetos especiales
+  1 No instalar los objetos especiales~
+
+
+@51 = ~Items [versión 5]~
 
 // ----------------------------------------------------------------------------
 // Potions
@@ -68,9 +74,15 @@ CARACTERÍSTICAS:
 
 Especial: Curación
 Especial: Quita la fatiga
-Especial: Re-memoriza hechizos lanzados~
+Especial: Reobtener lanzamiento de hechizos
+Especial: 15% de probabilidad de penalización de 1 a la CON (24 horas)
+Especial: 10% de probabilidad de penalización de 1 a la FUE (24 horas)
+Especial: 5% de probabilidad de penalización de 1 a la DES (24 horas)~
 
 
+@2043 = ~Constitución disminuida~
+@2044 = ~Fuerza disminuida~
+@2045 = ~Destreza disminuida~
 
 
 @2051 = ~Poción de Estabilidad Elemental~
@@ -669,6 +681,20 @@ CARACTERÍSTICAS:
 Especial:  Inmunidad contra Hechizar
 Peso:  2~
 
+
+
+@6041 = ~Cinturón de la Concentración~
+@6042 = ~La característica más notable de este cinturón es el broche. Antiguamente una grande y suave perla, el broche está ahora negro y picado. Las abolladuras accidentales parecen captar la luz dándole al broche uan bonita apariencia a pesar de su aspecto avejentado.
+
+Inspeccionándolo más de cerca, se puede ver que las abolladuras no son tales,sino restos de pequeños insectos; son sus alas las que captan y reflejan la luz. Los insectos se han estrellado con fuerza contra la superficie del broche, casi escondiendo su superficie original. Cerca del cinturón los insectos se distraen y se sienten atraídos por el cinturón. Esto identifica al cinturón como Sha-bane, el cinturón forjado para resistir a la plaga de insectos de Shanudd, el mago loco.
+
+CARACTERÍSTICAS:
+
+Especial:  Inmune al hechizo Plaga de Insectos
+Peso:  1~
+@6043 = ~Inmune al hechizo~
+
+
 // ----------------------------------------------------------------------------
 // Amulets
 // ----------------------------------------------------------------------------
@@ -798,6 +824,43 @@ Usable por:
 Ladrón~
 
 
+@8033 = ~Casco maldito del Crepúsculo~
+@8034 = ~Casco maldito del Crepúsculo
+
+Los detalles más antiguos del casco maldito del crepúsculo mencionan su origen; el casco se saqueó del cuerpo de un ilícido, en lo más profundo de sus guaridas. Sin embargo, incluso estas viejas historias no conocen el propósito de este casco. Negarle a un mago la capacidad de aprender nuevos hechizos es seguro algún castigo por algo, ¿pero por qué la bendición de velocidad incrementada?
+
+
+CARACTERÍSTICAS:
+
+Especial: No se pueden aprender hechizos nuevos
+Especial:  Velocidad de movimiento incrementada
+Casco: 0
+No lo puede usar:
+Bardo
+Ladrón~
+
+
+
+
+@8043 = ~Poder de la magia~
+@8044 = ~Poder de la magia
+
+Este casco parece estar hecho con cierto cristal sólido, si así lo fuera valdría una fortuna. Aunque para ser exactos el casco no es de cristal, y sólo es tan valioso en las manos adecuadas.
+
+El casco, o cierto encantamiento que tenga desde hace épocas, altera sutilmente el modo de actuar de la magia en las cercanías. Los estudiosos modernos consideran que el casco de alguna manera "dobla la magia alrededor de la realidad" o que "causs una descarga temporal de un punto", o incluso que "transforma directamente el pensamiento en acción usando como medio el tejido". De todas maneras, el casco funciona, el resultado es sencillo: la resistencia mágica se disminuye para todas las criaturas cercanas. El efecto se centra en el portador, cuya resistencia se elimina por completo.
+
+
+CARACTERÍSTICAS:
+
+Especial:  Resistencia a la magia a 0
+Especial:  -20 de resistencia mágica a todas las criaturas a menos de 5 metros
+Peso: 1
+No lo puede usar:
+Mago
+Bardo
+Ladrón~
+
+
 // ----------------------------------------------------------------------------
 // Dagas
 // ----------------------------------------------------------------------------
@@ -820,6 +883,31 @@ Tipo de talento: Daga
 Tipo:  1-puño
 Requiere: 3 Fuerza
 No usable por:
+ Clerigo~
+
+
+@9003 = ~Golpeadora +1~
+@9004 = ~Para Shuune siempre fue un problema ser capaz de hacer una sola cosa al mismo tiempo. Asesino a sueldo. Shuune tuvo que dejar pasar varios contratos interesantes económicamente porque ya se encontraba en una misión. Con el paso del tiempo, esto le molestaba cada vez más, y la cantidad de dinero que habría podido ganar aumentaba considerablemente (ya que Shuune era un asesino muy renombrado).
+
+Para resolver su problema, Shuune contrató los servicios de un mago y un herrero. Ambos trabajaron juntos durante meses, investigando y probando, y produciendo al final el equipamiento que solucionaría el problema que tenían encomendado. Este equipo fue un verdadero éxito; llevando el conjunto en completo el portador podría literalmente estar en varios sitios al mismo tiempo. Shuune estaba entusiasmado y comenzó al instante a usar este equipamiento y a crear leyenda en el proceso. El destino final de los objetos es desconocido, al igual que el del mismo Shuune.
+
+Esta daga parece ser uno de los objetos encargados por Shuune, y mantiene algunas de las habilidades del conjunto. Esta daga se puede lanzar hacia un objetivo y al golpearle inflijirá daño yvolverá al lanzador... ¡Mientras aún sigue clavada en el objetivo! La daga permanece durante varios segundos antes de desaparecer.
+
+
+CARACTERÍSTICAS:
+
+Especial: La daga vuelve a la mano del lanzador
+Especial: 1d4 de daño por ronda, durante 4 rondas
+Especial: Daño sangrante
+THACO:  Bonificación +1
+Daño:  1D6+1
+Tipo de daño:  perforante
+Peso: 1
+Factor de velocidad: 2 
+Talento marcial: Daga
+Tipo:  A una mano
+Requiere: Fuerza 3
+No lo puede usar:
  Clerigo~
 
 
@@ -849,6 +937,27 @@ No usable por:
 @10003 = ~¡Martillo roto!~
 
 
+@10005 = ~Martillo de poder mágico +2~
+@10006 = ~Este martillo es de un estilo y diseño estandar, con la salvedad de su metal es de color rojo profundo. Hay algo bueno sobre este martillo, y al sujetarlo puedes sentir que todo va a ir bien. Si esto es una visión del futuro o una ilusión debido a la magia o veneno es difícil de saber.
+
+
+CARACTERÍSTICAS:
+
+Especial: Penalización de 2 a la suerte
+THACO: Bonificación +2
+Daño:  1D5
+Tipo de daño:  aplastante
+Peso: 6
+Factor de velocidad: 4
+Talento marcial: Martillo de guerra
+Tipo: A una mano
+Requiere: Fuerza 9
+No lo puede usar:
+ Druida
+ Mago 
+ Ladrón~
+
+
 // ----------------------------------------------------------------------------
 // Quarterstaff
 // ----------------------------------------------------------------------------
@@ -868,3 +977,130 @@ Tipo de talento: Bastón
 Tipo:  2-puño
 Requiere: 5 Fuerza~
 @11003 = ~¡Derribado!~
+
+
+@11011 = ~El sueño de un hombre +2~
+@11012 = ~El sueño de un hombre +2
+
+Otunga es uno de los pocos mortales que hayan conseguido la inmortalidad, lo que le hace alguien remarcable. Que haya ganado su inmortalidad por accidente lo hace aún más notable. Otunga era un simple granjero en una región rural de Amn cuando sucedió. Muchos magos poderosos se interesaron inmediatamente por Otunga, e intentaron conseguir su secreto, por medios más o menos aceptables. Ya que el proceso fue por accidente, Otunga no se acordaba de cómo fue, y mucho menos podría hablar de ello a otros. 
+
+
+Al final los magos se cansaron de Otunga, viéndole como un recordatorio de sus fracasos. Sin ser capaces de matarle, lo hicieron prisionero bajo tierra. Otunga fue liberado tiempo después y pudo continuar con su larga larga vida. Los magos se enteraron de su libertad y de nuevo lo capturaron e interrogaron. Frustrados por no poder conseguir respuestas, petrificaron a Otunga y le dejaron como una estatua en el camino. Liberado de nuevo, encontró a un mago para que fabricara este bastón para él. Este bastón protege al portador de varias formas de anulación de movimiento mágicas.
+
+The fate of Otunga, obviously parted from his staff, is unlikely to be a happy one.
+
+CARACTERÍSTICAS:
+
+Especial: Inmune a Laberinto
+Especial: Inmune a Cautiverio
+Especial: Inmune a Alazo
+Especial: Inmune a Petrificar
+Daño:  1D6+2
+Tipo de daño:  aplastante
+Peso: 4
+Factor de velocidad: 4
+Talento marcial: Bastón
+Tipo:  A dos manos
+Requiere: Fuerza 5~
+
+
+// ----------------------------------------------------------------------------
+// Garrotes
+// ----------------------------------------------------------------------------
+@12001 = ~Botella vacía~
+@12002 = ~Esto una botella vacía. No hay ningún rastro de lo que contenía. Esta botella puede ser de utilidad en una pelea.
+
+
+ESTADÍSTICAS:
+
+Especial: 80% de probabilidad de abatir humanoides
+Daño:  1D5
+Tipo de daño:  aplastante
+Peso: 1
+Factor de velocidad: 4
+Talento marcial: Garrote
+Tipo:  A una mano
+No lo puede usar:
+ Mago~
+@12003 = ~¡Botella destrozada!~
+
+
+@12005 = ~Botella rota~
+@12006 = ~Estos son los restos de una botella vacía. No hay ningún rastro de lo que contenía. Esta botella puede ser de utilidad en una pelea.
+
+
+ESTADÍSTICAS:
+
+Daño:  1D5
+Tipo de daño:  aplastante
+Peso: 1
+Factor de velocidad: 4
+Talento marcial: Garrotes
+Tipo:  A una mano
+No lo puede usar:
+ Mago~
+@12007 = ~¡Botella destrozada!~
+
+
+// ----------------------------------------------------------------------------
+// Hachas
+// ----------------------------------------------------------------------------
+@13001 = ~Hacha Sin Peso: La Maravilla +1~
+@13002 = ~Hacha Sin Peso: La Maravilla +1
+
+Lo primero que te viene a la cabeza sobre esta hacha es su color rojo profundo poco común. Lo segundo y más sorprendente, su peso. Este arma parece no pesar absolutamente nada. Puedes levantar el hacha y embestir con ella rápidamente. El peso del hacha puede ser de utilidad en combate, aunque es algo desconcertante soltar un hacha sin peso y verla caer en el suelo con un fuerte batacazo.
+
+
+ESTADÍSTICAS:
+
+Especial: Bonificación +1 THAC0
+Daño:  1D8 +1
+Tipo de daño: Cortante
+Peso: 0
+Factor de velocidad: 1
+Tipo de talento marcial: Hachas
+Tipo:  De 1 mano
+No lo puede usar:
+ Druida
+ Clérigo
+ Mago 
+ Ladrón~
+
+
+// ----------------------------------------------------------------------------
+// Escudos
+// ----------------------------------------------------------------------------
+@14001 = ~Escudo de Rebote +1~
+@14002 = ~Escudo de Rebote +1
+
+Este escudo, hecho de maderaoscura dura, parece totalmente normal. El escudo solo muestra su habilidad en determinadas circunstancias, cuando una daga se lanza directamente contra el portador. En ese caso, la daga inexplicablemente cambia de dirección y se dirige hacia el lanzador, con intento de matarle.
+
+Semejantes habilidades son raras pero no improbables,  sin embargo este es el único encantamiento de su clase conocido en un escudo. El propietario original lo debe estar buscando, o quizás ha encargado alguna copia.
+
+
+ESTADÍSTICAS:
+
+Bonificación a la clase de armadura: 1
+Peso: 7
+Requiere: 12 Strength
+No lo puede usar:
+ Bardo
+ Druida
+ Mago
+ Ladrón~
+
+
+// ----------------------------------------------------------------------------
+// Arpas
+// ----------------------------------------------------------------------------
+@15001 = ~Arpa Curativa~
+@15002 = ~Arpa Curativa
+
+Este arpa es obviamente mágica; no sólo parece haber sido fabricada con una hoja sólida y gigante, sino que además se puede tocar normalmente sin cuerdas. Aunque estos puntos son suficientes para que los bardos de todo Faerun se peleen por este instrumento, posee otra característica especial. Algunas canciones, tocadas con este arpa, tienen la habilidad de curar a los que las oyen. Se desconoce el motivo, aunque se requiere cierto talento musical ya que sólo los bardos pueden activar esta magia.
+
+
+ESTADÍSTICAS:
+
+Peso: 0
+Lo puede usar:
+ Bardo~

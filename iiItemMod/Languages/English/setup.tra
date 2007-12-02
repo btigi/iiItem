@@ -6,8 +6,9 @@
 
 // Readme
 @1000 = ~View Readme~
-@1010 = ~Show readme after installation~
-@1020 = ~Do not show readme after installation~
+@1005 = ~View readme file now~
+@1010 = ~View readme file after installation~
+@1020 = ~Do not view readme file~
 
 // Components
 @500 = ~Item positions~
@@ -16,12 +17,16 @@
 @650 = ~Items in stores AND items throughout game (uniques in stores)~
 @700 = ~Items in stores AND items throughout game (uniques scattered)~
 @750 = ~Items in stores AND items throughout game (uniques mixed)~
-@800 = ~Should flavour items be included
-  0 Flavour items not included
-  1 Flavour items are included~
+@800 = ~Items in the iiItem mod are split into two categories; normal and 'flavour'. Flavour items are items that may have no relevance to the game, though they may add to the atmosphere (e.g. Spear +5 vs Dragons in BG1, where there are no dragons).
+
+Normal items are always installed, you can choose whether to install flavour items.
+
+Do you wish to install flavour items
+  0 Flavour items should be installed
+  1 Flavour items should NOT be installed~
 
 
-@51 = ~Items~
+@51 = ~Items [version 5]~
 
 // ----------------------------------------------------------------------------
 // Potions
@@ -69,9 +74,14 @@ STATISTICS:
 
 Special: Heal HP
 Special: Remove fatigue
-Special: Regain cast spells~
+Special: Regain cast spells
+Special: 15% chance of 1 pt CON penalty (24 hour)
+Special: 10% chance of 1 pt STR penalty (24 hour)
+Special: 5% chance of 1 pt DEX penalty (24 hour)~
 
-
+@2043 = ~Constitution lowered~
+@2044 = ~Strength lowered~
+@2045 = ~Dexterity lowered~
 
 
 @2051 = ~Potion of Elemental Stability~
@@ -174,7 +184,7 @@ Not usable by:
 
 
 @3011 = ~Arrows of Slowing~
-@3012 = ~Archers have long played a vital role in combat. The ability to reign arrow after arrow down upon an enemy while they are unable to retaliate can easily win a battle. The major weakness of the archer appears when the enemy force closes and engages in hard-to-hand combat - this can often result in the slaughter of the archers. Arrows of Slowing were conceived to lengthen the time taken for enemy forces to close on archers, and therefore give more time for arrows to be launched.
+@3012 = ~Archers have long played a vital role in combat. The ability to rain arrow after arrow down upon an enemy while they are unable to retaliate can easily win a battle. The major weakness of the archer appears when the enemy force closes and engages in hard-to-hand combat - this can often result in the slaughter of the archers. Arrows of Slowing were conceived to lengthen the time taken for enemy forces to close on archers, and therefore give more time for arrows to be launched.
 
 STATISTICS:
 
@@ -358,7 +368,7 @@ Not Usable By:
 
 
 @4013 = ~Gubbie Armor~
-@4014 = ~This suit of armor is commonly known as Gubbie Armor. No-one knows what the origins of the name are, nor what the strange purpose of the armor is. The only known power of this armor is to prevent the wearer from becoming invisible via magical means (spells or potions). What use this could be to anyone us unknown.
+@4014 = ~This suit of armor is commonly known as Gubbie Armor. No-one knows what the origins of the name are, nor what the strange purpose of the armor is. The only known power of this armor is to prevent the wearer from becoming invisible via magical means (spells or potions). What use this could be to anyone is unknown.
 
 STATISTICS:
 
@@ -417,7 +427,7 @@ Requires: 5 Strength~
 @4041 = ~Chain Mail~
 @4042 = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.  
 
-This particular armor bears no makers mark, no inscription or decoration, no dents or scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal. The only adornment on the armor are the dozens of sticky red stains, of various shades.
+This particular armor bears no makers mark, no inscription or decoration, no dents or scratches, it almost looks as if the armor has been carved out of a single piece of indestructable metal. The only adornments on the armor are the dozens of sticky red stains, of various shades.
 
 STATISTICS:
 
@@ -518,6 +528,7 @@ Weight: 40
 Requires: 6 Strength
 Not Usable By:
  Mage~
+
 
 // ----------------------------------------------------------------------------
 // Gloves
@@ -671,6 +682,21 @@ STATISTICS:
 Special:  Immune to Charm spell
 Weight:  2~
 
+
+
+
+@6041 = ~Belt of Concentration~
+@6042 = ~The only visible noteworthy feature of this belt is the buckle. Once a large, smooth pearl, the buckle is now black and pitted. The uneven bumps seem to catch the light and sparkle, giving the buckle a pleasing appearance despite its old, worn look.
+
+Upon closer inspection, it can be seen that the rough bumps are remains of small insects; it is their wings that catch and reflect the light. The insects have been tightly crushed against the surface of the buckle, almost hiding the original surface. When near the belt, insects are distracted from their purpose, and attracted to the belt. This identifies the belt as Sha-bane, the belt crafted to resist the insect swarm spells of the mad mage Shanudd.
+
+STATISTICS:
+
+Special:  Immune to Insect Plague spell
+Weight:  1~
+@6043 = ~Immune to spell~
+
+
 // ----------------------------------------------------------------------------
 // Amulets
 // ----------------------------------------------------------------------------
@@ -779,7 +805,7 @@ Usable By:
 Thief~
 
 @8023 = ~Thieves Helmet~
-@8024 = ~Thieves Helmet DESC
+@8024 = ~Thieves Helmet
 
 Ranij was a skilled young man who lived in Athkatla several decades ago. Ranij was also a brilliant thief, indeed Ranij was one of the most successful thieves who ever lived. Or at least he would have been, if he'd been able to pass the entrance tests for the Thieves Guild.
 
@@ -789,7 +815,7 @@ Ranij was barred from the Thieves Guild due this gap in his skill set, and to ma
 
 The Helm was a complete success, and Ranij re-applied for Guild entrance while wearing it. Ranij easily passed all the tests the Guildmasters could devise, even the trap setting test. Upon successful completion of the tests, Ranij was eagerly looking forward to being accepted into the Guild. Unfortunately, and some would say strangely, the Thieves Guild frowns upon cheating, especially on their entrance test.
 
-Ranijs body was never found...
+Ranij's body was never found...
 
 STATISTICS:
 
@@ -800,13 +826,52 @@ Usable By:
 Thief~
 
 
+
+
+@8033 = ~Cursed Helm of Twilight~
+@8034 = ~Cursed Helm of Twilight
+
+The oldest records of the Cursed Helm of Twilight mention its origin; the Helm was looted from the body of an Illithid, deep inside one of their lairs. However, even these old tales do not know the purpose of the Helm. To deny a mage the ability to learn new magic is surely a punishment of some kind, but then why the blessing of increased speed?
+
+
+STATISTICS:
+
+Special:  Cannot learn new spells
+Special:  Movement rate increased
+Weight: 0
+Not Usable By:
+Bard
+Thief~
+
+
+
+
+@8043 = ~Might of Magic~
+@8044 = ~Might of Magic
+
+This helmet almost appears to be carved from a single sold crystal; and if it were it would surely be worth a fortune! Though, in truth, the helmet is not made from crystal, it is just as valuable in the right hands.
+
+The helmet, or some enchantment laid upon it in ages past, subtlely alters the way magic works in the immediate vicinity. Modern scholars guess that the helm somehow 'bends magic around reality' or that it 'causes a micro-point temporal discharge', or even that it 'directly transforms thought to action using the weave as an intermediate'. However the helmet works, the result is simple; magic resistance is lowered for all creatures nearby. The effect is centred on the wearer, whose resistance is eliminated entirely.
+
+
+STATISTICS:
+
+Special:  Magic resistance set to 0
+Special:  -20 magic resistance to all creatures within 30ft
+Weight: 1
+Not Usable By:
+Mage
+Bard
+Thief~
+
+
 // ----------------------------------------------------------------------------
 // Daggers
 // ----------------------------------------------------------------------------
 @9001 = ~Razoredge Dagger +1~
 @9002 = ~This dagger is very dangerous, even to the wielder - for it has no handle! Whether this is by design, or whether the handle has worn away over time is unknown. The blade of the dagger is razor sharp, and can pierce deep into flesh causing much more damage than a normal dagger, though their is a price for this extra damage - the blade will severely cut the palm of the wielder upon each successful strike.
 
-There is one more feaure of the blade which may affect its usability. Carved into the blade approximately halfway from the tip is a very small glyph, which bears no resemblance to anything you have ever seen. This glyph gives off a faint glow, and seems to offer a limited form of magic resistance.
+There is one more feature of the blade which may affect its usability. Carved into the blade approximately halfway from the tip is a very small glyph, which bears no resemblance to anything you have ever seen. This glyph gives off a faint glow, and seems to offer a limited form of magic resistance.
 
 
 STATISTICS:
@@ -815,6 +880,31 @@ Special: +10% magic resistance
 Special: 1D4 damage to wielder per strike
 THACO:  +1 bonus
 Damage:  1D9+1
+Damage type:  piercing
+Weight: 1
+Speed Factor: 2 
+Proficiency Type: Dagger
+Type:  1-handed
+Requires:3 Strength
+Not Usable By:
+ Cleric~
+
+
+@9003 = ~Flicker +1~
+@9004 = ~Only being able to do one thing at once had always been a problem for Shuune. An assassin by trade, Shuune had to pass up several lucrative contracts due to already being hired on a mission. As time went on, this troubled Shuune more and more, as the amount of money he could have earned grew higher and higher (for Shuune was a very successful assassin).
+
+To solve his problem, Shuune engaged the services of a mage and a blacksmith. The mage and blacksmith worked together for many months, researching and testing, eventually producing equipment that would solve the problem they had been tasked with. The equipment was a stunning success; wearing the full set of items would allow the wearer to literally be several places at once. Shuune was ecstatic and immediately set about using his new items, and creating several legends in the process. The ultimate fate of the items is unknown, as is the fate of Shuune himself.
+
+This dagger appears to be one of the items commissioned by Shuune, and it retains some of the abilities of the full item set. The dagger can be thrown at a target, upon striking the target the dagger will inflict damage and return to the thrower - while also staying embedded in the target! The dagger remains for several seconds before disappearing.
+
+
+STATISTICS:
+
+Special: Dagger returns to hand of thrower
+Special: 1d4 damage per round, for 4 rounds
+Special: Bleeding damage
+THACO:  +1 bonus
+Damage:  1D6+1
 Damage type:  piercing
 Weight: 1
 Speed Factor: 2 
@@ -851,6 +941,28 @@ Not Usable By:
 @10003 = ~Hammer shattered!~
 
 
+@10005 = ~Hammer of Magical Might +2~
+@10006 = ~This hammer is of standard style and design, except for the fact that the metal is a deep red colour. Something about the hammer feels right, and while holding it, you somehow feel as if everything will turn out ok. Whether this is a glimpse of the future, or a delusion bought about by magic or poison you cannot tell.
+
+
+STATISTICS:
+
+Special: 2pt Luck penalty
+THACO:  +2 bonus
+Damage:  1D5
+Damage type:  crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type:  1-handed
+Requires: 9 Strength
+Not Usable By:
+ Druid
+ Mage 
+ Thief~
+
+
+
 // ----------------------------------------------------------------------------
 // Quarterstaff
 // ----------------------------------------------------------------------------
@@ -871,27 +983,138 @@ Type:  2-handed
 Requires: 5 Strength~
 @11003 = ~Knockback!~
 
+
+
+
+@11011 = ~Dream of a Man +2~
+@11012 = ~Dream of a Man +2
+
+Otunga is one of the few mortals to have gained immortality, making him a remarkable man. That he gained his immortality by accident makes hi all the more remarkable. Otunga was a simple farmer in a rural region of Amn when the accident happened. Many powerful mages took immediate interest in Otunga, and sought to gain his secret, through means fair and foul. Since the process was accidental, Otunga himself could not remember, let alone tell others. 
+
+Eventually the mages grew tired of Otunga, seeing him as a reminder of their failures and shortcomings. Not being able to kill him, they imprisoned him deep underground. Otunga was set free some time later and was content to get on with his long, long life. Mages learned of his freedom and once again they captured and interrogated him. Frustrated by his inability to answer thier questions they petrified Otunga and left him as a roadside statue. Freed once more, Otunga sought out a friendly mage to fashion this staff for him. The staff protects the bearer from several types of disabling magic.
+
+The fate of Otunga, obviously parted from his staff, is unlikely to be a happy one.
+
+STATISTICS:
+
+Special: Immune to Maze spell
+Special: Immune to Imprisonment
+Special: Immune to Wing Buffet
+Special: Immune to Petrification
+Damage:  1D6+2
+Damage type:  crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Staff
+Type:  2-handed
+Requires: 5 Strength~
+
+
+// ----------------------------------------------------------------------------
+// Clubs
+// ----------------------------------------------------------------------------
+@12001 = ~Empty Bottle~
+@12002 = ~This is an empty bottle. There is no trace of the contents. The bottle may make a handy weapon in a fight.
+
+
+STATISTICS:
+
+Special: 80% chance of knocking out humanoid creatures
+Damage:  1D5
+Damage type:  crushing
+Weight: 1
+Speed Factor: 4
+Proficiency Type: Club
+Type:  1-handed
+Not Usable By:
+ Mage~
+@12003 = ~Bottle shattered!~
+
+
+@12005 = ~Broken Bottle~
+@12006 = ~This is the remains of an empty bottle. There is no trance of the contents. The bottle may make a handy weapon in a fight.
+
+
+STATISTICS:
+
+Damage:  1D5
+Damage type:  crushing
+Weight: 1
+Speed Factor: 4
+Proficiency Type: Club
+Type:  1-handed
+Not Usable By:
+ Mage~
+@12007 = ~Bottle shattered!~
+
+
+// ----------------------------------------------------------------------------
+// Axes
+// ----------------------------------------------------------------------------
+@13001 = ~Weightless Axe: The Wonder +1~
+@13002 = ~Weightless Axe: The Wonder +1
+
+The first thing that strikes you about this axe is its unusual deep red colour. The second, and more surprising thing is the weight - the axe appears utterly weightless! You can easily life the axe and heave it around rapidly. The weight of the axe could be of use in combat, though it is somewhat disconcerting to drop a weightless axe and still see it fall to the floor with a heavy thud.
+
+
+STATISTICS:
+
+Special: 1pt THAC0 bonus
+Damage:  1D8 +1
+Damage type:  slashing
+Weight: 0
+Speed Factor: 1
+Proficiency Type: Axe
+Type:  1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief~
+
+
+// ----------------------------------------------------------------------------
+// Shields
+// ----------------------------------------------------------------------------
+@14001 = ~Bouncing Shield +1~
+@14002 = ~Bouncing Shield +1
+
+This shield, made from hardy darkwood, looks and feels completely normal. The shield only shows its ability in a certain circumstance - when a dagger has been thrown directly at the wearer. In such instances the dagger inexplicably changes direction and flies towards the original thrower, with deadly intent.
+
+Such abilities are rare but not unusual, however this is the only enchantment of its type known to be tied into a shield - the original owner is bound to be looking for it, or perhaps, to have commissioned a twin.
+
+
+STATISTICS:
+
+Armor Class Bonus: 1
+Weight: 7
+Requires: 12 Strength
+Not Usable By:
+ Bard
+ Druid
+ Mage
+ Thief~
+
+
+// ----------------------------------------------------------------------------
+// Harps
+// ----------------------------------------------------------------------------
+@15001 = ~Healing Harp~
+@15002 = ~Healing Harp
+
+This harp is obviously magical; not only does the harp appear to have been carved from a giant, solid leaf, but the instrument can be played normally even though it lacks strings! Though these points alone are enough to make the harp sought after by bards all over Faerun, there is another ability. Certain songs, when played on this harp, have the ability to heal those who hear them. How this is achieved is unknown, though some musical talent is required, only bards can activate this magic.
+
+
+STATISTICS:
+
+Weight: 0
+Usable By:
+ Bard~
+
+
+
+
 /*
   OMG - cut content!!
   Where is the iiItem UB? Or iiItem fixpack? Developer intent???
-
-  Diseased arrows (10% chance various disease type, while equipped suffer-1 CON)
-  Glass bottle (breaks after x hits)
-    Harp of Haste
-  Healing Harp
-  Kobold Flute (invisible to kobolds while playing?) - set bard song while equipped?
-
-  Shield of Deflection
-    Deflect all throwing daggers back at the attacker
-
-  Weightless (Axe?)
-    Axe +1, but with 0 weight
-
-  Hammer of Magical Might
-    Immune to all level 1 spells while equipped
-    2pt luck penalty - it's just bad karma
-
-  Cursed cloak of the Dawn
-    Immune to Learn Spell
-    1pt movement rate bonus
 */

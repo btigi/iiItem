@@ -412,4 +412,3 @@ BEGIN
   //OUTER_SET amount   = backupamount
   //OUTER_SET infinite = backupinfinite
 
-END  // define_action_macro
