@@ -6,9 +6,9 @@
 
 // Readme
 @1000 = ~Léeme~
-@1005 = ~Ver el léeme ahora~
-@1010 = ~Mostrar el Léeme luego de la instalación~
-@1020 = ~No mostrar el Léeme luego de la instalación~
+@1005 = ~Ver leeme ahora~
+@1010 = ~Ver leeme luego de la instalacion~
+@1020 = ~No ver leeme~
 
 // Components
 @500 = ~Posiciones de los Objetos~
@@ -17,16 +17,18 @@
 @650 = ~Objetos en tiendas y durante el juego (únicos sólo en tiendas)~
 @700 = ~Objetos en tiendas y durante el juego (únicos durante el juego)~
 @750 = ~Objetos en tiendas y durante el juego (únicos mezclados)~
-@800 = ~Los objetos en el mod iiItem están separados en dos categorías: normales y especiales. Los objetos especiales ('flavour') son objetos que pueden no tener relevancia en el juego, aunque son añadidos para dar atmósfera (por ejemplo, lanza +5 contra dragones en BG1, donde no hay dragones).
-
-Los objetos normales se instalan siempre, puedes elegir si instalar los objetos especiales.
-
-¿Quieres instalar los objetos especiales?
-  0 Instalar los objetos especiales
-  1 No instalar los objetos especiales~
+@800 = ~Los objetos en el mod iiItem están separados en dos categorías; normal y 'de relleno'. Los objetos de relleno no tienen relevancia en el juego, aunque agregan a la atmósfera (Por ejemplo, la Lanza +5 contra dragones en BG1, donde no hay dragones).
 
 
-@51 = ~Items [versión 5]~
+
+Los objetos normales son siempre instalados, puedes elegir instalar o no los objetos de relleno.
+
+Deseas instalar objetos de relleno
+  0 Objetos de relleno deben ser instalados
+  1 Objetos de relleno NO deben ser instalados~
+
+
+@51 = ~Objetos [version 5]~
 
 // ----------------------------------------------------------------------------
 // Potions
@@ -74,15 +76,15 @@ CARACTERÍSTICAS:
 
 Especial: Curación
 Especial: Quita la fatiga
-Especial: Reobtener lanzamiento de hechizos
-Especial: 15% de probabilidad de penalización de 1 a la CON (24 horas)
-Especial: 10% de probabilidad de penalización de 1 a la FUE (24 horas)
-Especial: 5% de probabilidad de penalización de 1 a la DES (24 horas)~
+Especial: Recobra los hechizos lanzados
+Especial: 15% posibilidad de penalización de 1 punto de CON  (24 horas)
+Especial: 10% posibilidad de penalización de 1 punto de FUE  (24 horas)
+Especial: 5% posibilidad de penalización de 1 punto de DES  (24 horas)~
 
 
-@2043 = ~Constitución disminuida~
-@2044 = ~Fuerza disminuida~
-@2045 = ~Destreza disminuida~
+@2043 = ~Constitución disminuída~
+@2044 = ~Fuerza disminuída~
+@2045 = ~Destreza disminuída~
 
 
 @2051 = ~Poción de Estabilidad Elemental~
@@ -683,17 +685,16 @@ Peso:  2~
 
 
 
-@6041 = ~Cinturón de la Concentración~
-@6042 = ~La característica más notable de este cinturón es el broche. Antiguamente una grande y suave perla, el broche está ahora negro y picado. Las abolladuras accidentales parecen captar la luz dándole al broche uan bonita apariencia a pesar de su aspecto avejentado.
+@6041 = ~Cinturón de concentración~
+@6042 = ~La única cosa que llama la atención de este cinturón es la hebilla. Una vez fue una gran perla, ahora está negro y con hoyos. Los hoyos parecen redirigir la luz haciendo que el cinturón brille, haciendo que se vea bonito, incluso siendo tan viejo y desgastado.
 
-Inspeccionándolo más de cerca, se puede ver que las abolladuras no son tales,sino restos de pequeños insectos; son sus alas las que captan y reflejan la luz. Los insectos se han estrellado con fuerza contra la superficie del broche, casi escondiendo su superficie original. Cerca del cinturón los insectos se distraen y se sienten atraídos por el cinturón. Esto identifica al cinturón como Sha-bane, el cinturón forjado para resistir a la plaga de insectos de Shanudd, el mago loco.
+Al inspeccionarlo más de cerca, se ve que los bultitos son pequeños insectos; son sus alas las que reflejan la luz. Los insectos han sido aplastados contra la superficie de la hebilla, casi escondiendo la superficie original. Cuando los insectos se acercan al cinturón, se distraen y son atraídos hacia la hebilla. Esto identifica al cinturón como Sha-bane, un cinturón que resiste los hechizos de nubes de insectos del mago Shanudd.
 
 CARACTERÍSTICAS:
 
-Especial:  Inmune al hechizo Plaga de Insectos
+Especial:  Inmune a Plaga de insectos
 Peso:  1~
-@6043 = ~Inmune al hechizo~
-
+@6043 = ~Inmunidad contra hechizo~
 
 // ----------------------------------------------------------------------------
 // Amulets
@@ -824,42 +825,41 @@ Usable por:
 Ladrón~
 
 
-@8033 = ~Casco maldito del Crepúsculo~
-@8034 = ~Casco maldito del Crepúsculo
+@8033 = ~Yelmo maldito del Atardecer~
+@8034 = ~Yelmo maldito del Atardecer
 
-Los detalles más antiguos del casco maldito del crepúsculo mencionan su origen; el casco se saqueó del cuerpo de un ilícido, en lo más profundo de sus guaridas. Sin embargo, incluso estas viejas historias no conocen el propósito de este casco. Negarle a un mago la capacidad de aprender nuevos hechizos es seguro algún castigo por algo, ¿pero por qué la bendición de velocidad incrementada?
+Los documentos más antiguos sobre el Yelmo maldito del Atardecer mencionan su orígen; el Yelmo fue tomado del cuerpo de un Ilícido. Incluso estas historias antiguas no conocen la utilidad del Yelmo. El negar al mago la habilidad de aprender nueva magia es seguramente algún tipo de castigo, ¿pero por qué la bendición de la velocidad?
 
 
 CARACTERÍSTICAS:
 
-Especial: No se pueden aprender hechizos nuevos
-Especial:  Velocidad de movimiento incrementada
-Casco: 0
-No lo puede usar:
+Especial:  No se pueden aprender nuevos hechizos
+Especial:  Incrementa el movimiento del usuario
+Peso: 0
+No usable por:
 Bardo
 Ladrón~
 
 
 
 
-@8043 = ~Poder de la magia~
-@8044 = ~Poder de la magia
+@8043 = ~Poder de la Magia~
+@8044 = ~Poder de la Magia
 
-Este casco parece estar hecho con cierto cristal sólido, si así lo fuera valdría una fortuna. Aunque para ser exactos el casco no es de cristal, y sólo es tan valioso en las manos adecuadas.
+Este yelmo parece haber sido tallado de una pieza sólida de cristal; ¡y si así fuera valdría una fortuna! Aunque la verdad es que el yelmo no está hecho de cristal, es valioso si cae en las manos adecuadas.
 
-El casco, o cierto encantamiento que tenga desde hace épocas, altera sutilmente el modo de actuar de la magia en las cercanías. Los estudiosos modernos consideran que el casco de alguna manera "dobla la magia alrededor de la realidad" o que "causs una descarga temporal de un punto", o incluso que "transforma directamente el pensamiento en acción usando como medio el tejido". De todas maneras, el casco funciona, el resultado es sencillo: la resistencia mágica se disminuye para todas las criaturas cercanas. El efecto se centra en el portador, cuya resistencia se elimina por completo.
+El yelmo, o algún tipo de encantamiento puesto sobre él hace tiempo, altera el funcionamiento de la magia cercana. Los estudiosos modernos creen que puede 'torcer la magia alrededor de la realidad' o 'o causar una descarga micro temporal', o incluso 'directamente transformar los pensamientos en acciones utilizando la urdimbre como intermediaria'. No importa como funcione el yelmo, el resultado es; la resistencia mágica de las criaturas cercanas es disminuída. El efecto se centra en el usuario, cuya resistencia se elimina completamente.
 
 
 CARACTERÍSTICAS:
 
-Especial:  Resistencia a la magia a 0
-Especial:  -20 de resistencia mágica a todas las criaturas a menos de 5 metros
+Especial:  Resistencia mágica 0
+Especial:  -20 resistencia mágica a todas las criaturas dentro de un radio de 30 pies
 Peso: 1
-No lo puede usar:
+No usable por:
 Mago
 Bardo
 Ladrón~
-
 
 // ----------------------------------------------------------------------------
 // Dagas
@@ -886,29 +886,29 @@ No usable por:
  Clerigo~
 
 
-@9003 = ~Golpeadora +1~
-@9004 = ~Para Shuune siempre fue un problema ser capaz de hacer una sola cosa al mismo tiempo. Asesino a sueldo. Shuune tuvo que dejar pasar varios contratos interesantes económicamente porque ya se encontraba en una misión. Con el paso del tiempo, esto le molestaba cada vez más, y la cantidad de dinero que habría podido ganar aumentaba considerablemente (ya que Shuune era un asesino muy renombrado).
+@9003 = ~Aleteo +1~
+@9004 = ~El sólo ser capaz de hacer una cosa por vez siempre fue un problema para Shuune. Asesino, Shuune tuvo que negarse a hacer varios trabajos al ya estar empleado en otra misión. Al pasar el tiempo, Shuune se preocupaba más y más, porque veía que podía haber ganado mucho más dinero (ya que Shuune era un asesino muy exitoso).
 
-Para resolver su problema, Shuune contrató los servicios de un mago y un herrero. Ambos trabajaron juntos durante meses, investigando y probando, y produciendo al final el equipamiento que solucionaría el problema que tenían encomendado. Este equipo fue un verdadero éxito; llevando el conjunto en completo el portador podría literalmente estar en varios sitios al mismo tiempo. Shuune estaba entusiasmado y comenzó al instante a usar este equipamiento y a crear leyenda en el proceso. El destino final de los objetos es desconocido, al igual que el del mismo Shuune.
+Para solventar este problema, Shuune empleó los servicios de un mago y un herrero. Estos trabajaron juntos durante meses, estudiando y testeando, y eventualmente creando el equipo que resolvería todos los problemas. Fue todo un éxito; el uso de todos los objetos permitiría al usuario estar literalmente en varios lugares al mismo tiempo. Shuune estaba feliz y se dispuso a utilizar los objetos cuanto antes, creando varias leyendas. El destino final de los objetos es desconocido, así como el de Shuune mismo.
 
-Esta daga parece ser uno de los objetos encargados por Shuune, y mantiene algunas de las habilidades del conjunto. Esta daga se puede lanzar hacia un objetivo y al golpearle inflijirá daño yvolverá al lanzador... ¡Mientras aún sigue clavada en el objetivo! La daga permanece durante varios segundos antes de desaparecer.
+Esta daga parece ser uno de los objetos comisionados por Shuune, y contiene parte de las habilidades del conjunto. La daga puede ser arrojada al objetivo, luego de hacer daño, la daga regresará al usuario, ¡al mismo tiempo que queda clavada en el objetivo! La daga se queda en su lugar varios segundos antes de desaparecer.
 
 
 CARACTERÍSTICAS:
 
-Especial: La daga vuelve a la mano del lanzador
-Especial: 1d4 de daño por ronda, durante 4 rondas
-Especial: Daño sangrante
-THACO:  Bonificación +1
+Especial: Regresa a la mano del propietario
+Especial: 1d4 daño por asalto, por 4 turnos
+Especial: Daño por sangrado
+THACO:  +1 bonificación
 Daño:  1D6+1
-Tipo de daño:  perforante
+Tipo de Daño:  punzante
 Peso: 1
 Factor de velocidad: 2 
-Talento marcial: Daga
-Tipo:  A una mano
-Requiere: Fuerza 3
-No lo puede usar:
- Clerigo~
+Tipo de talento: Dagger
+Tipo:  1 puño
+Requiere:3 Fuerza
+No usable por:
+ Clérigo~
 
 
 // ----------------------------------------------------------------------------
@@ -938,21 +938,21 @@ No usable por:
 
 
 @10005 = ~Martillo de poder mágico +2~
-@10006 = ~Este martillo es de un estilo y diseño estandar, con la salvedad de su metal es de color rojo profundo. Hay algo bueno sobre este martillo, y al sujetarlo puedes sentir que todo va a ir bien. Si esto es una visión del futuro o una ilusión debido a la magia o veneno es difícil de saber.
+@10006 = ~Este martillo es de diseño standard, excepto que el metal es de un color rojo oscuro. Algo de este martillo se siente bien, y mientras se empuña, pareces sentir que todo saldrá bien. Si es una visión del futuro, o una ilusión causada por magia o veneno... no lo sabes.
 
 
 CARACTERÍSTICAS:
 
-Especial: Penalización de 2 a la suerte
-THACO: Bonificación +2
+Especial: 2pt penalización de Suerte
+THACO:  +2 bonificación
 Daño:  1D5
-Tipo de daño:  aplastante
+Tipo de Daño:  aplastante
 Peso: 6
 Factor de velocidad: 4
-Talento marcial: Martillo de guerra
-Tipo: A una mano
-Requiere: Fuerza 9
-No lo puede usar:
+Tipo de talento: Martillo de guerra
+Tipo:  1 puño
+Requiere: 9 Fuerza
+No usable por:
  Druida
  Mago 
  Ladrón~
@@ -979,88 +979,89 @@ Requiere: 5 Fuerza~
 @11003 = ~¡Derribado!~
 
 
-@11011 = ~El sueño de un hombre +2~
-@11012 = ~El sueño de un hombre +2
+@11011 = ~Sueño del hombre +2~
+@11012 = ~Sueño del hombre +2
 
-Otunga es uno de los pocos mortales que hayan conseguido la inmortalidad, lo que le hace alguien remarcable. Que haya ganado su inmortalidad por accidente lo hace aún más notable. Otunga era un simple granjero en una región rural de Amn cuando sucedió. Muchos magos poderosos se interesaron inmediatamente por Otunga, e intentaron conseguir su secreto, por medios más o menos aceptables. Ya que el proceso fue por accidente, Otunga no se acordaba de cómo fue, y mucho menos podría hablar de ello a otros. 
+Otunga es uno de los pocos mortales que llegó a la inmortalidad, haciendolo un hombre extraordinario. El que haya ganado su inmortalidad por accidente es aún más extraordinario. Otunga era un simple granjero en una región rural de Amn cuando sucedió el accidente. Muchos magos se interesaron por Otunga, y buscaron obtener su secreto, por las buenas o las malas. Pero como este proceso fue accidental, Otunga no podía recordarlo, menos aún contárselo a los demás. 
 
 
-Al final los magos se cansaron de Otunga, viéndole como un recordatorio de sus fracasos. Sin ser capaces de matarle, lo hicieron prisionero bajo tierra. Otunga fue liberado tiempo después y pudo continuar con su larga larga vida. Los magos se enteraron de su libertad y de nuevo lo capturaron e interrogaron. Frustrados por no poder conseguir respuestas, petrificaron a Otunga y le dejaron como una estatua en el camino. Liberado de nuevo, encontró a un mago para que fabricara este bastón para él. Este bastón protege al portador de varias formas de anulación de movimiento mágicas.
 
-The fate of Otunga, obviously parted from his staff, is unlikely to be a happy one.
+Eventualmente los magos se cansaron de Otunga, viendolo como un recordatorio de sus fallos. Al no poder matarlo, lo encarcelaron bajo tierra. Otunga fue liberado un tiempo después y se contentó al regresar a su larga, larga vida. Los magos se enteraron de que estaba libre y otra vez lo encarcelaron. Frustrados con su imposibilidad de contestar sus preguntas, petrificaron a Otunga y lo dejaron como estatua. Nuevamente liberado, Otunga buscó un mago amigo para que le hiciera un bastón. El staff protege al usuario de varios tipos de magia.
+
+El destino de Otunga, es probable que no haya sido demasiado feliz.
 
 CARACTERÍSTICAS:
 
-Especial: Inmune a Laberinto
-Especial: Inmune a Cautiverio
-Especial: Inmune a Alazo
-Especial: Inmune a Petrificar
+Especial: Inmunidad a Laberinto
+Especial: Inmunidad a Cautiverio
+Especial: Inmunidad a Alazo
+Especial: Inmunidad a Petrificación
 Daño:  1D6+2
-Tipo de daño:  aplastante
+Tipo de Daño:  aplastante
 Peso: 4
 Factor de velocidad: 4
-Talento marcial: Bastón
-Tipo:  A dos manos
-Requiere: Fuerza 5~
+Tipo de talento: Bastón
+Tipo:  2-puños
+Requiere: 5 Fuerza~
 
 
 // ----------------------------------------------------------------------------
 // Garrotes
 // ----------------------------------------------------------------------------
 @12001 = ~Botella vacía~
-@12002 = ~Esto una botella vacía. No hay ningún rastro de lo que contenía. Esta botella puede ser de utilidad en una pelea.
+@12002 = ~Esta es una botella vacía. No hay pista de su contenido. La botella puede servir de arma en alguna pelea.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Especial: 80% de probabilidad de abatir humanoides
+Especial: 80% posibilidad de atontar criaturas humanoides
 Daño:  1D5
-Tipo de daño:  aplastante
+Tipo de Daño:  aplastante
 Peso: 1
 Factor de velocidad: 4
-Talento marcial: Garrote
-Tipo:  A una mano
-No lo puede usar:
+Tipo de talento: Palo
+Tipo:  1 puño
+No usable por:
  Mago~
-@12003 = ~¡Botella destrozada!~
+@12003 = ~¡La botella se ha roto!~
 
 
 @12005 = ~Botella rota~
-@12006 = ~Estos son los restos de una botella vacía. No hay ningún rastro de lo que contenía. Esta botella puede ser de utilidad en una pelea.
+@12006 = ~Estos son los restos de la botella. No hay pista de su contenido. La botella puede servir de arma en alguna pelea.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Daño:  1D5
-Tipo de daño:  aplastante
+Tipo de Daño:  aplastante
 Peso: 1
 Factor de velocidad: 4
-Talento marcial: Garrotes
-Tipo:  A una mano
-No lo puede usar:
+Tipo de talento: Palo
+Tipo:  1 puño
+No usable por:
  Mago~
-@12007 = ~¡Botella destrozada!~
+@12007 = ~¡La botella se ha roto!~
 
 
 // ----------------------------------------------------------------------------
 // Hachas
 // ----------------------------------------------------------------------------
-@13001 = ~Hacha Sin Peso: La Maravilla +1~
-@13002 = ~Hacha Sin Peso: La Maravilla +1
+@13001 = ~Hacha sin peso: La maravilla +1~
+@13002 = ~Hacha sin peso: La maravilla +1
 
-Lo primero que te viene a la cabeza sobre esta hacha es su color rojo profundo poco común. Lo segundo y más sorprendente, su peso. Este arma parece no pesar absolutamente nada. Puedes levantar el hacha y embestir con ella rápidamente. El peso del hacha puede ser de utilidad en combate, aunque es algo desconcertante soltar un hacha sin peso y verla caer en el suelo con un fuerte batacazo.
+La cosa que más llama la atención de esta hacha es su color rojo. La segunda es su peso: ¡el hacha parece no pesar nada! Facilmente puedes blandirla. El peso puede ser útil en combate, aunque puede ser algo desconcertante el dejar caer un hacha sin peso y que actúe como si fuera pesada.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Especial: Bonificación +1 THAC0
+Especial: 1pt THAC0 bonificación
 Daño:  1D8 +1
-Tipo de daño: Cortante
+Tipo de Daño:  cortante
 Peso: 0
 Factor de velocidad: 1
-Tipo de talento marcial: Hachas
-Tipo:  De 1 mano
-No lo puede usar:
+Tipo de talento: Hacha
+Tipo:  1 puño
+No usable por:
  Druida
  Clérigo
  Mago 
@@ -1070,20 +1071,20 @@ No lo puede usar:
 // ----------------------------------------------------------------------------
 // Escudos
 // ----------------------------------------------------------------------------
-@14001 = ~Escudo de Rebote +1~
-@14002 = ~Escudo de Rebote +1
+@14001 = ~Escudo de rebote +1~
+@14002 = ~Escudo de rebote +1
 
-Este escudo, hecho de maderaoscura dura, parece totalmente normal. El escudo solo muestra su habilidad en determinadas circunstancias, cuando una daga se lanza directamente contra el portador. En ese caso, la daga inexplicablemente cambia de dirección y se dirige hacia el lanzador, con intento de matarle.
+Este escudo hecho de madera dura se siente y parece completamente normal. El escudo sólo muestra su habilidad en una circumstancia especial: cuando una daga es arrojada directamente al usuario. En esa situacion, inexplicablemente la daga cambia de dirección y vuela de regreso al lanzador original, con peligro de muerte.
 
-Semejantes habilidades son raras pero no improbables,  sin embargo este es el único encantamiento de su clase conocido en un escudo. El propietario original lo debe estar buscando, o quizás ha encargado alguna copia.
+Tal habilidad es rara pero no inusual, aunque este es el único tipo de encantamiento conocido en un escudo. El dueño original debe estar buscándolo, o tal vez haya comisionado otro igual.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
-Bonificación a la clase de armadura: 1
+Bonificación de clase de armadura: 1
 Peso: 7
-Requiere: 12 Strength
-No lo puede usar:
+Requiere: 12 Fuerza
+No usable por:
  Bardo
  Druida
  Mago
@@ -1093,14 +1094,14 @@ No lo puede usar:
 // ----------------------------------------------------------------------------
 // Arpas
 // ----------------------------------------------------------------------------
-@15001 = ~Arpa Curativa~
-@15002 = ~Arpa Curativa
+@15001 = ~Arpa sanadora~
+@15002 = ~Arpa sanadora
 
-Este arpa es obviamente mágica; no sólo parece haber sido fabricada con una hoja sólida y gigante, sino que además se puede tocar normalmente sin cuerdas. Aunque estos puntos son suficientes para que los bardos de todo Faerun se peleen por este instrumento, posee otra característica especial. Algunas canciones, tocadas con este arpa, tienen la habilidad de curar a los que las oyen. Se desconoce el motivo, aunque se requiere cierto talento musical ya que sólo los bardos pueden activar esta magia.
+Esta arpa es obviamente mágica; no sólo parece haber sido tallada de una hoja gigante y sólida, ¡si no que puede ser tocada aunque no tiene cuerdas! Aunque sólo esto sea suficiente para que el arpa sea buscada por todos los bardos de Faerun, tiene otra habilidad más. Cuando se tocan ciertas canciones, puede curar a quien las escucha. Cómo se logra esto es desconocido, aunque se requiere talento musical, sólo los bardos pueden usarla.
 
 
-ESTADÍSTICAS:
+CARACTERÍSTICAS:
 
 Peso: 0
-Lo puede usar:
+Usable por:
  Bardo~
