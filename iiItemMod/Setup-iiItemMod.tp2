@@ -1,11 +1,12 @@
 // ----------------------------------------------------------------------------
 // Name:    iiItemMod
 // Author:  igi
-// Date:    2007/11/11
-// Version: 5
+// Date:    2021/09/05
+// Version: 5.2
 // ----------------------------------------------------------------------------
 BACKUP ~iiItemMod/backup~
 AUTHOR ~igi~
+VERSION ~v5.2~
 
 LANGUAGE ~English~ ~English~ ~iiItemMod/Languages/English/setup.tra~
 LANGUAGE ~Spanish~ ~Spanish~ ~iiItemMod/Languages/Spanish/setup.tra~
