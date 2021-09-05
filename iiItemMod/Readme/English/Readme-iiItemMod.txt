@@ -152,6 +152,9 @@ Amulet of Knowledge permanently increases Lore by 10pt per equipping of the item
 
 +) Section 6. Version History
 =============================
+V5.3 [2021/09/05]
+  - Maintenace release RE: mod packaging
+
 V5 [2007/12/02]
   - Added Hammer of Magical Might
   - Added Empty Bottle/Broken Bottle

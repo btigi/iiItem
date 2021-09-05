@@ -152,6 +152,9 @@ El amuleto de Conocimiento aumenta permanentemente el conocimiento 10 puntos al 
 
 +) Sección 6. Histórico de versiones
 ====================================
+V5.3 [2021/09/05]
+  - Maintenace release RE: empaquetado de mods
+
 V5 [2007/12/02]
   - Se añade el Martillo de Poder Mágico
   - Se añade la Botella Vacía/Rota
