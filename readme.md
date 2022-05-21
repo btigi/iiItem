@@ -1,3 +1,7 @@
+![Latest Release](https://img.shields.io/github/v/release/btigi/iiItem?color=blue)
+
+---
+
 # iiItem
 
 The iiItem Mod adds several dozen new items to the game, concentrating on lesser known item types (such as potions, bracers, arrows etc). The mod does not (currently) add any upgradable items, item parts or smiths. Game balance has been taken into account during item creation, and over-powered items have (hopefully) been avoided - there are no +5 katanas!
