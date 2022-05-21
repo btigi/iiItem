@@ -1,0 +1,8 @@
+golem:
+  mod_dir: iiItemMod  # OPTIONAL.
+  platforms:         # REQUIRED. List of IE platforms that you want to test your mod on
+    - tob            # note: this is ToB with G3 BG2 Fixpack, not vanilla
+    - bgee
+    - bg2ee
+  happy: true        # OPTIONAL. Omit if you don't want Happy IE
+  mail: warning      # OPTIONAL. Set to false to disable emails  
