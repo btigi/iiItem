@@ -1,4 +1,4 @@
-![Latest Release](https://img.shields.io/github/v/release/btigi/iiItem?color=blue)
+![Latest Release](https://img.shields.io/github/v/release/btigi/iiItem?color=blue) [![Golem Status](https://golem.bgforge.net/mods/iiitem/status.svg)](https://golem.bgforge.net/mods/iiitem) 
 
 ---
 
